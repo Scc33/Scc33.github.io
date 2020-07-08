@@ -130,6 +130,8 @@ header .social li a:hover {
   position: fixed;
   left: 0;
   top: 0;
+  opacity: 1;
+
 }
 
 .opaque {
@@ -144,8 +146,8 @@ header .social li a:hover {
 ul#nav {
   min-height: 48px;
   width: auto;
-  text-align: left;
   /* left align the menu */
+  text-align: left;
 }
 
 ul#nav li {
