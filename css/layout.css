@@ -127,9 +127,6 @@ header .social li a:hover {
   left: 0;
   top: 0;
   opacity: 1;
-}
-
-.opaque {
   background-color: #333;
 }
 

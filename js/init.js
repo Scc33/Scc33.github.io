@@ -44,7 +44,4 @@ jQuery(document).ready(function($) {
     },
     offset: '35%'
   });
-
-  var nav = $('#nav-wrap');
-  nav.addClass('opaque').fadeIn('fast');
 });
