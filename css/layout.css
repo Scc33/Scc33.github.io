@@ -113,34 +113,13 @@ ul#nav li.current a {
   color: #7A7A7A;
 }
 
-#about .profile-pic {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  border-radius: 100%;
-}
-
 #about .contact-details {
   width: 41.66667%;
+  padding-bottom: 10px
 }
 
 #about .main-col {
   padding-right: 5%;
-}
-
-#about .download .button {
-  margin-top: 6px;
-  background: #444;
-}
-
-#about .download .button:hover {
-  background: #fff;
-  color: #2B2B2B;
-}
-
-#about .download .button i {
-  margin-right: 15px;
-  font-size: 20px;
 }
 
 /* ------------------------------------------------------------------ */
