@@ -161,7 +161,7 @@ ul#nav li.current a {
 }
 
 #resume h1 {
-  font: 18px/24px 'opensans-bold', sans-serif;
+  font: 22px/30px 'opensans-bold', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -172,7 +172,7 @@ ul#nav li.current a {
 }
 
 #resume h3 {
-  font: 25px/30px 'opensans-bold', sans-serif;
+  font: 20px/28px 'opensans-bold', sans-serif;
 }
 
 #resume .header-col {
@@ -202,6 +202,63 @@ ul#nav li.current a {
 }
 
 #resume .date {
+  font: 15px/24px 'opensans-regular', sans-serif;
+  margin-top: 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/* d. Resume Section
+/* ------------------------------------------------------------------ */
+#portfolio {
+  background: #fff;
+  padding-top: 7px;
+  overflow: hidden;
+}
+
+#portfolio a, #portfolio a:visited {
+  color: #11ABB0;
+}
+
+#portfolio a:hover, #portfolio a:focus {
+  color: #313131;
+}
+
+#portfolio h1 {
+  font: 22px/30px 'opensans-bold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#portfolio h1 span {
+  border-bottom: 3px solid #11ABB0;
+  padding-bottom: 6px;
+}
+
+#portfolio h3 {
+  font: 20px/28px 'opensans-bold', sans-serif;
+}
+
+#portfolio .header-col {
+  padding-top: 9px;
+}
+
+#portfolio .main-col {
+  padding-right: 10%;
+}
+
+#portfolio .info {
+  font: 16px/24px 'librebaskerville-italic', serif;
+  color: #6E7881;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+#portfolio .info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#portfolio .date {
   font: 15px/24px 'opensans-regular', sans-serif;
   margin-top: 6px;
 }
