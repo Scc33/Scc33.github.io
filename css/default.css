@@ -536,12 +536,12 @@ input::-moz-focus-inner {
 /* default
 --------------------------------------------------------------- */
 .row {
-   width: 96%;
-   max-width: 1020px;
+   width: 80%;
+   max-width: 1080px;
    margin: 0 auto;
 }
 /* fixed width for IE8 */
-.ie .row { width: 1000px ; }
+.ie .row { width: 1080px ; }
 
 .narrow .row { max-width: 980px; }
 
