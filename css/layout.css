@@ -197,6 +197,59 @@ ul#nav li.current a {
   margin-bottom: 18px;
 }
 
+/* Interests Section */
+#interests {
+  background: #fff;
+  padding-top: 7px;
+}
+
+#interests a, #interests a:visited {
+  color: #11ABB0;
+}
+
+#interests a:hover, #interests a:focus {
+  color: #313131;
+}
+
+#interests h1 {
+  font: 22px/30px 'opensans-bold', sans-serif;
+  letter-spacing: 1px;
+}
+
+#interests h1 span {
+  border-bottom: 2px solid #11ABB0;
+  padding-bottom: 2px;
+}
+
+#interests h3 {
+  font: 20px/28px 'opensans-bold', sans-serif;
+}
+
+#interests .info {
+  font: 16px/24px 'librebaskerville-italic', serif;
+  color: #6E7881;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+#portfolio .info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#interests .date {
+  font: 15px/24px 'opensans-regular', sans-serif;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+#interests .view {
+  font: 15px/24px 'opensans-regular', sans-serif;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+
 /* Footer */
 footer {
   padding-top: 48px;
