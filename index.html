@@ -39,47 +39,6 @@
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
-
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-        }
-
-        function setIframeHeight(ifrm) {
-            var height = ifrm.contentWindow.postMessage("FrameHeight", "*");
-        }
-        window.addEventListener('message', function(event) {
-            //Here We have to check content of the message event  for safety purpose
-            //event data contains message sent from page added in iframe as shown in step 3
-            if (event.data.hasOwnProperty("FrameHeight")) {
-                //Set height of the Iframe
-                $("#IframeId").css("height", event.data.FrameHeight);
-            }
-        });
-        window.addEventListener('message', function(event) {
-
-            // Need to check for safety as we are going to process only our messages
-            // So Check whether event with data(which contains any object) contains our message here its "FrameHeight"
-            if (event.data == "FrameHeight") {
-
-                //event.source contains parent page window object 
-                //which we are going to use to send message back to main page here "abc.com/page"
-
-                //parentSourceWindow = event.source;
-
-                //Calculate the maximum height of the page
-                var body = document.body,
-                    html = document.documentElement;
-                var height = Math.max(body.scrollHeight, body.offsetHeight,
-                    html.clientHeight, html.scrollHeight, html.offsetHeight);
-
-                // Send height back to parent page "abc.com/page"
-                event.source.postMessage({
-                    "FrameHeight": height
-                }, "*");
-            }
-        });
-    </script>
 </head>
 
 <body>
@@ -317,12 +276,12 @@
                             <section class="education-section py-2 ">
                                 <h3 class="text-uppercase resume-section-heading mb-4 ">Education</h3>
                                 <ul class="list-unstyled resume-education-list ">
-                                    <li>
+                                    <li class="mb-3">
                                         <div class="resume-degree font-weight-bold ">B.S. in Computer Science</div>
                                         <div class="resume-degree-org text-muted ">University of Illinois Urbana-Champaign</div>
                                         <div class="resume-degree-time text-muted ">2018 - 2021</div>
                                     </li>
-                                    <li>
+                                    <li class="mb-0">
                                         <div class="resume-degree font-weight-bold ">Minor in Economics</div>
                                         <div class="resume-degree-org text-muted ">University of Illinois Urbana-Champaign</div>
                                         <div class="resume-degree-time text-muted ">2018 - 2021</div>
@@ -411,7 +370,7 @@
 											College Graduation
 										</a>
                                     </h3>
-                                    <div class="item-meta col-12 col-md-6 col-lg-5 text-muted text-start text-md-end ">LinkedIn Posts | October 2020 - May 2021</div>
+                                    <div class="item-meta col-12 col-md-6 col-lg-5 text-muted text-start text-md-end ">LinkedIn Posts | 12/21/2021 </div>
                                 </div>
                                 <div class="item-content ">
                                     <p>
@@ -420,7 +379,23 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="item row mb-2 ">
+                            <div class="item ">
+                                <div class="item-heading row align-items-center mb-2 ">
+                                    <h3 class="item-title col-12 col-md-6 col-lg-7 mb-2 mb-md-0 ">
+                                        <a href="https://www.linkedin.com/posts/sean-m-coughlin_i-am-very-excited-to-share-that-i-will-be-activity-6839216022394871808-d7mi" target="_blank" rel="noopener ">
+											Job Announcement
+										</a>
+                                    </h3>
+                                    <div class="item-meta col-12 col-md-6 col-lg-5 text-muted text-start text-md-end ">LinkedIn Post | __x/__x/__x</div>
+                                </div>
+                                <div class="item-content ">
+                                    <p>
+                                        I am very excited to share that I will be joining Discover Financial Services as a Software Engineer in their Business Technology Rotation Program after my graduation from the University of Illinois Urbana-Champaign in December 2021. I had a great experience
+                                        this past summer interning with the Digital Payments team and I could not be more eager to start my career with Discover.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item ">
                                 <div class="item-heading row align-items-center mb-2 ">
                                     <h3 class="item-title col-12 col-md-6 col-lg-7 mb-2 mb-md-0 ">
                                         <a href="https://jobs.discover.com/2021/07/28/2021-internship/ " target="_blank " rel="noopener ">
