@@ -39,6 +39,47 @@
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
+
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+
+        function setIframeHeight(ifrm) {
+            var height = ifrm.contentWindow.postMessage("FrameHeight", "*");
+        }
+        window.addEventListener('message', function(event) {
+            //Here We have to check content of the message event  for safety purpose
+            //event data contains message sent from page added in iframe as shown in step 3
+            if (event.data.hasOwnProperty("FrameHeight")) {
+                //Set height of the Iframe
+                $("#IframeId").css("height", event.data.FrameHeight);
+            }
+        });
+        window.addEventListener('message', function(event) {
+
+            // Need to check for safety as we are going to process only our messages
+            // So Check whether event with data(which contains any object) contains our message here its "FrameHeight"
+            if (event.data == "FrameHeight") {
+
+                //event.source contains parent page window object 
+                //which we are going to use to send message back to main page here "abc.com/page"
+
+                //parentSourceWindow = event.source;
+
+                //Calculate the maximum height of the page
+                var body = document.body,
+                    html = document.documentElement;
+                var height = Math.max(body.scrollHeight, body.offsetHeight,
+                    html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+                // Send height back to parent page "abc.com/page"
+                event.source.postMessage({
+                    "FrameHeight": height
+                }, "*");
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -359,18 +400,34 @@
                     <!--//row-->
                 </div>
                 <hr>
-                <div class="row align-items-center ">
+                <div class="resume-main row align-items-center ">
                     <section class="project-section py-2 mt-2 ">
-                        <h2 class="text-uppercase resume-section-heading mb-4 ">Latest Projects</h2>
+                        <h2 class="text-uppercase resume-section-heading mb-4 ">Blog</h2>
                         <div class="content ">
+                            <div class="item ">
+                                <div class="item-heading row align-items-center mb-2 ">
+                                    <h3 class="item-title col-12 col-md-6 col-lg-7 mb-2 mb-md-0 ">
+                                        <a href="https://www.linkedin.com/posts/sean-m-coughlin_illinois-activity-6879141994350866432-gyRU" target="_blank" rel="noopener ">
+											College Graduation
+										</a>
+                                    </h3>
+                                    <div class="item-meta col-12 col-md-6 col-lg-5 text-muted text-start text-md-end ">LinkedIn Posts | October 2020 - May 2021</div>
+                                </div>
+                                <div class="item-content ">
+                                    <p>
+                                        This past weekend I graduated from the University of Illinois Urbana-Champaign with a B.S. in Computer Science and a Minor in Economics. I am thankful to have walked at the first in person commencement at the University in two years and I am so grateful
+                                        for my time at #Illinois. In February, I will be starting full time at Discover Financial Services.
+                                    </p>
+                                </div>
+                            </div>
                             <div class="item row mb-2 ">
                                 <div class="item-heading row align-items-center mb-2 ">
                                     <h3 class="item-title col-12 col-md-6 col-lg-7 mb-2 mb-md-0 ">
                                         <a href="https://jobs.discover.com/2021/07/28/2021-internship/ " target="_blank " rel="noopener ">
-										Discover Employee Blog
-									</a>
+											Discover Employee Blog
+										</a>
                                     </h3>
-                                    <div class="item-meta col-12 col-md-6 col-lg-5 text-muted text-start text-md-end ">7/28/21</div>
+                                    <div class="item-meta col-12 col-md-6 col-lg-5 text-muted text-start text-md-end ">Originally posted for the Discover Employee Blog | 7/28/21</div>
                                 </div>
                                 <div class="item-content ">
                                     <p>
@@ -387,35 +444,23 @@
                         <!--//content-->
                     </section>
                 </div>
+                <!--//section-->
+                <!--//resume-body-->
                 <hr>
-                <div class="row align-items-center ">
-                    <section class="py-2 mt-2 ">
-                        <h2 class="text-uppercase resume-section-heading mb-4 ">LinkedIn Posts</h2>
-                        <div class="content text-center ">
-                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6879141993570738177 " height="auto " width="100% " frameborder="0 " allowfullscreen=" " title="Embedded post " scrolling="auto "></iframe>
-                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6839216021941886976 " height="auto " width="100% " frameborder="0 " allowfullscreen=" " title="Embedded post "></iframe>
-                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6826510514047242240 " height="auto " width="100% " frameborder="0 " allowfullscreen=" " title="Embedded post "></iframe>
-                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6800471743178842112 " height="auto " width="100% " frameborder="0 " allowfullscreen=" " title="Embedded post "></iframe>
-                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6726610119989215232 " height="auto " width="100% " frameborder="0 " allowfullscreen=" " title="Embedded post "></iframe>
-                    </section>
-                    </div>
-                    <!--//section-->
-                    <!--//resume-body-->
-                    <hr>
-                    <div class="resume-footer text-center ">
-                        <small><a a href="sitemap.xml ">Sitemap</a></small>
-                        <br>
-                        <small class="copyright text-muted ">Designed with <i class="fas fa-heart "></i> by <a class="theme-link " href="http://themes.3rdwavemedia.com " target="_blank " rel="noopener ">Xiaoying Riley</a> for developers</small>
-                        <br>
-                        <small>Updated by Sean Coughlin</small>
-                    </div>
-                    <!--//resume-footer-->
+                <div class="resume-footer text-center ">
+                    <small><a a href="sitemap.xml ">Sitemap</a></small>
+                    <br>
+                    <small class="copyright text-muted ">Designed with <i class="fas fa-heart "></i> by <a class="theme-link " href="http://themes.3rdwavemedia.com " target="_blank " rel="noopener ">Xiaoying Riley</a> for developers</small>
+                    <br>
+                    <small>Updated by Sean Coughlin</small>
+                </div>
+                <!--//resume-footer-->
             </article>
 
-            </div>
-            <!--//container-->
         </div>
-        <!--//main-wrapper-->
+        <!--//container-->
+    </div>
+    <!--//main-wrapper-->
 </body>
 
 </html>

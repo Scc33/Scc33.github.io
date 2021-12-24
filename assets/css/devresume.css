@@ -11307,7 +11307,8 @@ a.resume-link:hover {
 }
 
 .resume-profile-image {
-    max-width: 120px
+    width: 120px;
+    height: 130px;
 }
 
 .resume-intro {
