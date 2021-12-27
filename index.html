@@ -34,19 +34,55 @@
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="main-wrapper">
         <div class="container">
             <article class="resume-wrapper mx-auto theme-bg-light p-4 my-2 shadow-lg">
-                <div class="resume-header">
+                <nav class="navbar navbar-expand-lg navbar-light p-2">
+                    <div class="resume-title text-start">
+                        <h1 class="resume-name mb-0 text-uppercase">Sean Coughlin</h1>
+                        <div class="resume-tagline mb-3 mb-md-0">Software Engineer</div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html" target="_self">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html" target="_self">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projects.html" target="_self">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" target="_self">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <hr>
+                <div class="resume-intro py-3">
                     <div class="row align-items-center">
-                        <div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
-                            <h1 class="resume-name mb-0 text-uppercase">Sean Coughlin</h1>
-                            <div class="resume-tagline mb-3 mb-md-0">Software Engineer</div>
+                        <div class="col-12 col-md-3 col-xl-2 text-center">
+                            <img class="resume-profile-image mb-3 mb-md-0 me-md-5  ms-md-0 rounded mx-auto" src="assets/images/resume-profile.webp" alt="Sean Coughlin">
                         </div>
-                        <!--//resume-title-->
+                        <div class="col text-start mb-3 mb-md-0">
+                            <p class="mb-0">
+                                Summarise your career here. Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                            </p>
+                            <a href="resume.html">View my resume here</a>.
+                        </div>
                         <div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-3"><i class="fas fa-phone-square fa-fw fa-lg me-2 "></i><a class="resume-link" href="tel:847-226-9006">847-226-9006</a></li>
@@ -56,25 +92,6 @@
                                 <li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>Chicago, IL</li>
                             </ul>
                         </div>
-                        <!--//resume-contact-->
-                    </div>
-                    <!--//row-->
-                </div>
-                <!--//resume-header-->
-                <hr>
-                <div class="resume-intro py-3">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-md-3 col-xl-2 text-center">
-                            <img class="resume-profile-image mb-3 mb-md-0 me-md-5  ms-md-0 rounded mx-auto" src="assets/images/resume-profile.webp" alt="Sean Coughlin">
-                        </div>
-                        <div class="col text-start">
-                            <p class="mb-0">
-                                Summarise your career here. Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                            </p>
-                            <a href="resume.html">View my resume here</a>.
-                        </div>
-                        <!--//col-->
                     </div>
                 </div>
                 <!--//resume-intro-->
@@ -443,17 +460,18 @@
                 <div class="resume-footer text-center ">
                     <small><a a href="sitemap.xml ">Sitemap</a></small>
                     <br>
-                    <small class="copyright text-muted ">Designed with <i class="fas fa-heart "></i> by <a class="theme-link " href="http://themes.3rdwavemedia.com " target="_blank " rel="noopener ">Xiaoying Riley</a> for developers</small>
+                    <small class="copyright text-muted ">Original design with <i class="fas fa-heart "></i> by <a class="theme-link " href="http://themes.3rdwavemedia.com " target="_blank " rel="noopener ">Xiaoying Riley</a> for developers</small>
                     <br>
-                    <small>Updated by Sean Coughlin</small>
+                    <small class="copyright text-muted ">Design changes by Sean Coughlin</small>
+                    <br>
+                    <small class="copyright text-muted ">Last updated 12/26/21</small>
+                    <br>
+                    <small class="copyright text-muted "><a href="https://github.com/Scc33/Scc33.github.io">Website Source Code</a></small>
                 </div>
                 <!--//resume-footer-->
             </article>
-
         </div>
         <!--//container-->
-    </div>
-    <!--//main-wrapper-->
 </body>
 
 </html>
