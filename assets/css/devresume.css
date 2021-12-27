@@ -4430,7 +4430,7 @@ fieldset:disabled .btn {
 }
 
 .navbar {
-    position: fixed;
+    position: relative;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
@@ -11028,16 +11028,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #4f4f4f
-}
-
-body {
-    padding-top: 60px;
-}
-
-@media (max-width: 979px) {
-    body {
-        padding-top: 0px;
-    }
 }
 
 h1,
