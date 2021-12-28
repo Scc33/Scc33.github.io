@@ -1,13 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-	<loc>https://scc33.github.io/</loc>
-	<lastmod>2021-12-23T22:24:20+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://scc33.github.io/Resume.pdf</loc>
-	<lastmod>2021-12-23T22:24:20+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://seancoughlin.me/</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>https://seancoughlin.me/projects.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>https://seancoughlin.me/resume.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>https://seancoughlin.me/blog.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>https://seancoughlin.me/index.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>https://seancoughlin.me/contact.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
 </urlset>
