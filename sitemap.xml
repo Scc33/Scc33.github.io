@@ -9,11 +9,15 @@
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://seancoughlin.me/resume.html</loc>
+		<loc>https://seancoughlin.me/blog/index.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://seancoughlin.me/blog.html</loc>
+		<loc>https://seancoughlin.me/blog/2021-07-28.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>https://seancoughlin.me/resume.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
