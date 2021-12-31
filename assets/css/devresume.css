@@ -11132,12 +11132,8 @@ a.resume-link:hover {
 }
 
 .resume-profile-image {
-    width: 120px;
-    height: 130px;
-}
-
-.resume-intro {
-    font-size: 0.875rem
+    width: 240px;
+    height: 260px;
 }
 
 .resume-main .item-title {
