@@ -11164,25 +11164,6 @@ a.resume-link:hover {
     font-size: 1rem
 }
 
-.resume-education-list,
-.resume-awards-list {
-    font-size: 0.875rem
-}
-
-.resume-degree-time-org,
-.resume-degree-time {
-    font-size: 0.75rem
-}
-
-.resume-lang-list,
-.resume-interests-list {
-    font-size: 0.875rem
-}
-
-.resume-social-list {
-    font-size: 0.75rem
-}
-
 .fa-heart {
     color: #fb866a
 }
