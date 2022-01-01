@@ -11132,12 +11132,8 @@ a.resume-link:hover {
 }
 
 .resume-profile-image {
-    width: 120px;
-    height: 130px;
-}
-
-.resume-intro {
-    font-size: 0.875rem
+    width: 240px;
+    height: 260px;
 }
 
 .resume-main .item-title {
@@ -11162,25 +11158,6 @@ a.resume-link:hover {
 
 .resume-aside .item-title {
     font-size: 1rem
-}
-
-.resume-education-list,
-.resume-awards-list {
-    font-size: 0.875rem
-}
-
-.resume-degree-time-org,
-.resume-degree-time {
-    font-size: 0.75rem
-}
-
-.resume-lang-list,
-.resume-interests-list {
-    font-size: 0.875rem
-}
-
-.resume-social-list {
-    font-size: 0.75rem
 }
 
 .fa-heart {
