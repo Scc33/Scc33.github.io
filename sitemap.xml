@@ -25,7 +25,7 @@
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://seancoughlin.me/blog/2021-12-31.html</loc>
+		<loc>https://seancoughlin.me/blog/2022/2022-01-02.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
@@ -41,7 +41,7 @@
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://seancoughlin.me/blog/2021-07-28.html</loc>
+		<loc>https://seancoughlin.me/blog/2021/index.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
@@ -49,11 +49,23 @@
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
+		<loc>https://seancoughlin.me/blog/2021/2021-07-28.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
 		<loc>https://seancoughlin.me/projects/GreatestGallon.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
+		<loc>https://seancoughlin.me/blog/2022/index.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
 		<loc>https://seancoughlin.me/projects/PopularShowFinder.html</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>https://seancoughlin.me/blog/2021/2021-12-31.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
