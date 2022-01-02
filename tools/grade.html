@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172108989-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172108989-1');
+    </script>
+
+    <!-- Meta -->
+    <title>Sean Coughlin - FinalGradeCalculator</title>
+    <meta name="title" content="Sean Coughlin - FinalGradeCalculator">
+    <meta name="description" content="A calculator for final grades. ">
+    <meta name="keywords" content="Software, Engineer, Development, Programming, Coding, Illinois, Chicago, Sean, Coughlin, Sean Coughlin, Engineering">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Sean Coughlin">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/s.webp">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/devresume.css">
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- JS linking -->
+    <script src="./finalGradeCalc.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var currGrade = 80;
+        var desiredGrade = 82;
+        var finalWorth = 10;
+        finalGradeCalc(desiredGrade, currGrade, finalWorth);
+    </script>
+    <form>
+        <label for="currGrade">Current Grade</label><br>
+        <input type="text" id="currGrade" name="currGrade"></input><br>
+        <label for="desiredGrade">Desired Grade</label><br>
+        <input type="text" id="desiredGrade" name="desiredGrade"></input><br>
+        <label for="finalWorth">Final Worth</label><br>
+        <input type="text" id="finalWorth" name="finalWorth"></input>
+    </form>
+</body>
