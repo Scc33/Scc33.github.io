@@ -1,0 +1,413 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("applab/fontawesome-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+#divApplab.appModern button,
+#divApplab.appModern button:hover {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  height: 30px;
+  width: 80px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(26, 188, 156);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#divApplab.appModern label,
+#divApplab.appModern label:hover {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  line-height: 1;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  word-wrap: break-word;
+  color: rgb(51, 51, 51);
+  max-width: 320px;
+  width: 32px;
+  height: 19px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#divApplab.appModern input[type=text],
+#divApplab.appModern input[type=text]:hover {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 200px;
+  height: 30px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#divApplab.appModern input[type=checkbox],
+#divApplab.appModern input[type=checkbox]:hover {
+  width: 12px;
+  height: 12px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#divApplab.appModern select,
+#divApplab.appModern select:hover {
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(26, 188, 156);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#divApplab.appModern input[type=radio],
+#divApplab.appModern input[type=radio]:hover {
+  width: 12px;
+  height: 12px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#divApplab.appModern div.textArea,
+#divApplab.appModern div.textArea:hover {
+  width: 200px;
+  height: 100px;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#divApplab.appModern img,
+#divApplab.appModern img:hover {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  font-family: "object-fit: contain;";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#divApplab.appModern canvas,
+#divApplab.appModern canvas:hover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#divApplab.appModern div.screen,
+#divApplab.appModern div.screen:hover {
+  display: block;
+  height: 450px;
+  width: 320px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 0;
+}
+
+#divApplab.appModern div.chart,
+#divApplab.appModern div.chart:hover {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#divApplab.appModern input[type=range],
+#divApplab.appModern input[type=range]:hover {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  width: 150px;
+  height: 24px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#divApplab.appModern #screen1 {
+  background-color: rgb(247, 226, 226);
+}
+
+#divApplab.appModern #start {
+  height: 60px;
+  width: 320px;
+  background-color: rgb(136, 78, 133);
+  top: 395px;
+}
+
+#divApplab.appModern #background1 {
+  width: 108px;
+}
+
+#divApplab.appModern #background2 {
+  left: 108px;
+  width: 107px;
+}
+
+#divApplab.appModern #background3 {
+  left: 214px;
+  width: 107px;
+}
+
+#divApplab.appModern #title {
+  font-size: 28px;
+  width: 320px;
+  height: 40px;
+  top: 60px;
+  text-align: center;
+}
+
+#divApplab.appModern #subTitle {
+  font-size: 17px;
+  width: 320px;
+  height: 20px;
+  top: 105px;
+  text-align: center;
+}
+
+#divApplab.appModern #category1 {
+  left: 65px;
+  top: 150px;
+}
+
+#divApplab.appModern #category2 {
+  left: 175px;
+  top: 150px;
+}
+
+#divApplab.appModern #category3 {
+  left: 65px;
+  top: 195px;
+}
+
+#divApplab.appModern #backgroundWarning {
+  color: rgb(0, 0, 0);
+  width: 320px;
+  height: 35px;
+  top: 325px;
+  text-align: center;
+}
+
+#divApplab.appModern #category4 {
+  left: 175px;
+  top: 195px;
+}
+
+#divApplab.appModern #category5 {
+  left: 65px;
+  top: 240px;
+}
+
+#divApplab.appModern #category6 {
+  left: 175px;
+  top: 240px;
+}
+
+#divApplab.appModern #categoryWarning {
+  color: rgb(0, 0, 0);
+  width: 320px;
+  height: 35px;
+  top: 360px;
+  text-align: center;
+}
+
+#divApplab.appModern #category7 {
+  left: 119px;
+  top: 285px;
+}
+
+#divApplab.appModern #screen2 {
+  background-color: rgb(247, 226, 226);
+  display: none;
+}
+
+#divApplab.appModern #back1 {
+  height: 60px;
+  width: 320px;
+  background-color: rgb(136, 78, 133);
+  top: 395px;
+}
+
+#divApplab.appModern #quote1 {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  width: 320px;
+  height: 205px;
+  top: 60px;
+  text-align: center;
+}
+
+#divApplab.appModern #author1 {
+  font-size: 23px;
+  color: rgb(0, 0, 0);
+  width: 320px;
+  height: 35px;
+  top: 285px;
+  text-align: center;
+}
+
+#divApplab.appModern #screen3 {
+  background-color: rgb(247, 226, 226);
+  display: none;
+}
+
+#divApplab.appModern #back2 {
+  width: 320px;
+  background-color: rgb(136, 78, 133);
+  top: 395px;
+  height: 60px;
+}
+
+#divApplab.appModern #entry1 {
+  width: 310px;
+  left: 5px;
+  top: 350px;
+  height: 40px;
+}
+
+#divApplab.appModern #title1 {
+  color: rgb(0, 0, 0);
+  width: 320px;
+  height: 53px;
+  top: 15px;
+  font-size: 24px;
+  text-align: center;
+}
+
+#divApplab.appModern #quote2 {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  width: 320px;
+  text-align: center;
+  top: 80px;
+  height: 185px;
+}
+
+#divApplab.appModern #author2 {
+  color: rgb(0, 0, 0);
+  width: 320px;
+  height: 55px;
+  top: 265px;
+  font-size: 23px;
+  text-align: center;
+}
+
+#divApplab.appModern #screen4 {
+  background-color: rgb(247, 226, 226);
+  display: none;
+}
+
+#divApplab.appModern #back3 {
+  height: 60px;
+  background-color: rgb(136, 78, 133);
+  top: 395px;
+  width: 320px;
+}
+
+#divApplab.appModern #entry2 {
+  height: 40px;
+  width: 310px;
+  left: 5px;
+  top: 350px;
+}
+
+#divApplab.appModern #quoteInput {
+  width: 310px;
+  left: 5px;
+  top: 100px;
+  height: 90px;
+}
+
+#divApplab.appModern #title2 {
+  font-size: 23px;
+  width: 320px;
+  height: 35px;
+  top: 10px;
+  text-align: center;
+}
+
+#divApplab.appModern #subTitle2 {
+  font-size: 18px;
+  width: 310px;
+  height: 30px;
+  left: 5px;
+  top: 65px;
+}
+
+#divApplab.appModern #authorInput {
+  width: 310px;
+  height: 90px;
+  left: 5px;
+  top: 230px;
+}
+
+#divApplab.appModern #subTitle3 {
+  width: 310px;
+  height: 30px;
+  left: 5px;
+  top: 195px;
+  font-size: 18px;
+}
