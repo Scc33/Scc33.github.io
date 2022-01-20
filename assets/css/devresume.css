@@ -11046,19 +11046,6 @@ h6,
     font-weight: bold
 }
 
-a.theme-link {
-    color: #292929;
-    text-decoration: underline;
-    -webkit-text-decoration-color: rgba(41, 41, 41, 0.3);
-    text-decoration-color: rgba(41, 41, 41, 0.3)
-}
-
-a.theme-link:hover {
-    color: #54B689;
-    -webkit-text-decoration-color: rgba(84, 182, 137, 0.8);
-    text-decoration-color: rgba(84, 182, 137, 0.8)
-}
-
 .btn {
     font-weight: bold;
     padding: .375rem 1rem;
@@ -11174,7 +11161,7 @@ a.resume-link {
 }
 
 a.resume-link:hover {
-    color: #54B689
+    color: #66A4FF
 }
 
 .resume-profile-image {
