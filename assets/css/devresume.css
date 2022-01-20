@@ -240,12 +240,12 @@ sup {
 }
 
 a {
-    color: #54B689;
+    color: #0d6efd;
     text-decoration: underline
 }
 
 a:hover {
-    color: #43926e
+    color: #66A4FF
 }
 
 a:not([href]):not([class]),
@@ -11046,19 +11046,6 @@ h6,
     font-weight: bold
 }
 
-a.theme-link {
-    color: #292929;
-    text-decoration: underline;
-    -webkit-text-decoration-color: rgba(41, 41, 41, 0.3);
-    text-decoration-color: rgba(41, 41, 41, 0.3)
-}
-
-a.theme-link:hover {
-    color: #54B689;
-    -webkit-text-decoration-color: rgba(84, 182, 137, 0.8);
-    text-decoration-color: rgba(84, 182, 137, 0.8)
-}
-
 .btn {
     font-weight: bold;
     padding: .375rem 1rem;
@@ -11092,7 +11079,7 @@ a.theme-link:hover {
     padding-left: 1rem;
     font-size: 1.125rem;
     letter-spacing: 0.15rem;
-    color: #54B689
+    color: #0d6efd
 }
 
 .resume-section-heading:before {
@@ -11100,26 +11087,7 @@ a.theme-link:hover {
     display: inline-block;
     width: 5px;
     height: 100%;
-    background: #54B689;
-    position: absolute;
-    left: 0;
-    top: 0
-}
-
-.year-heading {
-    position: relative;
-    padding-left: 1rem;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    color: #54B689
-}
-
-.year-heading:before {
-    content: "";
-    display: inline-block;
-    width: 4px;
-    height: 100%;
-    background: #54B689;
+    background: #0d6efd;
     position: absolute;
     left: 0;
     top: 0
@@ -11129,7 +11097,7 @@ a.theme-link:hover {
     font-size: 1.25rem;
     font-weight: 900;
     letter-spacing: 0.2rem;
-    color: #54B689
+    color: #0d6efd;
 }
 
 @media (min-width: 360px) {
@@ -11174,7 +11142,7 @@ a.resume-link {
 }
 
 a.resume-link:hover {
-    color: #54B689
+    color: #66A4FF
 }
 
 .resume-profile-image {
