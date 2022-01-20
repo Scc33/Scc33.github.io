@@ -11126,10 +11126,37 @@ a.theme-link:hover {
 }
 
 .resume-name {
-    font-size: 2.75rem;
+    font-size: 1.25rem;
     font-weight: 900;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
     color: #54B689
+}
+
+@media (min-width: 360px) {
+    .resume-name {
+        letter-spacing: 0.2rem;
+    }
+}
+
+@media (min-width: 420px) {
+    .resume-name {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+    }
+}
+
+@media (min-width: 500px) {
+    .resume-name {
+        font-size: 2rem;
+        letter-spacing: 0.35rem;
+    }
+}
+
+@media (min-width: 770px) {
+    .resume-name {
+        font-size: 2.75rem;
+        letter-spacing: 0.4rem;
+    }
 }
 
 .resume-tagline {
