@@ -11093,25 +11093,6 @@ h6,
     top: 0
 }
 
-.year-heading {
-    position: relative;
-    padding-left: 1rem;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    color: #54B689
-}
-
-.year-heading:before {
-    content: "";
-    display: inline-block;
-    width: 4px;
-    height: 100%;
-    background: #54B689;
-    position: absolute;
-    left: 0;
-    top: 0
-}
-
 .resume-name {
     font-size: 1.25rem;
     font-weight: 900;
