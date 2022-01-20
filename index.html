@@ -53,6 +53,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <link rel="stylesheet " href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css " />
 </head>
 
 <body>
@@ -77,10 +80,7 @@
                                 <a class="nav-link" href="resume.html" target="_self">Resume</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://blog.seancoughlin.me">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="projects/index.html" target="_self">Projects</a>
+                                <a class="nav-link" href="blog/index.html">Blog</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html" target="_self">Contact</a>
@@ -91,42 +91,59 @@
                 <hr>
                 <section class="resume-main py-3">
                     <div class="row align-items-center">
-                        <div class="col-12 col-md-5 col-xl-3 text-center">
-                            <img class="resume-profile-image mb-3 mb-md-0 me-md-5  ms-md-0 rounded mx-auto" src="assets/images/resume-profile.webp" alt="Sean Coughlin">
+                        <div class="col-12 col-md-5 col-xl-3">
+                            <div class="text-center">
+                                <img class="resume-profile-image mb-3 rounded mx-auto" src="assets/images/resume-profile.webp" alt="Sean Coughlin">
+                            </div>
+                            <div>
+                                <h3 class="text-uppercase resume-section-heading mb-3 ">Quick Facts</h2>
+                                    <ul class="list-unstyled ms-1">
+                                        <li class="mb-3"><i class="fas fa-briefcase fa-fw fa-lg me-2"></i>Current Employer: <a href="https://jobs.discover.com" target="_blank " rel="noopener ">Discover Financial Services</a></li>
+                                        <li class="mb-3"><i class="fas fa-school fa-fw fa-lg me-2"></i>Education: <a href="https://cs.illinois.edu" target="_blank " rel="noopener ">Computer Science at the University of Illinois at Urbana Champaign</a></li>
+                                        <li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>Location: Chicago, IL</li>
+                                    </ul>
+                            </div>
                         </div>
                         <div class="col-12 col-md-7 col-lg-9 text-start mb-3 mb-md-0">
-                            <div class="mb-4">
+                            <div>
                                 <h2 class="text-uppercase resume-section-heading mb-3 ">Summary</h2>
                                 <p class="mb-3">
-                                    I recently graduated with my B.S. in Computer Science from the Grainger College of Engineering at the University of Illinois Urbana-Champaign. In February, I will be joining Discover Financial Services as a Software Engineer.</p>
-                                <p class="mb-3">
-                                    I am interested in Web Development, App Development, and Machine Learning. Visit my <a href="resume.html" target="_self">resume page</a> to view my entire work history. The <a href="projects/index.html">projects page</a>                                    is a great place to check out the things I build in my free time. Head over to <a href="https://blog.seancoughlin.me" target="_self">my blog</a> to see the projects I’m working on at the moment.
+                                    I recently graduated from the Grainger College of Engineering at the University of Illinois. Within the Engineering College at Illinois I studied Computer Science. After graduating I joined Discover Financial Services as a Software Engineer. I am interested
+                                    in Web Development, App Development, and Machine Learning. Visit my <a href="resume.html" target="_self">resume page</a> to view my entire work history. The <a href="projects/index.html">projects page</a>                                    is a great place to check out the things I build in my freetime. If you are curious what I am currently working on then head over to <a href="blog/index.html" target="_self">my blog</a>.
                                 </p>
-                                <p class="mb-3">
-                                    In my spare time you can find me reading or working out. I enjoy reading science fiction, fantasy, and history nonfiction. <a href="https://www.goodreads.com/scc33 " target="_blank " rel="noopener ">I track my reading statistics over on Goodreads.</a>                                    My workouts revolve around running, swimming, and weight lifting. Currently, my focus is running as I train for my first half marathon in May.
+                                <p>
+                                    In my spare time you can find me reading or working out. I enjoy reading science fiction, fantasy, and history nonfiction. <a href="https://www.goodreads.com/scc33 " target="_blank " rel="noopener ">I track my reading statistics over on Goodreads.</a>                                    My workouts revolve around running, swimming, and weight lifting. Currently my focus is running as I train for my fist half-marathon.
                                 </p>
-                                <p class="mb-3">
-                                    Podcasts are my favorite type of media for exploring my passion for current events and economics Some of my favorites are
+                                <p>
+                                    Current events and economics are passions of mine with podcasts being my favorite way of consuming content. Some of my favorites are the
                                     <a href="https://www.npr.org/sections/money/" target="_blank " rel="noopener ">Planet Money</a> and
                                     <a href="https://www.npr.org/podcasts/510325/the-indicator-from-planet-money" target="_blank " rel="noopener ">The Indicator</a> by NPR, <a href="https://www.wsj.com/podcasts/the-journal" target="_blank " rel="noopener ">The Journal</a>                                    by the Wall Street Journal, and
                                     <a href="https://podcasts.voxmedia.com/show/pivot" target="_blank " rel="noopener ">Pivot</a> with Kara Swisher and Scott Galloway.
                                 </p>
                             </div>
                             <div>
-                                <h3 class="text-uppercase resume-section-heading mb-3 ">Quick Facts</h3>
-                                <ul class="list-unstyled resume-interests-list ">
-                                    <li class="mb-3"><i class="fas fa-briefcase fa-fw fa-lg me-2"></i>Current Employer: <a href="https://jobs.discover.com" target="_blank " rel="noopener ">Discover Financial Services</a></li>
-                                    <li class="mb-3"><i class="fas fa-school fa-fw fa-lg me-2"></i>Education: <a href="https://cs.illinois.edu" target="_blank " rel="noopener ">Computer Science at the University of Illinois Urbana-Champaign</a></li>
-                                    <li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>Location: Chicago, IL</li>
-                                </ul>
+                                <h2 class="text-uppercase resume-section-heading mb-4 ">Github Stats</h2>
+                                <!-- Include the library. -->
+                                <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js "></script>
+
+                                <!-- Prepare a container for your calendar. -->
+                                <div class="calendar ">
+                                    <!-- Loading stuff -->
+                                    Loading the data just for you.
+                                </div>
+
+                                <script>
+                                    GitHubCalendar(".calendar ", "Scc33 ");
+                                    // or enable responsive functionality
+                                    GitHubCalendar(".calendar ", "Scc33 ", {
+                                        responsive: true
+                                    });
+                                </script>
                             </div>
                         </div>
-                    </div>
                 </section>
                 <hr>
                 <div class="resume-footer text-center ">
-                    <small><a a href="sitemap.xml ">Sitemap</a></small>
-                    <br>
                     <small class="copyright text-muted ">Original design by <a class="theme-link " href="http://themes.3rdwavemedia.com " target="_blank " rel="noopener ">Xiaoying Riley</a> for developers</small>
                     <br>
                     <small class="copyright text-muted ">Design changes by Sean Coughlin</small>
@@ -135,9 +152,9 @@
                 </div>
                 <!--//resume-footer-->
             </article>
+            </div>
+            <!--//container-->
         </div>
-        <!--//container-->
-    </div>
 </body>
 
 </html>
