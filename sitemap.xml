@@ -11,47 +11,11 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://seancoughlin.me/projects/index.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/RecipeFork.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
 		<loc>https://seancoughlin.me/resume.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://seancoughlin.me/projects/SwimmingStrokeDetector.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/index.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
 		<loc>https://seancoughlin.me/contact.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/iStudySpace.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/Bahrber.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/GreatestGallon.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/PopularShowFinder.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/GlobalPovertyVisualizer.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 </urlset>
