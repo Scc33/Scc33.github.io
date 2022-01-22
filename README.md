@@ -8,5 +8,6 @@ View live at [seancoughlin.me](http://seancoughlin.me)
 - [blog.seancoughlin.me](https://blog.seancoughlin.me)
 - [link.seancoughlin.me](https://link.seancoughlin.me) | [Repo](https://github.com/Scc33/link-home)
 - [insights.seancoughlin.me](https://insights.seancoughlin.me)
+- [design.seancoughlin.me](https://design.seancoughlin.me) | [Repo](https://github.com/Scc33/Design)
 
-Created using a template by [Xiaoying Riley](https://themes.3rdwavemedia.com). 
+Resume page created using a template by [Xiaoying Riley](https://themes.3rdwavemedia.com). 
