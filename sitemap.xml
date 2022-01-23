@@ -1,75 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://seancoughlin.me/</loc>
 		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/index.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/RecipeFork.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/blog/index.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/SwimmingStrokeDetector.html</loc>
-		<changefreq>daily</changefreq>
+		<image:image>
+			<image:loc>https://seancoughlin.me/assets/images/professional-pic.webp</image:loc>
+			<image:caption>A professional image of Sean Coughlin</image:caption>
+			<image:title>Sean Coughlin</image:title>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://seancoughlin.me/resume.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
-		<loc>https://seancoughlin.me/blog/2022/2022-01-02.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/index.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/iStudySpace.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
 		<loc>https://seancoughlin.me/contact.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/blog/2021/index.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/Bahrber.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/blog/2021/2021-07-28.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/GreatestGallon.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/blog/2022/index.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/PopularShowFinder.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/blog/2021/2021-12-31.html</loc>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://seancoughlin.me/projects/GlobalPovertyVisualizer.html</loc>
 		<changefreq>daily</changefreq>
 	</url>
 </urlset>
