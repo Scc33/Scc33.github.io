@@ -66,6 +66,12 @@ html::-webkit-scrollbar {
     align-self: center
 }
 
+@media (min-width: 500px) {
+    .jnbcHP {
+        justify-content: right;
+    }
+}
+
 .jnQoVy {
     width: 3.30rem;
     height: 3.30rem;
