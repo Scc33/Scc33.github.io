@@ -4161,11 +4161,6 @@ progress {
     margin-left: 3rem !important
 }
 
-.mx-auto {
-    margin-right: auto !important;
-    margin-left: auto !important
-}
-
 .my-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important
@@ -4273,44 +4268,8 @@ progress {
     margin-bottom: 1rem !important
 }
 
-.mb-4 {
-    margin-bottom: 1.5rem !important
-}
-
-.mb-5 {
-    margin-bottom: 3rem !important
-}
-
 .mb-auto {
     margin-bottom: auto !important
-}
-
-.ms-0 {
-    margin-left: 0 !important
-}
-
-.ms-1 {
-    margin-left: .25rem !important
-}
-
-.ms-2 {
-    margin-left: .5rem !important
-}
-
-.ms-3 {
-    margin-left: 1rem !important
-}
-
-.ms-4 {
-    margin-left: 1.5rem !important
-}
-
-.ms-5 {
-    margin-left: 3rem !important
-}
-
-.ms-auto {
-    margin-left: auto !important
 }
 
 .p-0 {
@@ -4591,10 +4550,6 @@ progress {
 
 .text-lowercase {
     text-transform: lowercase !important
-}
-
-.text-uppercase {
-    text-transform: uppercase !important
 }
 
 .text-capitalize {
@@ -7547,10 +7502,6 @@ h6,
 .h6 {
     color: #292929;
     font-weight: bold
-}
-
-.resume-wrapper {
-    border: 1px solid rgba(0, 0, 0, 0.025)
 }
 
 .resume-section-heading {
