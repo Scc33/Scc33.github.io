@@ -44,6 +44,10 @@ html::-webkit-scrollbar {
     display: none
 }
 
+.svgSize {
+    width: 20px;
+}
+
 .jnbcHP {
     width: 100%;
     display: -webkit-box;
