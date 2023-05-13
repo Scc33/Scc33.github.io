@@ -60,6 +60,7 @@ html::-webkit-scrollbar {
 
 .svgSize {
     width: 20px;
+    height: 20px;
 }
 
 .jnbcHP {
@@ -750,7 +751,7 @@ progress {
     .container-md,
     .container-sm,
     .container {
-        max-width: 720px
+        max-width: 730px
     }
 }
 
@@ -780,7 +781,7 @@ progress {
     .container-md,
     .container-sm,
     .container {
-        max-width: 1320px
+        max-width: 1370px
     }
 }
 
@@ -7597,6 +7598,9 @@ a.resume-link:hover {
 @media (max-width: 991.98px) {
     .resume-aside {
         border-left: 0
+    }
+    .mb-3-smallScreens {
+        margin-bottom: 1rem !important
     }
 }
 
