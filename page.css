@@ -32,20 +32,6 @@
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
 }
 
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-body {
-    /* This section calls the slideInFromLeft animation we defined above */
-    animation: 1s ease-out 0s 1 slideInFromTop;
-}
-
 html {
     -webkit-scrollbar-width: none!important;
     -moz-scrollbar-width: none!important;
