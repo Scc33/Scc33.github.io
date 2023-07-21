@@ -1,0 +1,307 @@
+Entity,Code,Year,annual_visits
+Afghanistan,AFG,1988,1
+Austria,AUT,1991,1
+Belgium,BEL,1992,1
+Belgium,BEL,2002,1
+Belgium,BEL,2009,1
+Brazil,BRA,2006,1
+Bulgaria,BGR,1979,1
+Bulgaria,BGR,1988,1
+Canada,CAN,1984,1
+Canada,CAN,1992,2
+Canada,CAN,1995,1
+Canada,CAN,1996,2
+Canada,CAN,1997,1
+Canada,CAN,1998,1
+Canada,CAN,1999,1
+Canada,CAN,2000,1
+Canada,CAN,2001,1
+Canada,CAN,2006,1
+Canada,CAN,2007,1
+Canada,CAN,2009,3
+Canada,CAN,2012,1
+Canada,CAN,2018,1
+China,CHN,2003,1
+China,CHN,2005,2
+China,CHN,2008,3
+China,CHN,2012,3
+China,CHN,2013,3
+China,CHN,2016,2
+Cuba,CUB,1980,1
+Czechia,CZE,1978,1
+Denmark,DNK,2015,1
+France,FRA,1982,1
+France,FRA,1985,1
+France,FRA,1988,1
+France,FRA,1992,1
+France,FRA,1993,1
+France,FRA,1994,1
+France,FRA,1996,2
+France,FRA,1997,2
+France,FRA,1998,1
+France,FRA,1999,3
+France,FRA,2001,1
+France,FRA,2002,1
+France,FRA,2008,1
+France,FRA,2016,1
+France,FRA,2021,1
+Germany,DEU,1978,1
+Germany,DEU,1983,1
+Germany,DEU,1985,2
+Germany,DEU,1991,1
+Germany,DEU,1992,1
+Germany,DEU,1993,2
+Germany,DEU,1994,1
+Germany,DEU,1995,1
+Germany,DEU,1997,1
+Germany,DEU,2000,1
+Germany,DEU,2006,1
+Germany,DEU,2008,1
+Germany,DEU,2014,1
+Germany,DEU,2018,1
+Hungary,HUN,1980,1
+Hungary,HUN,2007,1
+Hungary,HUN,2009,1
+India,IND,1984,1
+Iran,IRN,2006,1
+Israel,ISR,2003,1
+Italy,ITA,1992,1
+Italy,ITA,1996,2
+Italy,ITA,2001,1
+Italy,ITA,2002,1
+Italy,ITA,2005,1
+Italy,ITA,2007,1
+Italy,ITA,2010,1
+Italy,ITA,2011,1
+Italy,ITA,2013,1
+Italy,ITA,2014,1
+Italy,ITA,2017,1
+Italy,ITA,2019,1
+Japan,JPN,1992,1
+Japan,JPN,1994,1
+Japan,JPN,1996,1
+Japan,JPN,1997,1
+Japan,JPN,1998,1
+Japan,JPN,2000,2
+Japan,JPN,2005,1
+Japan,JPN,2008,2
+Japan,JPN,2009,2
+Japan,JPN,2010,1
+Japan,JPN,2011,1
+Japan,JPN,2012,1
+Japan,JPN,2013,1
+Japan,JPN,2015,1
+Japan,JPN,2016,1
+Japan,JPN,2017,1
+Japan,JPN,2020,1
+Japan,JPN,2021,1
+Kazakhstan,KAZ,1994,1
+Kazakhstan,KAZ,1998,1
+Kazakhstan,KAZ,2001,1
+Kazakhstan,KAZ,2015,1
+Malaysia,MYS,2007,1
+Mexico,MEX,1985,1
+Mongolia,MNG,1981,1
+Netherlands,NLD,1985,1
+Netherlands,NLD,2004,1
+Netherlands,NLD,2011,1
+Peru,PER,1997,1
+Peru,PER,2000,1
+Poland,POL,1978,1
+Romania,ROU,1981,1
+Russia,RUS,1961,2
+Russia,RUS,1962,2
+Russia,RUS,1963,2
+Russia,RUS,1964,3
+Russia,RUS,1965,2
+Russia,RUS,1967,1
+Russia,RUS,1968,1
+Russia,RUS,1969,11
+Russia,RUS,1970,2
+Russia,RUS,1971,6
+Russia,RUS,1973,4
+Russia,RUS,1974,6
+Russia,RUS,1975,8
+Russia,RUS,1976,6
+Russia,RUS,1977,6
+Russia,RUS,1978,7
+Russia,RUS,1979,3
+Russia,RUS,1980,10
+Russia,RUS,1981,4
+Russia,RUS,1982,6
+Russia,RUS,1983,5
+Russia,RUS,1984,8
+Russia,RUS,1985,5
+Russia,RUS,1986,2
+Russia,RUS,1987,7
+Russia,RUS,1988,5
+Russia,RUS,1989,2
+Russia,RUS,1990,6
+Russia,RUS,1991,4
+Russia,RUS,1992,4
+Russia,RUS,1993,4
+Russia,RUS,1994,7
+Russia,RUS,1995,7
+Russia,RUS,1996,4
+Russia,RUS,1997,6
+Russia,RUS,1998,6
+Russia,RUS,1999,2
+Russia,RUS,2000,7
+Russia,RUS,2001,7
+Russia,RUS,2002,7
+Russia,RUS,2003,2
+Russia,RUS,2004,3
+Russia,RUS,2005,2
+Russia,RUS,2006,2
+Russia,RUS,2007,3
+Russia,RUS,2008,3
+Russia,RUS,2009,4
+Russia,RUS,2010,6
+Russia,RUS,2011,6
+Russia,RUS,2012,6
+Russia,RUS,2013,6
+Russia,RUS,2014,6
+Russia,RUS,2015,5
+Russia,RUS,2016,6
+Russia,RUS,2017,4
+Russia,RUS,2018,3
+Russia,RUS,2019,3
+Russia,RUS,2020,4
+Russia,RUS,2021,2
+Saudi Arabia,SAU,1985,1
+Slovakia,SVK,1999,1
+South Africa,ZAF,2002,1
+South Korea,KOR,2008,1
+Spain,ESP,1998,1
+Spain,ESP,2003,1
+Sweden,SWE,2006,1
+Sweden,SWE,2009,1
+Switzerland,CHE,1992,1
+Switzerland,CHE,1993,1
+Switzerland,CHE,1996,1
+Switzerland,CHE,1999,1
+Syria,SYR,1987,1
+Ukraine,UKR,1997,1
+United Arab Emirates,ARE,2019,1
+United Kingdom,GBR,1991,1
+United Kingdom,GBR,1992,1
+United Kingdom,GBR,1993,1
+United Kingdom,GBR,1995,1
+United Kingdom,GBR,1997,1
+United Kingdom,GBR,1999,1
+United Kingdom,GBR,2003,1
+United Kingdom,GBR,2015,1
+United States,USA,1961,2
+United States,USA,1962,3
+United States,USA,1963,3
+United States,USA,1965,10
+United States,USA,1966,10
+United States,USA,1968,6
+United States,USA,1969,12
+United States,USA,1970,3
+United States,USA,1971,6
+United States,USA,1972,6
+United States,USA,1973,9
+United States,USA,1975,3
+United States,USA,1981,4
+United States,USA,1982,8
+United States,USA,1983,19
+United States,USA,1984,27
+United States,USA,1985,52
+United States,USA,1986,10
+United States,USA,1988,10
+United States,USA,1989,25
+United States,USA,1990,32
+United States,USA,1991,35
+United States,USA,1992,45
+United States,USA,1993,38
+United States,USA,1994,39
+United States,USA,1995,38
+United States,USA,1996,36
+United States,USA,1997,44
+United States,USA,1998,27
+United States,USA,1999,13
+United States,USA,2000,25
+United States,USA,2001,33
+United States,USA,2002,29
+United States,USA,2003,7
+United States,USA,2004,5
+United States,USA,2005,9
+United States,USA,2006,19
+United States,USA,2007,19
+United States,USA,2008,26
+United States,USA,2009,34
+United States,USA,2010,23
+United States,USA,2011,19
+United States,USA,2012,4
+United States,USA,2013,4
+United States,USA,2014,4
+United States,USA,2015,3
+United States,USA,2016,4
+United States,USA,2017,5
+United States,USA,2018,4
+United States,USA,2019,4
+United States,USA,2020,7
+United States,USA,2021,3
+Vietnam,VNM,1980,1
+World,OWID_WRL,1961,4
+World,OWID_WRL,1962,5
+World,OWID_WRL,1963,5
+World,OWID_WRL,1964,3
+World,OWID_WRL,1965,12
+World,OWID_WRL,1966,10
+World,OWID_WRL,1967,1
+World,OWID_WRL,1968,7
+World,OWID_WRL,1969,23
+World,OWID_WRL,1970,5
+World,OWID_WRL,1971,12
+World,OWID_WRL,1972,6
+World,OWID_WRL,1973,13
+World,OWID_WRL,1974,6
+World,OWID_WRL,1975,11
+World,OWID_WRL,1976,6
+World,OWID_WRL,1977,6
+World,OWID_WRL,1978,10
+World,OWID_WRL,1979,4
+World,OWID_WRL,1980,13
+World,OWID_WRL,1981,10
+World,OWID_WRL,1982,15
+World,OWID_WRL,1983,25
+World,OWID_WRL,1984,37
+World,OWID_WRL,1985,63
+World,OWID_WRL,1986,12
+World,OWID_WRL,1987,8
+World,OWID_WRL,1988,18
+World,OWID_WRL,1989,27
+World,OWID_WRL,1990,38
+World,OWID_WRL,1991,42
+World,OWID_WRL,1992,58
+World,OWID_WRL,1993,47
+World,OWID_WRL,1994,50
+World,OWID_WRL,1995,48
+World,OWID_WRL,1996,48
+World,OWID_WRL,1997,58
+World,OWID_WRL,1998,38
+World,OWID_WRL,1999,22
+World,OWID_WRL,2000,37
+World,OWID_WRL,2001,44
+World,OWID_WRL,2002,40
+World,OWID_WRL,2003,13
+World,OWID_WRL,2004,9
+World,OWID_WRL,2005,15
+World,OWID_WRL,2006,26
+World,OWID_WRL,2007,26
+World,OWID_WRL,2008,37
+World,OWID_WRL,2009,46
+World,OWID_WRL,2010,31
+World,OWID_WRL,2011,28
+World,OWID_WRL,2012,15
+World,OWID_WRL,2013,15
+World,OWID_WRL,2014,12
+World,OWID_WRL,2015,12
+World,OWID_WRL,2016,14
+World,OWID_WRL,2017,11
+World,OWID_WRL,2018,9
+World,OWID_WRL,2019,9
+World,OWID_WRL,2020,12
+World,OWID_WRL,2021,7
