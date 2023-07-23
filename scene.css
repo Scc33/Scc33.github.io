@@ -30,10 +30,13 @@ hr {
 }
 
 .tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     text-align: center;
-    width: 120px;
-    height: 28px;
+    width: 160px;
+    height: 42px;
     padding: 2px;
     font: 12px sans-serif;
     background: lightsteelblue;

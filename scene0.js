@@ -32,7 +32,7 @@ d3.csv("yearly-number-of-objects-launched-into-outer-space.csv").then(data => {
         .style("fill", "#00c698")
         .on("mouseover", (event, d) => {
             tooltip.style("visibility", "visible")
-                .text(`Year: ${d.Year}, Launches: ${d.yearly_launches}`)
+                .html("Year: " + d.Year + "<br>" + "Objects Launched: " + d.yearly_launches)
                 .style("top", (event.pageY - 10) + "px")
                 .style("left", (event.pageX + 10) + "px");
         })
