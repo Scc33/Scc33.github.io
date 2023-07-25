@@ -1,3 +1,5 @@
+let country = 'United States';
+
 const margin = {
         top: 10,
         right: 30,
@@ -39,6 +41,11 @@ d3.csv("cumulative-number-of-objects-launched-into-outer-space.csv").then(functi
     svg.append("g")
         .call(d3.axisLeft(y));
 
+    // Tooltip
+    const tooltip = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip");
+
     // Line generator
     const line = d3.line()
         .x(function(d) {
@@ -78,7 +85,7 @@ d3.csv("cumulative-number-of-objects-launched-into-outer-space.csv").then(functi
     d3.select("#selectButton").on("change", () => {
         // A change event to redraw the line with the selected entity
         const selectedOption = d3.select("#selectButton").property("value")
-        console.log(selectedOption)
+        country = selectedOption;
         let dataFiltered = data.filter(function(d) {
             return d['Entity'] == selectedOption && d['Year'] >= 1961
         })
@@ -95,5 +102,31 @@ d3.csv("cumulative-number-of-objects-launched-into-outer-space.csv").then(functi
                     return y(+d.cumulative_launches)
                 })
             )
+    });
+
+    let overlay = svg.append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height)
+        .style("opacity", 0)
+        .on("mouseover", () => { tooltip.style("visibility", "visible"); })
+        .on("mouseout", () => { tooltip.style("visibility", "hidden"); });
+
+    overlay.on("mousemove", function(event) {
+        let x0 = x.invert(d3.pointer(event, this)[0]);
+        let x1 = Math.round(x0);
+        let dataFiltered = data.filter(function(d) {
+            return d['Entity'] == country && d['Year'] >= 1961
+        })
+        let d = dataFiltered[x1 - 1961];
+        tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+
+        tooltip
+            .style("visibility", "visible")
+            .html("Year: " + d.Year + "<br>" + "Cummulative object launches: " + d.cumulative_launches)
+            .style("top", (event.pageY - 10) + "px")
+            .style("left", (event.pageX + 10) + "px");
     });
 });

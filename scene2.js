@@ -55,14 +55,6 @@ d3.csv("launch-cost.csv").then(function(data) {
         .attr("stroke", "steelblue")
         .attr("stroke-width", 4)
         .attr("d", line)
-        .on("mouseover", function(event, d) {
-            tooltip
-                .style("visibility", "visible")
-                .html("Year: " + d.Year + "<br>" + "Avg: " + d.AverageofAllLaunchplatforms)
-                .style("top", (event.pageY - 10) + "px")
-                .style("left", (event.pageX + 10) + "px");
-        })
-        .on("mouseout", () => { tooltip.style("visibility", "hidden"); });
 
     let overlay = svg.append("rect")
         .attr("class", "overlay")
@@ -75,7 +67,7 @@ d3.csv("launch-cost.csv").then(function(data) {
     overlay.on("mousemove", function(event) {
         let x0 = x.invert(d3.pointer(event, this)[0]);
         let x1 = Math.round(x0);
-        let d = data[x1 - 1962];
+        let d = data[x1 - 1961];
 
         tooltip.transition()
             .duration(200)
