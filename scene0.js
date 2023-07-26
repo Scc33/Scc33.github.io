@@ -67,4 +67,29 @@ d3.csv("yearly-number-of-objects-launched-into-outer-space.csv").then(data => {
         .attr("dy", ".35em")
         .style("text-anchor", "start")
         .text("World");
+
+    // Find data for 2012 and 2022
+    var year2012 = data.find(d => +d.Year === 2012);
+    var year2022 = data.find(d => +d.Year === 2022);
+
+    // Add circles for 2012 and 2022
+    svg.selectAll("circle.highlighted")
+        .data([year2012, year2022])
+        .enter()
+        .append("circle")
+        .attr("cx", d => xScale(+d.Year))
+        .attr("cy", d => yScale(+d.yearly_launches))
+        .attr("r", 10) // larger radius
+        .style("fill", "none")
+        .style("stroke", "red"); // red outline
+
+    // Connect 2012 and 2022 with a line
+    svg.append("line")
+        .attr("x1", xScale(+year2012.Year))
+        .attr("y1", yScale(+year2012.yearly_launches))
+        .attr("x2", xScale(+year2022.Year))
+        .attr("y2", yScale(+year2022.yearly_launches))
+        .style("stroke", "red")
+        .style("stroke-width", 2);
+
 }).catch(e => console.log(e));
