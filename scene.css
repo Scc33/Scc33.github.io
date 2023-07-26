@@ -27,6 +27,7 @@ hr {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    max-width: 1000px;
 }
 
 .tooltip {
