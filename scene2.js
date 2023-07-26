@@ -79,4 +79,43 @@ d3.csv("launch-cost.csv").then(function(data) {
             .style("top", (event.pageY - 10) + "px")
             .style("left", (event.pageX + 10) + "px");
     });
+
+    // Find data for 2012 and 2022
+    var year1961 = data.find(d => +d.Year === 1961);
+    var year2020 = data.find(d => +d.Year === 2020);
+
+    // Define US arrow marker
+    svg.append("defs").append("marker")
+        .attr("id", "arrow")
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 5)
+        .attr("refY", 0)
+        .attr("markerWidth", 4)
+        .attr("markerHeight", 4)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M0,-5L10,0L0,5")
+        .style("stroke", "red")
+        .style("fill", "none");
+
+    // Add circles for US 2012 and 2022
+    svg.selectAll("circle.highlighted")
+        .data([year1961, year2020])
+        .enter()
+        .append("circle")
+        .attr("cx", d => x(+d.Year))
+        .attr("cy", d => y(+d.AverageofAllLaunchplatforms))
+        .attr("r", 10) // larger radius
+        .style("fill", "none")
+        .style("stroke", "red"); // red outline
+
+    // Connect US 2012 and 2022 with a line
+    svg.append("line")
+        .attr("x1", x(+year1961.Year) + 5)
+        .attr("y1", y(+year1961.AverageofAllLaunchplatforms) + 5)
+        .attr("x2", x(+year2020.Year) - 5)
+        .attr("y2", y(+year2020.AverageofAllLaunchplatforms) - 5)
+        .attr("marker-end", "url(#arrow)") // Add arrow to the end of the line
+        .style("stroke", "red")
+        .style("stroke-width", 2);
 });

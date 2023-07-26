@@ -67,4 +67,44 @@ d3.csv("yearly-number-of-objects-launched-into-outer-space.csv").then(data => {
         .attr("dy", ".35em")
         .style("text-anchor", "start")
         .text("World");
+
+    // Define arrow marker
+    svg.append("defs").append("marker")
+        .attr("id", "arrow")
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 5)
+        .attr("refY", 0)
+        .attr("markerWidth", 4)
+        .attr("markerHeight", 4)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M0,-5L10,0L0,5")
+        .style("stroke", "red")
+        .style("fill", "none");
+
+    // Find data for 2012 and 2022
+    var year2012 = data.find(d => +d.Year === 2012);
+    var year2022 = data.find(d => +d.Year === 2022);
+
+    // Add circles for 2012 and 2022
+    svg.selectAll("circle.highlighted")
+        .data([year2012, year2022])
+        .enter()
+        .append("circle")
+        .attr("cx", d => xScale(+d.Year))
+        .attr("cy", d => yScale(+d.yearly_launches))
+        .attr("r", 10) // larger radius
+        .style("fill", "none")
+        .style("stroke", "red"); // red outline
+
+    // Connect 2012 and 2022 with a line
+    svg.append("line")
+        .attr("x1", xScale(+year2012.Year))
+        .attr("y1", yScale(+year2012.yearly_launches))
+        .attr("x2", xScale(+year2022.Year))
+        .attr("y2", yScale(+year2022.yearly_launches))
+        .attr("marker-end", "url(#arrow)") // Add arrow to the end of the line
+        .style("stroke", "red")
+        .style("stroke-width", 2);
+
 }).catch(e => console.log(e));
