@@ -2,7 +2,6 @@ const svg = d3.select("#scatterplot")
     .append("svg")
     .attr("width", 800)
     .attr("height", 600)
-    .append("g")
 
 var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
