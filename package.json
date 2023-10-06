@@ -9,7 +9,8 @@
         "lint": "eslint --ext .js,.svelte src",
         "lint-fix": "eslint --fix --ext .js,.svelte src",
         "pretty-check": "prettier --check \"src/**/*.{js,svelte}\"",
-        "pretty-write": "prettier --write \"src/**/*.{js,svelte}\""
+        "pretty-write": "prettier --write \"src/**/*.{js,svelte}\"",
+        "husky": "husky install"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "^2.0.0",
@@ -23,7 +24,6 @@
         "eslint-plugin-promise": "^6.0.0",
         "eslint-plugin-svelte": "^2.34.0",
         "husky": "^8.0.3",
-        "lint-staged": "^14.0.1",
         "postcss": "^8.4.28",
         "prettier": "3.0.3",
         "prettier-plugin-svelte": "^3.0.3",
