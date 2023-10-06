@@ -1,7 +1,7 @@
 <script>
   import Step from "./Step.svelte";
 
-  let steps = [
+  const steps = [
     {
       name: "Smoljames Store",
       icon: "fa-solid fa-cart-shopping",
@@ -22,7 +22,7 @@
     },
   ];
 
-  let benefits = [
+  const benefits = [
     {
       metric: "10x",
       name: "a self taught developer",
@@ -76,21 +76,6 @@
         class="object-cover z-[2] max-h-[70vh]"
       />
     </div>
-    <!-- <div  class="flex p-0.5 relative max-w-[700px] w-full mx-auto">
-            <div
-                class="absolute inset-0 overflow-hidden rounded-md flex items-center justify-center"
-            >
-                <div
-                    class="bg-gradient-to-r absolute inset-[-20px]  from-violet-800 to-indigo-800 specialSpin"
-                />
-            </div>
-
-            <img
-                src={"images/zetane-engine.jpeg"}
-                alt="Zetane Engine"
-                class="w-full h-full object-cover z-[2]"
-            />
-        </div> -->
   </section>
   <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
     <div class="flex flex-col gap-2 text-center">
@@ -147,7 +132,6 @@
     id="about"
     class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
   >
-    <!-- <div class="z-[-1] bg-violet-950 w-screen left-1/2 -translate-x-1/2 top-0 h-full absolute"> </div> -->
     <div
       class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-4"
     >
@@ -161,21 +145,6 @@
     </p>
     <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
       {#each benefits as benefit, index}
-        <!-- <div class="flex flex-col gap-2 mx-auto">
-                    <div class="flex items-end gap-4">
-                        <p
-                            class="poppins text-6xl sm:text-7xl md:text-8xl text-slate-500 font-medium"
-                        >
-                            {benefit.metric}
-                        </p>
-                        <p
-                            class="text-xl sm:text-2xl md:text-3xl capitalize pb-2"
-                        >
-                            {benefit.name}
-                        </p>
-                    </div>
-                    <p class="text-center italic">- {benefit.description}</p>
-                </div> -->
         <div class="flex gap-6 sm:gap-8">
           <p
             class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold"
