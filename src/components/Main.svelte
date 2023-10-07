@@ -247,13 +247,3 @@
     </div>
   </section>
 </main>
-
-<style>
-  .hideScroll::-webkit-scrollbar {
-    display: none;
-  }
-  .hidescroll {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-</style>

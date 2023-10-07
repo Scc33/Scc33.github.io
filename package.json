@@ -1,7 +1,7 @@
 {
     "name": "scough",
     "version": "0.0.1",
-    "private": true,
+    "homepage": "https://seancoughlin.me",
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
@@ -10,11 +10,12 @@
         "lint-fix": "eslint --fix --ext .js,.svelte src",
         "pretty-check": "prettier --check \"src/**/*.{js,svelte}\"",
         "pretty-write": "prettier --write \"src/**/*.{js,svelte}\"",
-        "husky": "husky install"
+        "husky": "husky install",
+        "deploy": "gh-pages -d build"
     },
     "devDependencies": {
-        "@sveltejs/adapter-auto": "^2.0.0",
         "@sveltejs/kit": "^1.20.4",
+        "@sveltejs/adapter-static": "^2.0.3",
         "autoprefixer": "^10.4.15",
         "eslint": "^8.0.1",
         "eslint-config-prettier": "^9.0.0",
@@ -29,7 +30,8 @@
         "prettier-plugin-svelte": "^3.0.3",
         "svelte": "^4.2.1",
         "tailwindcss": "^3.3.3",
-        "vite": "^4.4.2"
+        "vite": "^4.4.2",
+        "gh-pages": "^6.0.0"
     },
     "type": "module"
 }
