@@ -2,8 +2,9 @@
   export let y;
 
   export let tabs = [
-    { name: "Projects ", link: "#projects" },
     { name: "About me", link: "#about" },
+    { name: "GitHub", link: "https://github.com/Scc33" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/sean-m-coughlin/" },
     { name: "Blog", link: "https://blog.seancoughlin.me" },
   ];
 </script>
@@ -22,7 +23,7 @@
       <a
         href={tab.link}
         class="duration-200 hover:text-violet-400"
-        target={index === 2 ? "_blank" : ""}
+        target={index === 0 ? "" : "_blank"}
       >
         <p>{tab.name}</p>
       </a>
@@ -30,10 +31,12 @@
     <button
       class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950"
     >
-      <div
-        class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
-      />
-      <h4 class="relative z-9">Get in touch</h4>
+      <a href="assets/Resume.pdf" target="_blank">
+        <div
+          class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
+        />
+        <h4 class="relative z-9">Resume</h4>
+      </a>
     </button>
   </div>
 </header>
