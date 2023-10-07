@@ -6,4 +6,4 @@ echo "Running pre-commit hooks"
 echo "Running eslint..."
 yarn run eslint
 echo "Running prettier..."
-yarn run prettier
+yarn run pretty-check
