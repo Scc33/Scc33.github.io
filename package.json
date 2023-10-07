@@ -11,6 +11,7 @@
         "pretty-check": "prettier --check \"src/**/*.{js,svelte}\"",
         "pretty-write": "prettier --write \"src/**/*.{js,svelte}\"",
         "husky": "husky install",
+        "predeploy": "vite build",
         "deploy": "gh-pages -d build"
     },
     "devDependencies": {
