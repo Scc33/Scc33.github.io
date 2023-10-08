@@ -5,14 +5,10 @@
     <p><b class="pr-2">Email</b> coughlinscc33@gmail.com</p>
     <p>
       <b class="pr-2">GitHub</b>
-      <a href="https://github.com/Scc33" target="_blank" class="text-violet-400"
-        >Scc33<sup class=""
-          ><span class="text-xs scale-75 pl-0.5"
-            ><i
-              class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
-            /></span
-          ></sup
-        ></a
+      <a
+        href="https://github.com/Scc33"
+        target="_blank"
+        class="text-violet-400 underline">Scc33</a
       >
     </p>
     <p>
@@ -20,14 +16,7 @@
       <a
         href="https://www.linkedin.com/in/sean-m-coughlin/"
         target="_blank"
-        class="text-violet-400"
-        >sean-m-coughlin<sup class=""
-          ><span class="text-xs scale-75 pl-0.5"
-            ><i
-              class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
-            /></span
-          ></sup
-        ></a
+        class="text-violet-400 underline">sean-m-coughlin</a
       >
     </p>
     <p>
@@ -35,26 +24,16 @@
       <a
         href="https://blog.seancoughlin.me"
         target="_blank"
-        class="text-violet-400"
-        >Hashnode<sup class=""
-          ><span class="text-xs scale-75 pl-0.5"
-            ><i
-              class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
-            /></span
-          ></sup
-        ></a
+        class="text-violet-400 underline">Hashnode</a
       >
     </p>
     <p>
-      <a href="assets/Resume.pdf" target="_blank" class="text-violet-400">
+      <a
+        href="assets/Resume.pdf"
+        target="_blank"
+        class="text-violet-400 underline"
+      >
         Resume
-        <sup class=""
-          ><span class="text-xs scale-75 pl-0.5"
-            ><i
-              class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
-            /></span
-          ></sup
-        >
       </a>
     </p>
   </div>
