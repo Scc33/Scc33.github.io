@@ -29,6 +29,13 @@ jobs:
       # Install project dependencies
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      # Now we run our tests
+      - name: Run tests
+        run: yarn run test
       # Now we run our lints
       - name: Run lints
         run: yarn run lint
+      # Now we run our pretty checks for code formatting
+      - name: Run pretty checks
+        run: yarn run pretty-check
+      

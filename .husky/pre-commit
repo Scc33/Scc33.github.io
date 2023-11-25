@@ -3,7 +3,11 @@
 
 echo "Running pre-commit hooks"
 
+echo "Running tests..."
+yarn run test
+
 echo "Running eslint..."
 yarn run eslint
+
 echo "Running prettier..."
 yarn run pretty-check
