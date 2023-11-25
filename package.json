@@ -2,6 +2,10 @@
     "name": "scough",
     "version": "0.0.1",
     "homepage": "https://seancoughlin.me",
+    "engines": {
+        "yarn": ">1.22.0",
+        "node": ">20.0.0"
+    },
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
