@@ -1,26 +1,34 @@
 name: CI
+
 on:
+  # Can run on command
   workflow_dispatch:
+  # Runs on pushes to main
   push:
     branches: [main]
+  # Runs on pull requests
   pull_request:
     branches: [main]
 
 jobs:
   build:
-    # We're running on ubuntu-latest, nothing special
+    # Running on ubuntu-latest, nothing special
     runs-on: ubuntu-latest
     steps:
       # As usual, we simply checkout the project
       - name: Checkout
         uses: actions/checkout@v2
+      # Install the latest version of node
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '20'
+      # Install yarn (prefered build tool)
       - name: Install Yarn
         run: npm install -g yarn
-      # Now we run our lints. This is the place where you could run other tests
-      # unrelated to cypress (e.g.: unit tests).
+      # Install project dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      # Now we run our lints
       - name: Run lints
         run: yarn run lint
