@@ -5,10 +5,10 @@ on:
   workflow_dispatch:
   # Runs on pushes to main
   push:
-    branches: [main]
+    branches: [master]
   # Runs on pull requests
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
