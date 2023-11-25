@@ -1446,6 +1446,11 @@ eslint-plugin-svelte@^2.35.1:
     semver "^7.5.3"
     svelte-eslint-parser ">=0.33.0 <1.0.0"
 
+eslint-plugin-vitest-globals@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vitest-globals/-/eslint-plugin-vitest-globals-1.4.0.tgz#b9102bc87cd3e698ac40bfeb4cbe461b55721624"
+  integrity sha512-WE+YlK9X9s4vf5EaYRU0Scw7WItDZStm+PapFSYlg2ABNtaQ4zIG7wEqpoUB3SlfM+SgkhgmzR0TeJOO5k3/Nw==
+
 eslint-plugin-vitest@^0.3.10:
   version "0.3.10"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vitest/-/eslint-plugin-vitest-0.3.10.tgz#236f8da89ffc10edc158d39fa61d13ff8759febc"
