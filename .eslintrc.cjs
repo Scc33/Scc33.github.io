@@ -1,9 +1,13 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        "vitest/globals": true
     },
-    extends: ['standard', 'prettier', 'plugin:svelte/recommended'],
+    plugins: ["vitest"],
+    extends: ['standard', 'prettier', "plugin:vitest/recommended",
+        'plugin:svelte/recommended'
+    ],
     overrides: [{
         env: {
             node: true
