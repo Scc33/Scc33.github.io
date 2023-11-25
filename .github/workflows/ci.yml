@@ -1,0 +1,26 @@
+name: CI
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    # We're running on ubuntu-latest, nothing special
+    runs-on: ubuntu-latest
+    steps:
+      # As usual, we simply checkout the project
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18'
+      - name: Install Yarn
+        run: npm install -g yarn
+      # Now we run our lints. This is the place where you could run other tests
+      # unrelated to cypress (e.g.: unit tests).
+      - name: Run lints
+        run: yarn run lint
