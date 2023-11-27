@@ -1,7 +1,7 @@
 import { render } from "@testing-library/svelte";
 import Main from "./Main.svelte";
 
-describe("Main Component", () => {
+describe("main Component", () => {
   it("renders without crashing", () => {
     const { getByText } = render(Main);
     expect(getByText("Sean")).toBeTruthy();

@@ -1,7 +1,7 @@
 import { render } from "@testing-library/svelte";
 import Header from "./Header.svelte";
 
-describe("Header Component", () => {
+describe("header Component", () => {
   it("renders without crashing", () => {
     const { container } = render(Header, { y: 0 });
     expect(container).toBeTruthy();
