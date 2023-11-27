@@ -23,6 +23,7 @@
     <button
       on:click={goTop}
       class="ml-auto rounded-full bg-slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer aspect-square grid place-items-center"
+      aria-label="Go to top"
     >
       <i class="fa-solid fa-arrow-up" />
     </button>

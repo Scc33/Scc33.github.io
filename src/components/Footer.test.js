@@ -1,7 +1,7 @@
 import { render } from "@testing-library/svelte";
 import Footer from "./Footer.svelte";
 
-describe("Footer Component", () => {
+describe("footer Component", () => {
   it("renders without crashing", () => {
     const { getByText } = render(Footer);
     expect(getByText("Email")).toBeTruthy();

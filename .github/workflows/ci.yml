@@ -30,6 +30,9 @@ jobs:
       # Install project dependencies
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      # Make sure the application can build
+      - name: Build application
+        run: yarn run build
       # Now we run our tests
       - name: Run tests
         run: yarn run test
@@ -39,4 +42,7 @@ jobs:
       # Now we run our pretty checks for code formatting
       - name: Run pretty checks
         run: yarn run pretty-check
+      # Finally we run svelte-check for some last minute svelte sanity
+      - name: Run svelte-check
+        run: yarn run svelte-check
       
