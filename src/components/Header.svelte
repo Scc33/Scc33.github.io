@@ -5,7 +5,8 @@
     { name: "About me", link: "#about" },
     { name: "GitHub", link: "https://github.com/Scc33" },
     { name: "LinkedIn", link: "https://www.linkedin.com/in/sean-m-coughlin/" },
-    { name: "Blog", link: "https://blog.seancoughlin.me" },
+    { name: "Technical Blog", link: "https://blog.seancoughlin.me" },
+    { name: "Personal Blog", link: "https://explores.world" },
   ];
 </script>
 
@@ -32,7 +33,7 @@
       class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950"
       aria-label="Resume"
     >
-      <a href="assets/Resume.pdf" target="_blank">
+      <a href="Resume.pdf" target="_blank">
         <div
           class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
         />

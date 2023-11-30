@@ -12,15 +12,13 @@ describe("header Component", () => {
     expect(getByText("About me")).toBeVisible();
     expect(getByText("GitHub")).toBeVisible();
     expect(getByText("LinkedIn")).toBeVisible();
-    expect(getByText("Blog")).toBeVisible();
+    expect(getByText("Technical Blog")).toBeVisible();
+    expect(getByText("Personal Blog")).toBeVisible();
   });
 
   it("renders the Resume button with correct link", () => {
     const { getByText } = render(Header, { y: 0 });
     const resumeButton = getByText("Resume");
-    expect(resumeButton.closest("a")).toHaveAttribute(
-      "href",
-      "assets/Resume.pdf",
-    );
+    expect(resumeButton.closest("a")).toHaveAttribute("href", "Resume.pdf");
   });
 });
