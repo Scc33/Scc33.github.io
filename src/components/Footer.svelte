@@ -36,11 +36,7 @@
       >
     </p>
     <p>
-      <a
-        href="assets/Resume.pdf"
-        target="_blank"
-        class="text-violet-400 underline"
-      >
+      <a href="Resume.pdf" target="_blank" class="text-violet-400 underline">
         Resume
       </a>
     </p>

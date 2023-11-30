@@ -19,9 +19,6 @@ describe("header Component", () => {
   it("renders the Resume button with correct link", () => {
     const { getByText } = render(Header, { y: 0 });
     const resumeButton = getByText("Resume");
-    expect(resumeButton.closest("a")).toHaveAttribute(
-      "href",
-      "assets/Resume.pdf",
-    );
+    expect(resumeButton.closest("a")).toHaveAttribute("href", "Resume.pdf");
   });
 });

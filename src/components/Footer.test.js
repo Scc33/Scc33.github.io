@@ -46,7 +46,7 @@ describe("footer Component", () => {
 
   it("has correct link to Resume", () => {
     const { container } = render(Footer);
-    const link = container.querySelector('a[href="assets/Resume.pdf"]');
+    const link = container.querySelector('a[href="Resume.pdf"]');
     expect(link).toBeTruthy();
     expect(link.getAttribute("target")).toBe("_blank");
   });
