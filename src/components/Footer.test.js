@@ -28,11 +28,18 @@ describe("footer Component", () => {
     expect(link.getAttribute("target")).toBe("_blank");
   });
 
-  it("has correct link to Blog", () => {
+  it("has correct link to technical blog", () => {
     const { container } = render(Footer);
     const link = container.querySelector(
       'a[href="https://blog.seancoughlin.me"]',
     );
+    expect(link).toBeTruthy();
+    expect(link.getAttribute("target")).toBe("_blank");
+  });
+
+  it("has correct link to personal blog", () => {
+    const { container } = render(Footer);
+    const link = container.querySelector('a[href="https://explores.world"]');
     expect(link).toBeTruthy();
     expect(link.getAttribute("target")).toBe("_blank");
   });

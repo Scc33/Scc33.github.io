@@ -20,9 +20,17 @@
       >
     </p>
     <p>
-      <b class="pr-2">Blog</b>
+      <b class="pr-2">Technical Blog</b>
       <a
         href="https://blog.seancoughlin.me"
+        target="_blank"
+        class="text-violet-400 underline">Hashnode</a
+      >
+    </p>
+    <p>
+      <b class="pr-2">Personal Blog</b>
+      <a
+        href="https://explores.world"
         target="_blank"
         class="text-violet-400 underline">Hashnode</a
       >

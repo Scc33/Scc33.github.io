@@ -12,7 +12,8 @@ describe("header Component", () => {
     expect(getByText("About me")).toBeVisible();
     expect(getByText("GitHub")).toBeVisible();
     expect(getByText("LinkedIn")).toBeVisible();
-    expect(getByText("Blog")).toBeVisible();
+    expect(getByText("Technical Blog")).toBeVisible();
+    expect(getByText("Personal Blog")).toBeVisible();
   });
 
   it("renders the Resume button with correct link", () => {
