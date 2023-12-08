@@ -1,0 +1,30 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # As usual, we simply checkout the project
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install the latest version of node
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # Install yarn (prefered build tool)
+      - name: Install Yarn
+        run: npm install -g yarn
+      # Install project dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      # Install Playwright browsers
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      # Run Playwright tests
+      - name: Run Playwright tests
+        run: npx playwright test

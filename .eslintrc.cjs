@@ -15,5 +15,5 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module'
     },
-    rules: {}
+    rules: { "vitest/require-hook": "off" }
 }

@@ -21,10 +21,12 @@
         "deploy": "gh-pages -d build"
     },
     "devDependencies": {
+        "@playwright/test": "^1.40.1",
         "@sveltejs/adapter-static": "^2.0.3",
         "@sveltejs/kit": "^1.27.7",
         "@sveltejs/vite-plugin-svelte": "^3.0.1",
         "@testing-library/svelte": "^4.0.5",
+        "@vitest/coverage-v8": "^1.0.2",
         "autoprefixer": "^10.4.16",
         "eslint": "^8.55.0",
         "eslint-config-prettier": "^9.1.0",
