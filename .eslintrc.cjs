@@ -7,13 +7,19 @@ module.exports = {
     plugins: ["vitest"],
     extends: [
         "eslint:recommended",
-        'plugin:vitest/all',
         'plugin:svelte/recommended',
-        "plugin:vitest-globals/recommended"
     ],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module'
     },
-    rules: { "vitest/require-hook": "off" }
+    overrides: [{
+            files: ['tests/**'],
+            extends: ['plugin:playwright/recommended']
+        },
+        {
+            files: ['src/**'],
+            extends: ['plugin:vitest/all', "plugin:vitest-globals/recommended"]
+        }
+    ]
 }
