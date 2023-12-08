@@ -4,9 +4,12 @@
   export let tabs = [
     { name: "About me", link: "#about" },
     { name: "GitHub", link: "https://github.com/Scc33" },
-    { name: "LinkedIn", link: "https://www.linkedin.com/in/sean-m-coughlin/" },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/sean-m-coughlin/"
+    },
     { name: "Technical Blog", link: "https://blog.seancoughlin.me" },
-    { name: "Personal Blog", link: "https://explores.world" },
+    { name: "Personal Blog", link: "https://explores.world" }
   ];
 </script>
 

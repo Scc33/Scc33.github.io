@@ -17,7 +17,7 @@ describe("main Component", () => {
     const { getByText } = render(Main);
     expect(getByText("Programming languages")).toBeTruthy();
     expect(
-      getByText("JavaScript, Java, HTML/CSS, Python, SQL/NoSQL"),
+      getByText("JavaScript, Java, HTML/CSS, Python, SQL/NoSQL")
     ).toBeTruthy();
   });
 
@@ -25,7 +25,7 @@ describe("main Component", () => {
     const { getByText } = render(Main);
     expect(getByText("Hobbies")).toBeTruthy();
     expect(
-      getByText("Mountain climbing, Hiking, Running, Weight lifting"),
+      getByText("Mountain climbing, Hiking, Running, Weight lifting")
     ).toBeTruthy();
   });
 });

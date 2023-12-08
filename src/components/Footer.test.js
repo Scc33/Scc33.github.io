@@ -22,7 +22,7 @@ describe("footer Component", () => {
   it("has correct link to LinkedIn", () => {
     const { container } = render(Footer);
     const link = container.querySelector(
-      'a[href="https://www.linkedin.com/in/sean-m-coughlin/"]',
+      'a[href="https://www.linkedin.com/in/sean-m-coughlin/"]'
     );
     expect(link).toBeTruthy();
     expect(link.getAttribute("target")).toBe("_blank");
@@ -31,7 +31,7 @@ describe("footer Component", () => {
   it("has correct link to technical blog", () => {
     const { container } = render(Footer);
     const link = container.querySelector(
-      'a[href="https://blog.seancoughlin.me"]',
+      'a[href="https://blog.seancoughlin.me"]'
     );
     expect(link).toBeTruthy();
     expect(link.getAttribute("target")).toBe("_blank");

@@ -25,23 +25,23 @@ describe("header Component", () => {
     const { getByText } = render(Header, { y: 0 });
     expect(getByText("About me").closest("a")).toHaveAttribute(
       "href",
-      "#about",
+      "#about"
     );
     expect(getByText("GitHub").closest("a")).toHaveAttribute(
       "href",
-      "https://github.com/Scc33",
+      "https://github.com/Scc33"
     );
     expect(getByText("LinkedIn").closest("a")).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/sean-m-coughlin/",
+      "https://www.linkedin.com/in/sean-m-coughlin/"
     );
     expect(getByText("Technical Blog").closest("a")).toHaveAttribute(
       "href",
-      "https://blog.seancoughlin.me",
+      "https://blog.seancoughlin.me"
     );
     expect(getByText("Personal Blog").closest("a")).toHaveAttribute(
       "href",
-      "https://explores.world",
+      "https://explores.world"
     );
   });
 
