@@ -26,7 +26,7 @@
         class="duration-200 hover:text-violet-400"
         target={index === 0 ? "" : "_blank"}
       >
-        <p>{tab.name}</p>
+        {tab.name}
       </a>
     {/each}
     <button
