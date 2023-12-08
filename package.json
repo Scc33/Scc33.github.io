@@ -14,8 +14,8 @@
         "svelte-check": "svelte-check",
         "lint": "eslint --ext .js,.svelte src/ tests/",
         "lint-fix": "eslint --fix --ext .js,.svelte src/ tests/",
-        "pretty-check": "prettier --check \"src/**/*.{js,svelte}\"",
-        "pretty-write": "prettier --write \"src/**/*.{js,svelte}\"",
+        "pretty-check": "prettier --check \"{src,tests}/**/*.{js,svelte}\"",
+        "pretty-write": "prettier --write \"{src,tests}/**/*.{js,svelte}\"",
         "husky": "husky install",
         "predeploy": "vitest run --coverage && vite build",
         "deploy": "gh-pages -d build"
