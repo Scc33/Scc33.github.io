@@ -10,7 +10,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: "html",
   use: {
-    trace: "on-first-retry"
+    trace: "on-first-retry",
+    baseURL: "http://localhost:4173"
   },
 
   projects: [
@@ -44,12 +45,13 @@ export default defineConfig({
       name: "Google Chrome",
       use: { ...devices["Desktop Chrome"], channel: "chrome" }
     }
-  ]
+  ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  webServer: {
+    command: "yarn run dev --port 4173",
+    url: "http://localhost:4173",
+    reuseExistingServer: !process.env.CI,
+    stdout: "pipe"
+  }
 });

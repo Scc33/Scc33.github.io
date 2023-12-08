@@ -2,13 +2,13 @@ import { test, expect } from "@playwright/test";
 
 test.describe("home page", () => {
   test("has title", async ({ page }) => {
-    await page.goto("https://seancoughlin.me");
+    await page.goto("/");
 
     await expect(page).toHaveTitle(/Sean Coughlin | Software/);
   });
 
   test("has header", async ({ page }) => {
-    await page.goto("https://seancoughlin.me");
+    await page.goto("/");
 
     await expect(
       page.getByRole("heading", { name: "Sean Coughlin", exact: true })
@@ -20,7 +20,7 @@ test.describe("home page", () => {
       page.viewportSize().width !== 1280,
       "Skipping this test for mobile viewports"
     );
-    await page.goto("https://seancoughlin.me");
+    await page.goto("/");
 
     await expect(page.getByRole("link", { name: "About me" })).toBeVisible();
     await expect(page.getByRole("link", { name: "GitHub" })).toBeVisible();
@@ -37,7 +37,7 @@ test.describe("home page", () => {
   });
 
   test("has main content", async ({ page }) => {
-    await page.goto("https://seancoughlin.me");
+    await page.goto("/");
 
     await expect(
       page.getByText(
@@ -48,7 +48,7 @@ test.describe("home page", () => {
   });
 
   test("has footer", async ({ page }) => {
-    await page.goto("https://seancoughlin.me");
+    await page.goto("/");
 
     await expect(page.getByText("Email coughlinscc33@gmail.com")).toBeVisible();
     await expect(page.getByRole("link", { name: "Scc33" })).toBeVisible();
