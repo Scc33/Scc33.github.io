@@ -6,6 +6,16 @@ export default defineConfig({
     test: {
         globals: true,
         environment: 'jsdom',
-        setupFiles: ['./vitest-setup.js'],
+        setupFiles: './vitest-setup.js',
+        exclude: ['node_modules', 'tests'],
+        coverage: {
+            include: ['src/components/**/*.svelte'],
+            thresholds: {
+                statements: 100,
+                branches: 100,
+                functions: 100,
+                lines: 100,
+            }
+        }
     },
 })

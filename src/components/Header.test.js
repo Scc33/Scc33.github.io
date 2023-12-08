@@ -2,8 +2,13 @@ import { render } from "@testing-library/svelte";
 import Header from "./Header.svelte";
 
 describe("header Component", () => {
-  it("renders without crashing", () => {
+  it("renders at y=0 without crashing", () => {
     const { container } = render(Header, { y: 0 });
+    expect(container).toBeTruthy();
+  });
+
+  it("renders past y=0 without crashing", () => {
+    const { container } = render(Header, { y: 10 });
     expect(container).toBeTruthy();
   });
 
