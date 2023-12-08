@@ -17,7 +17,7 @@
         "pretty-check": "prettier --check \"src/**/*.{js,svelte}\"",
         "pretty-write": "prettier --write \"src/**/*.{js,svelte}\"",
         "husky": "husky install",
-        "predeploy": "vite build",
+        "predeploy": "vitest run --coverage && vite build",
         "deploy": "gh-pages -d build"
     },
     "devDependencies": {
@@ -33,6 +33,7 @@
         "eslint-config-standard": "^17.1.0",
         "eslint-plugin-import": "^2.29.0",
         "eslint-plugin-n": "^16.3.1",
+        "eslint-plugin-playwright": "^0.19.0",
         "eslint-plugin-promise": "^6.1.1",
         "eslint-plugin-svelte": "^2.35.1",
         "eslint-plugin-vitest": "^0.3.10",

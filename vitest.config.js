@@ -7,7 +7,7 @@ export default defineConfig({
         globals: true,
         environment: 'jsdom',
         setupFiles: './vitest-setup.js',
-        exclude: ['node_modules', 'tests'],
+        include: ['src/**/*.test.js'],
         coverage: {
             include: ['src/components/**/*.svelte'],
             thresholds: {
