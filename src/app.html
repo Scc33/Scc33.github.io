@@ -1,93 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/images/s_small.webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <meta name="viewport" content="width=device-width" /> %sveltekit.head%
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <meta name="viewport" content="width=device-width" />
+    %sveltekit.head%
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJSB0P6X9K"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XJSB0P6X9K"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-XJSB0P6X9K');
+      gtag("config", "G-XJSB0P6X9K");
     </script>
 
     <!-- Meta Tags -->
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="author" content="Sean Coughlin">
-    <link rel="canonical" href="https://seancoughlin.me">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Sean Coughlin" />
+    <link rel="canonical" href="https://seancoughlin.me" />
 
     <!-- Primary Meta Tags -->
     <title>Sean Coughlin | Software Engineer</title>
-    <meta name="title" content="Sean Coughlin | Software Engineer">
-    <meta name="description" content="Sean Coughlin is a Software Engineering Professional. He is experienced in web development, app development, and machine learning.">
+    <meta name="title" content="Sean Coughlin | Software Engineer" />
+    <meta
+      name="description"
+      content="Sean Coughlin is a Software Engineering Professional. He is experienced in web development, app development, and machine learning."
+    />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seancoughlin.me/">
-    <meta property="og:title" content="Sean Coughlin | Software Engineer">
-    <meta property="og:description" content="Sean Coughlin is a Software Engineering Professional. He is experienced in web development, app development, and machine learning.">
-    <meta property="og:image" content="https://design.seancoughlin.me/assets/images/social-fancy-s.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seancoughlin.me/" />
+    <meta property="og:title" content="Sean Coughlin | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Sean Coughlin is a Software Engineering Professional. He is experienced in web development, app development, and machine learning."
+    />
+    <meta
+      property="og:image"
+      content="https://design.seancoughlin.me/assets/images/social-fancy-s.png"
+    />
 
     <!-- Rich Content -->
     <script type="application/ld+json">
-        {
-            "@context": "http://schema.org/",
-            "@type": "Person",
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Sean Coughlin",
+        "jobTitle": "Software Engineer",
+        "alumniOf": "University of Illinois Urbana-Champaign",
+        "email": "coughlinscc33@gmail.com",
+        "url": "http://seancoughlin.me",
+        "knowsAbout": "Software Engineering"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
             "name": "Sean Coughlin",
-            "jobTitle": "Software Engineer",
-            "alumniOf": "University of Illinois Urbana-Champaign",
-            "email": "coughlinscc33@gmail.com",
-            "url": "http://seancoughlin.me",
-            "knowsAbout": "Software Engineering"
-        }
+            "item": "https://seancoughlin.me"
+          }
+        ]
+      }
     </script>
 
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Sean Coughlin",
-                "item": "https://seancoughlin.me"
-            }]
-        }
+      {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://design.seancoughlin.me/assets/images/social-fancy-s.png",
+        "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
     </script>
+  </head>
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "ImageObject",
-            "contentUrl": "https://design.seancoughlin.me/assets/images/social-fancy-s.png",
-            "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
-        }
-    </script>
-</head>
-
-<body data-sveltekit-preload-data="hover" class="bg-slate-950 text-white relative">
+  <body
+    data-sveltekit-preload-data="hover"
+    class="bg-slate-950 text-white relative"
+  >
     <div style="display: contents" class="relative z-[1]">%sveltekit.body%</div>
 
     <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">
-        <div id="particles-js" class="absolute inset-0" />
+      <div id="particles-js" class="absolute inset-0" />
     </div>
     <script>
-        particlesJS.load("particles-js", "assets/particles.json", function() {});
+      particlesJS.load("particles-js", "assets/particles.json", function () {});
     </script>
-</body>
-
+  </body>
 </html>

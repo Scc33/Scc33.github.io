@@ -3,7 +3,7 @@ name: Update Dependencies
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight
+    - cron: "0 0 * * *" # Runs every day at midnight
 
 jobs:
   update:
@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
       - name: Install Yarn
         run: npm install -g yarn
       - name: Update Dependencies
@@ -25,7 +25,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           commit-message: Update dependencies
-          title: '[DEPENDENCY] Update Dependencies'
+          title: "[DEPENDENCY] Update Dependencies"
           body: |
             Updates dependencies in `package.json`.
           branch: update-dependencies
