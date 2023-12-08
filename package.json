@@ -10,7 +10,7 @@
         "dev": "vite dev",
         "build": "vite build",
         "preview": "vite preview",
-        "test": "vitest run",
+        "test": "vitest run --coverage",
         "svelte-check": "svelte-check",
         "lint": "eslint --ext .js,.svelte src",
         "lint-fix": "eslint --fix --ext .js,.svelte src",
