@@ -16,4 +16,4 @@ echo "Running svelte-checks..."
 yarn run svelte-check
 
 echo "Running Playwright tests..."
-yarn run playwright
+yarn run test:playwright

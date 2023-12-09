@@ -1,19 +1,16 @@
-name: Playwright
+name: CD
 
 on:
-  # Can run on command
   workflow_dispatch:
-  # Runs on pushes to main
+  # Runs on pushes to master branch
   push:
-    branches: [master]
-  # Runs on pull requests
-  pull_request:
     branches: [master]
 
 jobs:
-  test:
-    name: lighthouse-test
-    # Running on ubuntu-latest, nothing special
+  build:
+    uses: ./.github/workflows/ci.yml
+  deploy:
+    name: deploy
     runs-on: ubuntu-latest
     steps:
       # As usual, we simply checkout the project
@@ -30,9 +27,6 @@ jobs:
       # Install project dependencies
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      # Install Playwright browsers
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-      # Run Lighthouse Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright test --project lighthouse
+      # Build and deploy the project
+      - name: Build and deploy
+        run: yarn run deploy

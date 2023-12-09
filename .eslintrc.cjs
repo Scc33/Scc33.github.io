@@ -10,6 +10,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module"
   },
+  ignorePatterns: ["node_modules", "playwright.config.js"],
   overrides: [
     {
       files: ["tests/**"],
