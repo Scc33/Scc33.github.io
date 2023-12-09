@@ -1,14 +1,16 @@
 import { playAudit } from "playwright-lighthouse";
-import { test, chromium } from "@playwright/test";
+import { test, expect, chromium } from "@playwright/test";
 
-test.describe("audit example", () => {
-  test("open browser", async () => {
+test.describe("audit", () => {
+  test("run lighthouse", async () => {
     const browser = await chromium.launch({
       args: ["--remote-debugging-port=9222"],
       headless: true
     });
     const page = await browser.newPage();
     await page.goto("http://localhost:4173/");
+
+    expect(await page.title()).toBe("Sean Coughlin | Software Engineer");
 
     await playAudit({
       page: page,
