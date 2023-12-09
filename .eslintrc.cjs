@@ -1,19 +1,26 @@
 module.exports = {
-    env: {
-        browser: true,
-        es2021: true,
-        "vitest-globals/env": true
+  env: {
+    browser: true,
+    es2021: true,
+    "vitest-globals/env": true
+  },
+  plugins: ["vitest"],
+  extends: ["eslint:recommended", "plugin:svelte/recommended"],
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module"
+  },
+  overrides: [
+    {
+      files: ["tests/**"],
+      extends: ["plugin:playwright/recommended"],
+      rules: {
+        "playwright/no-skipped-test": "off"
+      }
     },
-    plugins: ["vitest"],
-    extends: [
-        "eslint:recommended",
-        'plugin:vitest/all',
-        'plugin:svelte/recommended',
-        "plugin:vitest-globals/recommended"
-    ],
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module'
-    },
-    rules: {}
-}
+    {
+      files: ["src/**"],
+      extends: ["plugin:vitest/all", "plugin:vitest-globals/recommended"]
+    }
+  ]
+};

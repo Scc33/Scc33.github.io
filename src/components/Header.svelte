@@ -4,9 +4,12 @@
   export let tabs = [
     { name: "About me", link: "#about" },
     { name: "GitHub", link: "https://github.com/Scc33" },
-    { name: "LinkedIn", link: "https://www.linkedin.com/in/sean-m-coughlin/" },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/sean-m-coughlin/"
+    },
     { name: "Technical Blog", link: "https://blog.seancoughlin.me" },
-    { name: "Personal Blog", link: "https://explores.world" },
+    { name: "Personal Blog", link: "https://explores.world" }
   ];
 </script>
 
@@ -26,7 +29,7 @@
         class="duration-200 hover:text-violet-400"
         target={index === 0 ? "" : "_blank"}
       >
-        <p>{tab.name}</p>
+        {tab.name}
       </a>
     {/each}
     <button

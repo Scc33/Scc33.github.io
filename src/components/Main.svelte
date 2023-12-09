@@ -4,13 +4,13 @@
       metric: "10x",
       name: "a developer",
       description:
-        "Presently, I work as an Associate Software Engineer at Discover Financial Services. In my current role, I am a full-stack web developer improving the user experience Discover Home Loan customers. I develop Spring Boot backend microservices and React frontend services.",
+        "Presently, I work as an Associate Software Engineer at Discover Financial Services. In my current role, I am a full-stack web developer improving the user experience Discover Home Loan customers. I develop Spring Boot backend microservices and React frontend services."
     },
     {
       name: "a student",
       description:
-        "While working full-time, I am also pursuing my Master of Computer Science from the University of Illinois Urbana-Champaign. Previously, I studied computer science and economics at the University of Illinois Urbana-Champaign.",
-    },
+        "While working full-time, I am also pursuing my Master of Computer Science from the University of Illinois Urbana-Champaign. Previously, I studied computer science and economics at the University of Illinois Urbana-Champaign."
+    }
   ];
 </script>
 
@@ -31,7 +31,8 @@
       class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
     >
       <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
-        Hi! I'm <span class="poppins text-violet-400">Sean</span> Coughlin
+        Hi! I'm <span class="poppins text-violet-400">Sean</span>
+        Coughlin
         <br />Full Stack
         <span class="poppins text-violet-400">Developer</span>
       </h2>
