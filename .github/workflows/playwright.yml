@@ -1,11 +1,19 @@
-name: Playwright Tests
+name: Playwright
+
 on:
+  # Can run on command
+  workflow_dispatch:
+  # Runs on pushes to main
   push:
-    branches: [main]
+    branches: [master]
+  # Runs on pull requests
   pull_request:
-    branches: [main]
+    branches: [master]
+
 jobs:
   test:
+    name: playwright-test
+    # Running on ubuntu-latest, nothing special
     runs-on: ubuntu-latest
     steps:
       # As usual, we simply checkout the project
