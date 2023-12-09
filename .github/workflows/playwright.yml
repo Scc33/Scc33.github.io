@@ -33,21 +33,6 @@ jobs:
       # Install Playwright browsers
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      # Run Chromium Playwright tests
+      # Run Playwright tests
       - name: Run Playwright tests
-        run: npx playwright test --project chromium
-      # Run Firefox Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright test --project firefox
-      # Run Webkit Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright test --project webkit
-        # Run mobile Chrom Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright test --project mobileChrome
-        # Run mobile Safari Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright test --project mobileSafari
-      # Run Google Chrome Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright test --project googleChrome
+        run: npx playwright test --project chromium --project firefox --project webkit --project mobileChrome --project mobileSafari --project googleChrome
