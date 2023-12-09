@@ -3,6 +3,8 @@ name: CI
 on:
   # Can run on command
   workflow_dispatch:
+  # Can be run by other actions
+  workflow_call:
   # Runs on pull requests
   pull_request:
     branches: [master]
