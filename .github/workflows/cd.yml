@@ -1,6 +1,7 @@
 name: CD
 
 on:
+  # Can run on command
   workflow_dispatch:
   # Runs on pushes to master branch
   push:
@@ -10,6 +11,7 @@ jobs:
   build:
     uses: ./.github/workflows/ci.yml
   deploy:
+    needs: build
     name: deploy
     runs-on: ubuntu-latest
     steps:
@@ -29,4 +31,7 @@ jobs:
         run: yarn install --frozen-lockfile
       # Build and deploy the project
       - name: Build and deploy
-        run: yarn run deploy
+        run: |
+          git config --global user.name 'Sean Coughlin'
+          git config --global user.email 'coughlinscc33@gmail.com'
+          yarn run deploy
