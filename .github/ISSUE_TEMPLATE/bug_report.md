@@ -4,7 +4,6 @@ about: Create a bug report
 title: "[BUG]"
 labels: bug
 assignees: Scc33
-
 ---
 
 **Describe the bug**
