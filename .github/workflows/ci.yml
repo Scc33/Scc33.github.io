@@ -3,9 +3,6 @@ name: CI
 on:
   # Can run on command
   workflow_dispatch:
-  # Runs on pushes to main
-  push:
-    branches: [master]
   # Runs on pull requests
   pull_request:
     branches: [master]
@@ -45,3 +42,59 @@ jobs:
       # Finally we run svelte-check for some last minute svelte sanity
       - name: Run svelte-check
         run: yarn run svelte-check
+
+  test:
+    # Runs on execution of build
+    needs: build
+    name: playwright-test
+    # Running on ubuntu-latest, nothing special
+    runs-on: ubuntu-latest
+    steps:
+      # As usual, we simply checkout the project
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install the latest version of node
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      # Install yarn (prefered build tool)
+      - name: Install Yarn
+        run: npm install -g yarn
+      # Install project dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      # Install Playwright browsers
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      # Run Playwright tests
+      - name: Run tests
+        run: yarn run test:playwright
+
+  analyze:
+    # Runs on successful playwright
+    needs: [build, test]
+    name: lighthouse-test
+    # Running on ubuntu-latest, nothing special
+    runs-on: ubuntu-latest
+    steps:
+      # As usual, we simply checkout the project
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install the latest version of node
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      # Install yarn (prefered build tool)
+      - name: Install Yarn
+        run: npm install -g yarn
+      # Install project dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      # Install Playwright browsers
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      # Run Lighthouse Playwright tests
+      - name: Run Playwright tests
+        run: yarn run test:lighthouse
