@@ -16,34 +16,46 @@ export default defineConfig({
 
   projects: [
     {
+      name: "lighthouse",
+      testMatch: "playwright.test.js"
+    },
+
+    /* Test against desktop viewports. */
+    {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] }
+      use: { ...devices["Desktop Chrome"] },
+      testIgnore: "playwright.test.js"
     },
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] }
+      use: { ...devices["Desktop Firefox"] },
+      testIgnore: "playwright.test.js"
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"] }
+      use: { ...devices["Desktop Safari"] },
+      testIgnore: "playwright.test.js"
     },
 
     /* Test against mobile viewports. */
     {
       name: "Mobile Chrome",
-      use: { ...devices["Pixel 5"] }
+      use: { ...devices["Pixel 5"] },
+      testIgnore: "playwright.test.js"
     },
     {
       name: "Mobile Safari",
-      use: { ...devices["iPhone 12"] }
+      use: { ...devices["iPhone 12"] },
+      testIgnore: "playwright.test.js"
     },
 
     /* Test against branded browsers. */
     {
       name: "Google Chrome",
-      use: { ...devices["Desktop Chrome"], channel: "chrome" }
+      use: { ...devices["Desktop Chrome"], channel: "chrome" },
+      testIgnore: "playwright.test.js"
     }
   ],
 
