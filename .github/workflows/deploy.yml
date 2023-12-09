@@ -29,6 +29,9 @@ jobs:
       - name: Predeploy
         run: yarn predeploy
       # Build and deploy the project
+      - name: Move directories
+        run: cd build
+      # Add and commit the build
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.3
         with:
