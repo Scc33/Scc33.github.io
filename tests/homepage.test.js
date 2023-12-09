@@ -32,7 +32,7 @@ test.describe("home page", () => {
       page.getByRole("link", { name: "Personal Blog" })
     ).toBeVisible();
     await expect(
-      page.getByLabel("Resume").getByRole("link", { name: "Resume" })
+      page.getByRole("banner").getByRole("link", { name: "Resume" })
     ).toBeVisible();
   });
 

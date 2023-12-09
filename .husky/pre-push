@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running pre-push hooks"
+
+echo "Running tests..."
+yarn run test
+
+echo "Running eslint..."
+yarn run eslint
+
+echo "Running prettier..."
+yarn run pretty-check
+
+echo "Running svelte-checks..."
+yarn run svelte-check
+
+echo "Running Playwright tests..."
+yarn run playwright
