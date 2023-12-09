@@ -11,3 +11,4 @@ vite.config.ts.timestamp-*
 coverage
 playwright-report/index.html
 yarn-error.log
+lighthouse-report
