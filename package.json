@@ -15,11 +15,16 @@
     "svelte-check": "svelte-check",
     "lint": "eslint --ext .js,.svelte src/ tests/",
     "lint-fix": "eslint --fix --ext .js,.svelte src/ tests/",
+    "lint-staged": "lint-staged",
     "pretty-check": "prettier --check .",
     "pretty-write": "prettier --write .",
+    "lighthouse": "lighthouse https://seancoughlin.me --output-path=./lighthouse-report",
     "husky": "husky install",
     "predeploy": "vitest run --coverage && vite build",
     "deploy": "gh-pages -d build"
+  },
+  "lint-staged": {
+    "*.{js,ts,svelte}": "eslint --fix"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.1",
@@ -44,6 +49,7 @@
     "husky": "^8.0.3",
     "jsdom": "^23.0.1",
     "lighthouse": "^11.3.0",
+    "lint-staged": "^15.2.0",
     "playwright-lighthouse": "^3.1.0",
     "postcss": "^8.4.32",
     "prettier": "3.1.0",
