@@ -15,6 +15,7 @@ export default defineConfig({
   },
 
   projects: [
+    /* Test against lighthouse. */
     {
       name: "lighthouse",
       testMatch: "playwright.test.js"
@@ -41,19 +42,19 @@ export default defineConfig({
 
     /* Test against mobile viewports. */
     {
-      name: "Mobile Chrome",
+      name: "mobileChrome",
       use: { ...devices["Pixel 5"] },
       testIgnore: "playwright.test.js"
     },
     {
-      name: "Mobile Safari",
+      name: "mobileSafari",
       use: { ...devices["iPhone 12"] },
       testIgnore: "playwright.test.js"
     },
 
     /* Test against branded browsers. */
     {
-      name: "Google Chrome",
+      name: "googleChrome",
       use: { ...devices["Desktop Chrome"], channel: "chrome" },
       testIgnore: "playwright.test.js"
     }
