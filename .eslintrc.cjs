@@ -12,7 +12,6 @@ module.exports = {
   },
   ignorePatterns: ["node_modules", "playwright.config.js"],
   rules: {
-    quotes: ["error", "double"],
     semi: ["error", "always"],
     eqeqeq: "error"
   },
