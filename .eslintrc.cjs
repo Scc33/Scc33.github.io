@@ -11,6 +11,11 @@ module.exports = {
     sourceType: "module"
   },
   ignorePatterns: ["node_modules", "playwright.config.js"],
+  rules: {
+    quotes: ["error", "double"],
+    semi: ["error", "always"],
+    eqeqeq: "error"
+  },
   overrides: [
     {
       files: ["tests/**"],
@@ -22,6 +27,10 @@ module.exports = {
     {
       files: ["src/**"],
       extends: ["plugin:vitest/all", "plugin:vitest-globals/recommended"]
+    },
+    {
+      files: ["*.ts"],
+      parser: "@typescript-eslint/parser"
     }
   ]
 };
