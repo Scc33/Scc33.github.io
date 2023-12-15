@@ -2,14 +2,18 @@ import { render } from "@testing-library/svelte";
 import Footer from "./Footer.svelte";
 
 describe("footer Component", () => {
-  it("renders without crashing", () => {
+  it("renders email text", () => {
     const { getByText } = render(Footer);
     expect(getByText("Email")).toBeTruthy();
   });
 
-  it("displays the correct email address", () => {
-    const { getByText } = render(Footer);
-    expect(getByText("coughlinscc33@gmail.com")).toBeTruthy();
+  it("has the correct email address", () => {
+    const { container } = render(Footer);
+    const link = container.querySelector(
+      'a[href="mailto:coughlinscc33@gmail.com"]'
+    );
+    expect(link).toBeTruthy();
+    expect(link.getAttribute("target")).toBe("_blank");
   });
 
   it("has correct link to GitHub", () => {
@@ -22,7 +26,7 @@ describe("footer Component", () => {
   it("has correct link to LinkedIn", () => {
     const { container } = render(Footer);
     const link = container.querySelector(
-      'a[href="https://www.linkedin.com/in/sean-m-coughlin/"]'
+      'a[href="https://www.linkedin.com/in/sean-m-coughlin"]'
     );
     expect(link).toBeTruthy();
     expect(link.getAttribute("target")).toBe("_blank");
