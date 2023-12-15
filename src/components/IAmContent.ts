@@ -3,7 +3,7 @@ interface IAmContent {
   description: string;
 }
 
-const IAm: IAmContent[] = [
+const iAm: IAmContent[] = [
   {
     name: "a developer",
     description:
@@ -13,7 +13,11 @@ const IAm: IAmContent[] = [
     name: "a student",
     description:
       "While working full-time, I am also pursuing my Master of Computer Science from the University of Illinois Urbana-Champaign. Previously, I studied computer science and economics at the University of Illinois Urbana-Champaign."
+  },
+  {
+    name: "tbd",
+    description: "tbd"
   }
 ];
 
-export default IAm;
+export default iAm;
