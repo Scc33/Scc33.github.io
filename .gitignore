@@ -12,4 +12,3 @@ coverage
 playwright-report/index.html
 yarn-error.log
 lighthouse-report
-.vscode/settings.json
