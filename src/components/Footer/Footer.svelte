@@ -1,5 +1,5 @@
 <script>
-  import links from "./Links";
+  import links from "../../data/Links";
 </script>
 
 <footer

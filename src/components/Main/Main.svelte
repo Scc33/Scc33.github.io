@@ -1,8 +1,8 @@
 <script>
-  import iAm from "./IAmContent";
+  import iAm from "../../data/IAmContent";
   import MoreInfoSection from "./Skills/Skills.svelte";
-  import skillsList from "./Skills";
-  import hobbiesList from "./Hobbies";
+  import skillsList from "../../data/Skills";
+  import hobbiesList from "../../data/Hobbies";
 </script>
 
 <main class="flex flex-col flex-1 p-4 hidescroll">
