@@ -1,14 +1,6 @@
-interface svg {
-  viewBox: string;
-  path: string;
-}
+import type { Skills, Cateogry } from "./Interfaces";
 
-interface Skills {
-  name: string;
-  icon: svg;
-}
-
-export const programmingSkills: Skills[] = [
+const programmingSkills: Skills[] = [
   {
     name: "JavaScript",
     icon: {
@@ -53,7 +45,7 @@ export const programmingSkills: Skills[] = [
   }
 ];
 
-export const techSkills: Skills[] = [
+const techSkills: Skills[] = [
   {
     name: "React",
     icon: {
@@ -90,3 +82,13 @@ export const techSkills: Skills[] = [
     }
   }
 ];
+
+const skillsList: Cateogry[] = [
+  {
+    name: "Programming languages",
+    category: programmingSkills
+  },
+  { name: "Tech skills", category: techSkills }
+];
+
+export default skillsList;

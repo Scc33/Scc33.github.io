@@ -25,7 +25,7 @@ describe("main Component", () => {
     const { getByText } = render(Main);
     expect(getByText("Hobbies")).toBeTruthy();
     expect(
-      getByText("Mountain climbing, Hiking, Running, Weight lifting")
+      getByText("Mountain climbing, Hiking, Running, Weightlifting, Reading")
     ).toBeTruthy();
   });
 });
