@@ -1,16 +1,6 @@
 <script>
   export let y;
-
-  export let tabs = [
-    { name: "About me", link: "#about" },
-    { name: "GitHub", link: "https://github.com/Scc33" },
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/sean-m-coughlin/"
-    },
-    { name: "Technical Blog", link: "https://blog.seancoughlin.me" },
-    { name: "Personal Blog", link: "https://explores.world" }
-  ];
+  import links from "../../data/Links";
 </script>
 
 <header
@@ -23,14 +13,16 @@
     <b class="font-bold poppins">Sean</b> <span class="">Coughlin</span>
   </h1>
   <div class="sm:flex items-center gap-4 hidden">
-    {#each tabs as tab, index}
-      <a
-        href={tab.link}
-        class="duration-200 hover:text-violet-400"
-        target={index === 0 ? "" : "_blank"}
-      >
-        {tab.name}
-      </a>
+    {#each links as link, index}
+      {#if index !== 0 && index !== links.length - 1}
+        <a
+          href={link.url}
+          class="duration-200 hover:text-violet-400"
+          target="_blank"
+        >
+          {link.name}
+        </a>
+      {/if}
     {/each}
     <a
       href="Resume.pdf"
