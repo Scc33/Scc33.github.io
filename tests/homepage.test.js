@@ -22,14 +22,17 @@ test.describe("home page", () => {
     );
     await page.goto("/");
 
-    await expect(page.getByRole("link", { name: "About me" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "GitHub" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "LinkedIn" })).toBeVisible();
     await expect(
-      page.getByRole("link", { name: "Technical Blog" })
+      page.getByRole("banner").getByRole("link", { name: "LinkedIn" })
     ).toBeVisible();
     await expect(
-      page.getByRole("link", { name: "Personal Blog" })
+      page.getByRole("banner").getByRole("link", { name: "GitHub" })
+    ).toBeVisible();
+    await expect(
+      page.getByRole("banner").getByRole("link", { name: "Technical Blog" })
+    ).toBeVisible();
+    await expect(
+      page.getByRole("banner").getByRole("link", { name: "Personal Blog" })
     ).toBeVisible();
     await expect(
       page.getByRole("banner").getByRole("link", { name: "Resume" })
@@ -50,22 +53,20 @@ test.describe("home page", () => {
   test("has footer", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page.getByText("Email coughlinscc33@gmail.com")).toBeVisible();
-    await expect(page.getByRole("link", { name: "Scc33" })).toBeVisible();
+    await expect(page.getByText("Email")).toBeVisible();
     await expect(
-      page.getByRole("link", { name: "sean-m-coughlin" })
+      page.getByRole("contentinfo").getByRole("link", { name: "LinkedIn" })
+    ).toBeVisible();
+    await expect(
+      page.getByRole("contentinfo").getByRole("link", { name: "GitHub" })
     ).toBeVisible();
     await expect(
       page
-        .locator("p")
-        .filter({ hasText: "Technical Blog Hashnode" })
-        .getByRole("link")
+        .getByRole("contentinfo")
+        .getByRole("link", { name: "Technical Blog" })
     ).toBeVisible();
     await expect(
-      page
-        .locator("p")
-        .filter({ hasText: "Personal Blog Hashnode" })
-        .getByRole("link")
+      page.getByRole("contentinfo").getByRole("link", { name: "Personal Blog" })
     ).toBeVisible();
     await expect(
       page.getByRole("contentinfo").getByRole("link", { name: "Resume" })
