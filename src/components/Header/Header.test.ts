@@ -14,7 +14,6 @@ describe("header Component", () => {
 
   it("renders all header text with correct text", () => {
     const { getByText } = render(Header, { y: 0 });
-    expect(getByText("About me")).toBeVisible();
     expect(getByText("GitHub")).toBeVisible();
     expect(getByText("LinkedIn")).toBeVisible();
     expect(getByText("Technical Blog")).toBeVisible();
@@ -23,17 +22,13 @@ describe("header Component", () => {
 
   it("renders all header text with correct links", () => {
     const { getByText } = render(Header, { y: 0 });
-    expect(getByText("About me").closest("a")).toHaveAttribute(
-      "href",
-      "#about"
-    );
     expect(getByText("GitHub").closest("a")).toHaveAttribute(
       "href",
       "https://github.com/Scc33"
     );
     expect(getByText("LinkedIn").closest("a")).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/sean-m-coughlin/"
+      "https://www.linkedin.com/in/sean-m-coughlin"
     );
     expect(getByText("Technical Blog").closest("a")).toHaveAttribute(
       "href",
