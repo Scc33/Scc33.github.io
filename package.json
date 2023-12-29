@@ -1,6 +1,9 @@
 {
-  "name": "scough",
-  "version": "0.0.1",
+  "name": "seancoughlin.me",
+  "description": "My personal website",
+  "author": "Sean Coughlin",
+  "license": "MIT",
+  "version": "1.0.0",
   "homepage": "https://seancoughlin.me",
   "engines": {
     "yarn": ">1.22.0",
