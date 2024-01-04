@@ -9,8 +9,24 @@
     "checkJs": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "types": ["vitest/globals", "svelte", "@testing-library/jest-dom"]
+    "types": [
+      "vitest/globals",
+      "svelte",
+      "@testing-library/jest-dom"
+    ],
+    "strict": false,
+    "incremental": true,
+    "esModuleInterop": true,
+    "jsx": "preserve"
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.svelte"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
