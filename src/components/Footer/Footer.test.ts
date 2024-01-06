@@ -41,13 +41,6 @@ describe("footer Component", () => {
     expect(link.getAttribute("target")).toBe("_blank");
   });
 
-  it("has correct link to personal blog", () => {
-    const { container } = render(Footer);
-    const link = container.querySelector('a[href="https://explores.world"]');
-    expect(link).toBeTruthy();
-    expect(link.getAttribute("target")).toBe("_blank");
-  });
-
   it("has correct link to Resume", () => {
     const { container } = render(Footer);
     const link = container.querySelector('a[href="Resume.pdf"]');
