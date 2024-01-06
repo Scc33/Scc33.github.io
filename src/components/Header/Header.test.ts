@@ -14,29 +14,24 @@ describe("header Component", () => {
 
   it("renders all header text with correct text", () => {
     const { getByText } = render(Header, { y: 0 });
-    expect(getByText("GitHub")).toBeVisible();
     expect(getByText("LinkedIn")).toBeVisible();
-    expect(getByText("Technical Blog")).toBeVisible();
-    expect(getByText("Personal Blog")).toBeVisible();
+    expect(getByText("GitHub")).toBeVisible();
+    expect(getByText("Blog")).toBeVisible();
   });
 
   it("renders all header text with correct links", () => {
     const { getByText } = render(Header, { y: 0 });
-    expect(getByText("GitHub").closest("a")).toHaveAttribute(
-      "href",
-      "https://github.com/Scc33"
-    );
     expect(getByText("LinkedIn").closest("a")).toHaveAttribute(
       "href",
       "https://www.linkedin.com/in/sean-m-coughlin"
     );
-    expect(getByText("Technical Blog").closest("a")).toHaveAttribute(
+    expect(getByText("GitHub").closest("a")).toHaveAttribute(
+      "href",
+      "https://github.com/Scc33"
+    );
+    expect(getByText("Blog").closest("a")).toHaveAttribute(
       "href",
       "https://blog.seancoughlin.me"
-    );
-    expect(getByText("Personal Blog").closest("a")).toHaveAttribute(
-      "href",
-      "https://explores.world"
     );
   });
 

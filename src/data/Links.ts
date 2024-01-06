@@ -14,12 +14,8 @@ const links: Links[] = [
     url: "https://github.com/Scc33"
   },
   {
-    name: "Technical Blog",
+    name: "Blog",
     url: "https://blog.seancoughlin.me"
-  },
-  {
-    name: "Personal Blog",
-    url: "https://explores.world"
   },
   {
     name: "Resume",
