@@ -1,0 +1,1 @@
+"Presently, I work as an Associate Software Engineer at Discover Financial Services. In my current role, I am a full-stack web developer improving the user experience Discover Home Loan customers. I develop Spring Boot backend microservices and React frontend services."

@@ -19,7 +19,7 @@
     class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
   >
     <div
-      class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
+      class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 lg:pl-5"
     >
       <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
         Hi! I'm <span class="poppins text-violet-400">Sean</span>
@@ -73,6 +73,127 @@
       {/each}
     </div>
   </section>
+  <div class="grid grid-cols-1 max-w-xl mx-auto pt-20">
+    <div
+      class="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4"
+    >
+      <h1
+        class="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800"
+      >
+        2021
+      </h1>
+      <h1 class="font-semibold text-xl">Software Developer</h1>
+      <a href="https://mroads.com" class="text-gray-500">mroads</a>
+      <p class="text-gray-600 dark:text-gray-400 my-2">
+        Contributed to our flagship product - Panna - which is an AI powered
+        candidate interviewing product.
+      </p>
+    </div>
+    <div class="divider-container flex flex-col items-center -mt-2">
+      <div class="w-4 h-4 bg-green-500 rounded-full relative z-10">
+        <div
+          class="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"
+        ></div>
+      </div>
+      <div
+        class="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"
+      ></div>
+    </div>
+    <div
+      class="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4"
+    >
+      <h1
+        class="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800"
+      >
+        2021
+      </h1>
+      <h1 class="font-semibold text-xl">Founder and Developer</h1>
+      <a href="https://tailwindmasterkit.com" class="text-gray-500"
+        >TailwindMasterKit</a
+      >
+      <p class="text-gray-600 dark:text-gray-400 my-2">
+        Developed a marketplace for tailwind web components (React, HTML and
+        Angular) and templates.
+      </p>
+    </div>
+    <div class="divider-container flex flex-col items-center -mt-2">
+      <div class="w-4 h-4 bg-green-500 rounded-full relative z-10">
+        <div
+          class="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"
+        ></div>
+      </div>
+      <div
+        class="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"
+      ></div>
+    </div>
+    <div
+      class="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4"
+    >
+      <h1
+        class="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800"
+      >
+        2021
+      </h1>
+      <h1 class="font-semibold text-xl">Founder and Developer</h1>
+      <a href="https://algochurn.com" class="text-gray-500">Algochurn</a>
+      <p class="text-gray-600 dark:text-gray-400 my-2">
+        Your last moment revision friend right before a Tech coding interview.
+        Practice problems and get hired at top Product based companies.
+      </p>
+    </div>
+    <div class="divider-container flex flex-col items-center -mt-2">
+      <div class="w-4 h-4 bg-green-500 rounded-full relative z-10">
+        <div
+          class="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"
+        ></div>
+      </div>
+      <div
+        class="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"
+      ></div>
+    </div>
+    <div
+      class="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4"
+    >
+      <h1
+        class="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800"
+      >
+        2019
+      </h1>
+      <h1 class="font-semibold text-xl">Internship</h1>
+      <a href="https://intel.com" class="text-gray-500">Intel Corporation</a>
+      <p class="text-gray-600 dark:text-gray-400 my-2">
+        Developed pothole detection system with OpenCV and computer vision,
+        detects potholes on roads and informs the driver.
+      </p>
+    </div>
+    <div class="divider-container flex flex-col items-center -mt-2">
+      <div class="w-4 h-4 bg-green-500 rounded-full relative z-10">
+        <div
+          class="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"
+        ></div>
+      </div>
+      <div
+        class="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"
+      ></div>
+    </div>
+    <div
+      class="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4"
+    >
+      <h1
+        class="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800"
+      >
+        2015
+      </h1>
+      <h1 class="font-semibold text-xl">High School</h1>
+      <a href="https://upes.co.in" class="text-gray-500"
+        >Delhi Public School, Jaipur.</a
+      >
+      <p class="text-gray-600 dark:text-gray-400 my-2">
+        Subjects being PCM - I barely survived with 93.6% marks aggregate. Flex
+        fridays, fellas.
+      </p>
+    </div>
+  </div>
   <MoreInfoSection sectionName="skills" {skillsList} />
   <MoreInfoSection sectionName="hobbies" skillsList={hobbiesList} />
 </main>

@@ -5,9 +5,12 @@ interface IAmContent {
 
 const iAm: IAmContent[] = [
   {
-    name: "a developer",
-    description:
-      "Presently, I work as an Associate Software Engineer at Discover Financial Services. In my current role, I am a full-stack web developer improving the user experience Discover Home Loan customers. I develop Spring Boot backend microservices and React frontend services."
+    name: "a front-end developer",
+    description: "I have experience developing frontend applications with plain HTML/JS, React, and Svelte."
+  },
+  {
+    name: "a back-end developer",
+    description: "I have experience developing backend microservices with Spring Boot and Node.js."
   },
   {
     name: "a student",
