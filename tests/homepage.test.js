@@ -29,10 +29,7 @@ test.describe("home page", () => {
       page.getByRole("banner").getByRole("link", { name: "GitHub" })
     ).toBeVisible();
     await expect(
-      page.getByRole("banner").getByRole("link", { name: "Technical Blog" })
-    ).toBeVisible();
-    await expect(
-      page.getByRole("banner").getByRole("link", { name: "Personal Blog" })
+      page.getByRole("banner").getByRole("link", { name: "Blog" })
     ).toBeVisible();
     await expect(
       page.getByRole("banner").getByRole("link", { name: "Resume" })
@@ -61,12 +58,7 @@ test.describe("home page", () => {
       page.getByRole("contentinfo").getByRole("link", { name: "GitHub" })
     ).toBeVisible();
     await expect(
-      page
-        .getByRole("contentinfo")
-        .getByRole("link", { name: "Technical Blog" })
-    ).toBeVisible();
-    await expect(
-      page.getByRole("contentinfo").getByRole("link", { name: "Personal Blog" })
+      page.getByRole("contentinfo").getByRole("link", { name: "Blog" })
     ).toBeVisible();
     await expect(
       page.getByRole("contentinfo").getByRole("link", { name: "Resume" })
