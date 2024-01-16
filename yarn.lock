@@ -543,10 +543,10 @@
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.1.tgz#64c36020435d7b1eacd362b2d027fefda5ec2e44"
   integrity sha512-6lMvf7xYEJ+oGeR5L8DFJJrowkefTK6ZgA4JiMqoClMkKq0s6yvsd3FZfCFvX1fQ0tpCD7fkuRVHsnUVgsHyNg==
 
-"@sveltejs/kit@^2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.2.2.tgz#c93aa09adf5e2d64a3cf069e75f205ec833687a1"
-  integrity sha512-1X6TFzOC/93h7xUEv+gasb289BbSNNbDxX0upyRvoAL86brZkl2thytRRroMu1ha7HOeR1UlDssDR+xLnBg78w==
+"@sveltejs/kit@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.3.3.tgz#97c0a025b348869ba253ef11813a873765d1feca"
+  integrity sha512-RYsOjZ7pFvZqPfL+4kNdL428kyJSy12Wk7BT+1XoUkwNe5F47z81n8kvm/2SfkD2NNXVKE9QBfhtiNJsssNWvQ==
   dependencies:
     "@types/cookie" "^0.6.0"
     cookie "^0.6.0"
