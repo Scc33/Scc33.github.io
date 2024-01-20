@@ -4,10 +4,10 @@ updates:
   - package-ecosystem: "npm"
     directory: "/" # Location of package.json
     schedule:
-      interval: "daily"
+      interval: "weekly"
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/" # Location of .github/workflows
     schedule:
-      interval: "daily"
+      interval: "weekly"
