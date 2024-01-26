@@ -32,7 +32,7 @@
     "*.{js,ts,svelte}": "eslint --fix"
   },
   "devDependencies": {
-    "@playwright/test": "^1.40.1",
+    "@playwright/test": "^1.41.1",
     "@sveltejs/adapter-static": "^3.0.1",
     "@sveltejs/kit": "^2.4.3",
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
