@@ -633,6 +633,11 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
+"@types/junit-report-builder@^3.0.0":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@types/junit-report-builder/-/junit-report-builder-3.0.2.tgz#17cc131d14ceff59dcf14e5847bd971b96f2cbe0"
+  integrity sha512-R5M+SYhMbwBeQcNXYWNCZkl09vkVfAtcPIaCGdzIkkbeaTrVbGQ7HVgi4s+EmM/M1K4ZuWQH0jGcvMvNePfxYA==
+
 "@types/node@*":
   version "20.10.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.5.tgz#47ad460b514096b7ed63a1dae26fad0914ed3ab2"
@@ -1045,13 +1050,15 @@ axe-html-reporter@2.2.3:
     mustache "^4.0.1"
     rimraf "^3.0.2"
 
-axe-playwright@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/axe-playwright/-/axe-playwright-1.2.3.tgz#b590b4edf3898ed5784c4932cbad2937115b31f2"
-  integrity sha512-bTxCTNp3kx6sQRMjmuLv8pG3+v+kOCvFXATim1+XUXzW6ykulbbuJdQfgB+vQPNAF9uvYbW2qrv9pg81ZSFV/A==
+axe-playwright@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/axe-playwright/-/axe-playwright-2.0.1.tgz#c474be6b7f3826e6a4cd1955ef006e33e4a145b9"
+  integrity sha512-MHjNjGARulF9XzqSfspmNjw+tpBz4x9o1VlTuLWEUW9fqzhn+xWa1qEpuOIQPbsRWQiLfooDjQAunLeE0PM5AQ==
   dependencies:
+    "@types/junit-report-builder" "^3.0.0"
     axe-core "^4.5.1"
     axe-html-reporter "2.2.3"
+    junit-report-builder "^3.0.1"
     picocolors "^1.0.0"
 
 axobject-query@^3.2.1:
@@ -1431,6 +1438,11 @@ data-urls@^5.0.0:
   dependencies:
     whatwg-mimetype "^4.0.0"
     whatwg-url "^14.0.0"
+
+date-format@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/date-format/-/date-format-4.0.3.tgz#f63de5dc08dc02efd8ef32bf2a6918e486f35873"
+  integrity sha512-7P3FyqDcfeznLZp2b+OMitV9Sz2lUnsT87WaTat9nVwqsBkTzPG3lPLNwW3en6F4pHUiWzr6vb8CLhjdK9bcxQ==
 
 debug@4, debug@4.3.4, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
@@ -2769,6 +2781,16 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+junit-report-builder@^3.0.1:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/junit-report-builder/-/junit-report-builder-3.1.0.tgz#3a806c62aef81ca4a630c957340c0f16010d8ebd"
+  integrity sha512-uKcPKbjl/v3pqQUuQuCehmuObAb9adZiZleKp0JijMmKPpBh5rl9YvyPjVqzaLkA0dROnMnQvjXQF37VbYoofw==
+  dependencies:
+    date-format "4.0.3"
+    lodash "^4.17.21"
+    make-dir "^3.1.0"
+    xmlbuilder "^15.1.1"
+
 keyv@^4.5.3:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"
@@ -2987,7 +3009,7 @@ magicast@^0.3.3:
     "@babel/types" "^7.23.6"
     source-map-js "^1.0.2"
 
-make-dir@^3.0.0, make-dir@^3.0.2:
+make-dir@^3.0.0, make-dir@^3.0.2, make-dir@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
   integrity sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
@@ -4725,6 +4747,11 @@ xml-name-validator@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-5.0.0.tgz#82be9b957f7afdacf961e5980f1bf227c0bf7673"
   integrity sha512-EvGK8EJ3DhaHfbRlETOWAS5pO9MZITeauHKJyb8wyajUfQUenkIg2MvLDTZ4T/TgIcm3HU0TFBgWWboAZ30UHg==
+
+xmlbuilder@^15.1.1:
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-15.1.1.tgz#9dcdce49eea66d8d10b42cae94a79c3c8d0c2ec5"
+  integrity sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==
 
 xmlchars@^2.2.0:
   version "2.2.0"
