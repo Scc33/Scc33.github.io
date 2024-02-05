@@ -3,17 +3,20 @@ import Main from "./Main.svelte";
 
 describe("main Component", () => {
   it("renders without crashing", () => {
+    expect.assertions(1);
     const { getByText } = render(Main);
     expect(getByText("Sean")).toBeTruthy();
   });
 
   it("renders the about sections correctly", () => {
+    expect.assertions(2);
     const { getByText } = render(Main);
     expect(getByText("a developer")).toBeTruthy();
     expect(getByText("a student")).toBeTruthy();
   });
 
   it("renders the skills section correctly", () => {
+    expect.assertions(2);
     const { getByText } = render(Main);
     expect(getByText("Programming languages")).toBeTruthy();
     expect(
@@ -22,6 +25,7 @@ describe("main Component", () => {
   });
 
   it("renders the hobbies section correctly", () => {
+    expect.assertions(2);
     const { getByText } = render(Main);
     expect(getByText("Hobbies")).toBeTruthy();
     expect(
