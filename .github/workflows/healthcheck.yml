@@ -18,6 +18,8 @@ jobs:
       # As usual, we simply checkout the project
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: screenshots
       # Install the latest version of node
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -39,7 +41,6 @@ jobs:
         run: |
           git config --global user.email "coughlinscc33@gmail.com"
           git config --global user.name "Sean Coughlin"
-          git checkout screenshots
           git add -f screenshots
           git commit -m "Add test screenshots"
           git push
