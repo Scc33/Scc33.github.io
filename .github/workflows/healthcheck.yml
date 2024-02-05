@@ -1,0 +1,44 @@
+name: healthcheck
+
+on:
+  # Can run on command
+  workflow_dispatch:
+  # Can be run by other actions
+  workflow_call:
+  # Runs every day at midnight
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  test:
+    name: playwright-test
+    # Running on ubuntu-latest, nothing special
+    runs-on: ubuntu-latest
+    steps:
+      # As usual, we simply checkout the project
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install the latest version of node
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      # Install yarn (prefered build tool)
+      - name: Install Yarn
+        run: npm install -g yarn
+      # Install project dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      # Install Playwright browsers
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      # Run Playwright tests
+      - name: Run tests
+        run: yarn run test:healthcheck
+      - name: Commit screenshots
+        run: |
+          git config --global user.email "coughlinscc33@gmail.com"
+          git config --global user.name "Sean Coughlin"
+          git add -f screenshots
+          git commit -m "Add test screenshots"
+          git push
