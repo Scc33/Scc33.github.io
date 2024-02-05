@@ -10,53 +10,63 @@ export default defineConfig({
   workers: process.env.CI ? 3 : undefined,
   reporter: "html",
   use: {
-    trace: "on-first-retry",
-    baseURL: "http://localhost:4173"
+    trace: "on-first-retry"
   },
 
   projects: [
+    /* Health check */
+    {
+      name: "healthCheck",
+      testMatch: "healthCheck.test.js",
+      use: { baseURL: "https://seancoughlin.me" }
+    },
+
     /* Test against lighthouse. */
     {
       name: "lighthouse",
-      testMatch: "playwright.test.js"
+      testMatch: "lighthouse.test.js",
+      use: { baseURL: "http://localhost:4173" }
     },
 
     /* Test against desktop viewports. */
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-      testIgnore: "playwright.test.js"
-    },
-
-    {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-      testIgnore: "playwright.test.js"
+      use: { ...devices["Desktop Firefox"], baseURL: "http://localhost:4173" },
+      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"] },
-      testIgnore: "playwright.test.js"
+      use: { ...devices["Desktop Safari"], baseURL: "http://localhost:4173" },
+      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
     },
 
     /* Test against mobile viewports. */
     {
       name: "mobileChrome",
-      use: { ...devices["Pixel 5"] },
-      testIgnore: "playwright.test.js"
+      use: {
+        ...devices["Pixel 5"],
+        channel: "chrome",
+        baseURL: "http://localhost:4173"
+      },
+      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
     },
+
     {
       name: "mobileSafari",
-      use: { ...devices["iPhone 12"] },
-      testIgnore: "playwright.test.js"
+      use: { ...devices["iPhone 12"], baseURL: "http://localhost:4173" },
+      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
     },
 
     /* Test against branded browsers. */
     {
       name: "googleChrome",
-      use: { ...devices["Desktop Chrome"], channel: "chrome" },
-      testIgnore: "playwright.test.js"
+      use: {
+        ...devices["Desktop Chrome"],
+        channel: "chrome",
+        baseURL: "http://localhost:4173"
+      },
+      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
     }
   ],
 
