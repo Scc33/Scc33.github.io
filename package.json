@@ -10,7 +10,7 @@
     "node": ">20.0.0"
   },
   "scripts": {
-    "start": "vite dev",
+    "start": "vite dev --open",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest run --coverage",
