@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-    name: playwright-test
+    name: healthcheck
     # Running on ubuntu-latest, nothing special
     runs-on: ubuntu-latest
     steps:
