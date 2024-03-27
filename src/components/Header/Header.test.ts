@@ -3,16 +3,19 @@ import Header from "./Header.svelte";
 
 describe("header Component", () => {
   it("renders at y=0 without crashing", () => {
+    expect.assertions(1);
     const { container } = render(Header, { y: 0 });
     expect(container).toBeTruthy();
   });
 
   it("renders past y=0 without crashing", () => {
+    expect.assertions(1);
     const { container } = render(Header, { y: 10 });
     expect(container).toBeTruthy();
   });
 
   it("renders all header text with correct text", () => {
+    expect.assertions(3);
     const { getByText } = render(Header, { y: 0 });
     expect(getByText("LinkedIn")).toBeVisible();
     expect(getByText("GitHub")).toBeVisible();
@@ -20,6 +23,7 @@ describe("header Component", () => {
   });
 
   it("renders all header text with correct links", () => {
+    expect.assertions(3);
     const { getByText } = render(Header, { y: 0 });
     expect(getByText("LinkedIn").closest("a")).toHaveAttribute(
       "href",
@@ -36,6 +40,7 @@ describe("header Component", () => {
   });
 
   it("renders the Resume button with correct link", () => {
+    expect.assertions(1);
     const { getByText } = render(Header, { y: 0 });
     const resumeButton = getByText("Resume");
     expect(resumeButton.closest("a")).toHaveAttribute("href", "Resume.pdf");
