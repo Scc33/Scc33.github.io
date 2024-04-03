@@ -23,27 +23,27 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      # Install yarn (prefered build tool)
-      - name: Install Yarn
-        run: npm install -g yarn
+      # Install Bun (prefered build tool)
+      - name: Install bun
+        run: npm install -g bun
       # Install project dependencies
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
       # Make sure the application can build
       - name: Build application
-        run: yarn run build
+        run: bun run build
       # Now we run our tests
       - name: Run tests
-        run: yarn run test
+        run: bun run test
       # Now we run our lints
       - name: Run lints
-        run: yarn run lint
+        run: bun run lint
       # Now we run our pretty checks for code formatting
       - name: Run pretty checks
-        run: yarn run pretty-check
+        run: bun run pretty-check
       # Finally we run svelte-check for some last minute svelte sanity
       - name: Run svelte-check
-        run: yarn run svelte-check
+        run: bun run svelte-check
 
   test:
     # Runs on execution of build
@@ -60,18 +60,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      # Install yarn (prefered build tool)
-      - name: Install Yarn
-        run: npm install -g yarn
+      # Install bun (prefered build tool)
+      - name: Install bun
+        run: npm install -g bun
       # Install project dependencies
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
       # Install Playwright browsers
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: bunx playwright install --with-deps
       # Run Playwright tests
       - name: Run tests
-        run: yarn run test:playwright
+        run: bun run test:playwright
 
   analyze:
     # Runs on successful playwright
@@ -88,15 +88,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      # Install yarn (prefered build tool)
-      - name: Install Yarn
-        run: npm install -g yarn
+      # Install bun (prefered build tool)
+      - name: Install bun
+        run: npm install -g bun
       # Install project dependencies
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
       # Install Playwright browsers
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: bunx playwright install --with-deps
       # Run Lighthouse Playwright tests
       - name: Run Playwright tests
-        run: yarn run test:lighthouse
+        run: bun run test:lighthouse

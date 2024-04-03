@@ -9,13 +9,13 @@
     "node": ">20.0.0"
   },
   "scripts": {
-    "start": "vite dev --open",
+    "start": "bunx --bun vite --open",
     "build": "tsc && vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --open",
     "test": "vitest run --coverage",
-    "test:playwright": "npx playwright test --project firefox --project webkit --project mobileChrome --project mobileSafari --project googleChrome",
-    "test:lighthouse": "npx playwright test --project lighthouse",
-    "test:healthcheck": "npx playwright test --project healthcheck",
+    "test:playwright": "bunx playwright test --project firefox --project webkit --project mobileChrome --project mobileSafari --project googleChrome",
+    "test:lighthouse": "bunx playwright test --project lighthouse",
+    "test:healthcheck": "bunx playwright test --project healthcheck",
     "svelte-check": "svelte-check --tsconfig ./tsconfig.json",
     "lint": "eslint --ext .js,.svelte,.ts src/ tests/",
     "lint-fix": "eslint --fix --ext .js,.svelte,.ts src/ tests/",
@@ -26,7 +26,7 @@
     "husky": "husky install",
     "predeploy": "vitest run --coverage && vite build",
     "deploy": "gh-pages -d build",
-    "dependency-analysis": "npx depcheck",
+    "dependency-analysis": "bunx depcheck",
     "update-deps": "bunx npm-check-updates --root --format group -i"
   },
   "lint-staged": {
