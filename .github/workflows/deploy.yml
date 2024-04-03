@@ -16,14 +16,10 @@ jobs:
       # As usual, we simply checkout the project
       - name: Checkout
         uses: actions/checkout@v4
-      # Install the latest version of node
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      # Setup the latest version of Bun
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: "20"
-      # Install Bun (prefered build tool)
-      - name: Install bun
-        run: npm install -g bun
+          bun-version: latest
       # Install project dependencies
       - name: Install dependencies
         run: bun install --frozen-lockfile

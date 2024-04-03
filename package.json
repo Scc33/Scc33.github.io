@@ -5,9 +5,6 @@
   "license": "MIT",
   "version": "1.0.0",
   "homepage": "https://seancoughlin.me",
-  "engines": {
-    "node": ">20.0.0"
-  },
   "scripts": {
     "start": "bunx --bun vite --open",
     "build": "tsc && vite build",
