@@ -21,15 +21,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      # Install yarn (prefered build tool)
-      - name: Install Yarn
-        run: npm install -g yarn
+      # Install Bun (prefered build tool)
+      - name: Install bun
+        run: npm install -g bun
       # Install project dependencies
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
       # Build the project
       - name: Predeploy
-        run: yarn predeploy
+        run: bun predeploy
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

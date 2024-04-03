@@ -4,13 +4,13 @@
 echo "Running pre-commit hooks"
 
 echo "Running tests..."
-yarn run test
+bun run test
 
 echo "Running eslint with lint-staged..."
-yarn run lint-staged
+bun run lint-staged
 
 echo "Running prettier..."
-yarn run pretty-check
+bun run pretty-check
 
 echo "Running svelte-checks..."
-yarn run svelte-check
+bun run svelte-check

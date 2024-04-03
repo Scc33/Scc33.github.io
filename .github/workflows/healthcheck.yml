@@ -25,18 +25,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      # Install yarn (prefered build tool)
-      - name: Install Yarn
-        run: npm install -g yarn
+      # Install Bun (prefered build tool)
+      - name: Install bun
+        run: npm install -g bun
       # Install project dependencies
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
       # Install Playwright browsers
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: bunx playwright install --with-deps
       # Run Playwright tests
       - name: Run tests
-        run: yarn run test:healthcheck
+        run: bun run test:healthcheck
       - name: Commit screenshots
         run: |
           git config --global user.email "coughlinscc33@gmail.com"
