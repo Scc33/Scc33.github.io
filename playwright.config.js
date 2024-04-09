@@ -16,8 +16,8 @@ export default defineConfig({
   projects: [
     /* Health check */
     {
-      name: "healthCheck",
-      testMatch: "healthCheck.test.js",
+      name: "smoke",
+      testMatch: "smoke.test.js",
       use: { baseURL: "https://seancoughlin.me" }
     },
 

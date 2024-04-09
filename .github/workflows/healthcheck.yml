@@ -32,7 +32,7 @@ jobs:
         run: bunx playwright install --with-deps
       # Run Playwright tests
       - name: Run tests
-        run: bun run test:healthcheck
+        run: bun run test:smoke
       - name: Commit screenshots
         run: |
           git config --global user.email "coughlinscc33@gmail.com"

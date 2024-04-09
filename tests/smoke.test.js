@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Health Check", () => {
+test.describe("Smoke check", () => {
   test("should ensure the website is alive", async ({ page }) => {
     await page.goto("/");
     const title = await page.title();
@@ -15,11 +15,8 @@ test.describe("Health Check", () => {
     ).toBeVisible();
   });
 
-  test("should take a screenshot", async ({ page }) => {
-    const date = new Date();
-    const photoPath = `./screenshots/healthcheck-${date.toISOString()}.png`;
-
-    await page.goto("/");
-    await page.screenshot({ path: photoPath });
+  test("should respond with 200 accepted HTTP response", async ({ page }) => {
+    const response = await page.goto("/");
+    expect(response.ok()).toBe(true);
   });
 });

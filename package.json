@@ -12,7 +12,7 @@
     "test": "vitest run --coverage",
     "test:playwright": "bunx playwright test --project firefox --project webkit --project mobileChrome --project mobileSafari --project googleChrome",
     "test:lighthouse": "bunx playwright test --project lighthouse",
-    "test:healthcheck": "bunx playwright test --project healthcheck",
+    "test:smoke": "bunx playwright test --project smoke",
     "svelte-check": "svelte-check --tsconfig ./tsconfig.json",
     "lint": "eslint",
     "lint-fix": "eslint --fix",
