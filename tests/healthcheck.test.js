@@ -15,7 +15,6 @@ test.describe("Health Check", () => {
     ).toBeVisible();
   });
 
-  // eslint-disable-next-line playwright/expect-expect
   test("should take a screenshot", async ({ page }) => {
     const date = new Date();
     const photoPath = `./screenshots/healthcheck-${date.toISOString()}.png`;
