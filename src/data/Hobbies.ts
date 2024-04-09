@@ -1,5 +1,16 @@
 import type { Cateogry, Hobbies } from "./Interfaces";
 
+/**
+ * Hobbies data
+ * @type {Hobbies[]}
+ * @constant
+ * @since 1.0.0
+ * @module hobbiesList
+ * @example
+ * ```ts
+ * import hobbiesList from "./data/Hobbies";
+ * ```
+ */
 const hobbies: Hobbies[] = [
   {
     name: "Mountain climbing",
@@ -38,6 +49,17 @@ const hobbies: Hobbies[] = [
   }
 ];
 
+/**
+ * Hobbies list
+ * @type {Cateogry[]}
+ * @constant
+ * @since 1.0.0
+ * @module hobbiesList
+ * @example
+ * ```ts
+ * import hobbiesList from "./data/Hobbies";
+ * ```
+ */
 export const hobbiesList: Cateogry[] = [
   {
     name: "Hobbies",
