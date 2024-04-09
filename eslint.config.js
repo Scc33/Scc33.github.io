@@ -5,11 +5,13 @@ import globals from "globals";
 import tsEslint from "typescript-eslint";
 import vitest from "eslint-plugin-vitest";
 import playwright from "eslint-plugin-playwright";
+import jsdoc from "eslint-plugin-jsdoc";
 
 export default [
   js.configs.recommended,
   ...tsEslint.configs.recommended,
   ...eslintPluginSvelte.configs["flat/recommended"],
+  jsdoc.configs["flat/recommended"],
   eslintConfigPrettier,
   {
     ...playwright.configs["flat/playwright"],

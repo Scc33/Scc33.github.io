@@ -27,7 +27,8 @@
     "update-deps": "bunx npm-check-updates --root --format group -i"
   },
   "lint-staged": {
-    "*.{js,ts,svelte}": "eslint --fix"
+    "*.{js,ts,svelte}": "eslint --fix",
+    "*": "prettier --ignore-unknown --write"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
@@ -42,6 +43,7 @@
     "axe-playwright": "^2.0.1",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsdoc": "^48.2.3",
     "eslint-plugin-playwright": "^1.5.4",
     "eslint-plugin-svelte": "^2.36.0",
     "eslint-plugin-vitest": "^0.5.0",
