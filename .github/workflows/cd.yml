@@ -13,6 +13,6 @@ jobs:
   deploy:
     needs: build
     uses: ./.github/workflows/deploy.yml
-  healthcheck:
+  smoke:
     needs: deploy
-    uses: ./.github/workflows/healthcheck.yml
+    uses: ./.github/workflows/smoke.yml

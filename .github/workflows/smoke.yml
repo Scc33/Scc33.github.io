@@ -1,4 +1,4 @@
-name: healthcheck
+name: smoke
 
 on:
   # Can run on command
@@ -11,15 +11,13 @@ on:
 
 jobs:
   test:
-    name: healthcheck
+    name: smoke
     # Running on ubuntu-latest, nothing special
     runs-on: ubuntu-latest
     steps:
       # As usual, we simply checkout the project
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: screenshots
       # Setup the latest version of Bun
       - uses: oven-sh/setup-bun@v1
         with:
@@ -32,11 +30,4 @@ jobs:
         run: bunx playwright install --with-deps
       # Run Playwright tests
       - name: Run tests
-        run: bun run test:healthcheck
-      - name: Commit screenshots
-        run: |
-          git config --global user.email "coughlinscc33@gmail.com"
-          git config --global user.name "Sean Coughlin"
-          git add -f screenshots
-          git commit -m "Add test screenshots"
-          git push
+        run: bun run test:smoke
