@@ -18,8 +18,6 @@ jobs:
       # As usual, we simply checkout the project
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: screenshots
       # Setup the latest version of Bun
       - uses: oven-sh/setup-bun@v1
         with:
@@ -33,10 +31,3 @@ jobs:
       # Run Playwright tests
       - name: Run tests
         run: bun run test:smoke
-      - name: Commit screenshots
-        run: |
-          git config --global user.email "coughlinscc33@gmail.com"
-          git config --global user.name "Sean Coughlin"
-          git add -f screenshots
-          git commit -m "Add test screenshots"
-          git push
