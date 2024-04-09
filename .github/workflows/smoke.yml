@@ -1,4 +1,4 @@
-name: healthcheck
+name: smoke
 
 on:
   # Can run on command
@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-    name: healthcheck
+    name: smoke
     # Running on ubuntu-latest, nothing special
     runs-on: ubuntu-latest
     steps:

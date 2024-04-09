@@ -14,7 +14,7 @@ export default defineConfig({
   },
 
   projects: [
-    /* Health check */
+    /* Smoke check */
     {
       name: "smoke",
       testMatch: "smoke.test.js",
@@ -32,13 +32,13 @@ export default defineConfig({
     {
       name: "firefox",
       use: { ...devices["Desktop Firefox"], baseURL: "http://localhost:4173" },
-      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
+      testIgnore: ["lighthouse.test.js", "smoke.test.js"]
     },
 
     {
       name: "webkit",
       use: { ...devices["Desktop Safari"], baseURL: "http://localhost:4173" },
-      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
+      testIgnore: ["lighthouse.test.js", "smoke.test.js"]
     },
 
     /* Test against mobile viewports. */
@@ -49,13 +49,13 @@ export default defineConfig({
         channel: "chrome",
         baseURL: "http://localhost:4173"
       },
-      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
+      testIgnore: ["lighthouse.test.js", "smoke.test.js"]
     },
 
     {
       name: "mobileSafari",
       use: { ...devices["iPhone 12"], baseURL: "http://localhost:4173" },
-      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
+      testIgnore: ["lighthouse.test.js", "smoke.test.js"]
     },
 
     /* Test against branded browsers. */
@@ -66,7 +66,7 @@ export default defineConfig({
         channel: "chrome",
         baseURL: "http://localhost:4173"
       },
-      testIgnore: ["lighthouse.test.js", "healthCheck.test.js"]
+      testIgnore: ["lighthouse.test.js", "smoke.test.js"]
     }
   ],
 
