@@ -88,3 +88,27 @@ jobs:
       # Run Lighthouse Playwright tests
       - name: Run Playwright tests
         run: bun run test:lighthouse
+      - name: Format Lighthouse Score
+        # Transform the audit results into a single, friendlier output
+        id: format_lighthouse_score
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
+        env:
+          # using env as input to our script
+          # see https://github.com/actions/github-script#use-env-as-input
+          LIGHTHOUSE_RESULT: ${{ steps.lighthouse_audit.outputs.manifest }}
+          LIGHTHOUSE_LINKS: ${{ steps.lighthouse_audit.outputs.links }}
+          VERCEL_PREVIEW_URL: ${{ steps.vercel_preview_url.outputs.url }}
+        with:
+          # Run as a separate file so we do not have to inline all of our formatting logic.
+          # See https://github.com/actions/github-script#run-a-separate-file for more info.
+          script: |
+            const { formatLighthouseResults } = await import('${{github.workspace}}/scripts/lighthouse/index.mjs')
+            await formatLighthouseResults({core})
+      - name: Add Comment to PR
+        # Replace the previous message with our formatted lighthouse results
+        uses: thollander/actions-comment-pull-request@d61db783da9abefc3437960d0cce08552c7c004f # v2.4.2
+        with:
+          # Reference the previously created comment
+          comment_tag: "lighthouse_audit"
+          message: |
+            ${{ steps.format_lighthouse_score.outputs.comment }}
