@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable jsdoc/require-param */
 "use strict";
 
@@ -12,6 +13,8 @@ const formatScore = (res) => {
  * `core` is in scope from https://github.com/actions/github-script
  */
 export const formatLighthouseResults = ({ core }) => {
+  console.log("LIGHTHOUSE_RESULT", process.env.LIGHTHOUSE_RESULT);
+  console.log("LIGHTHOUSE_LINKS", process.env.LIGHTHOUSE_LINKS);
   // this will be the shape of https://github.com/treosh/lighthouse-ci-action#manifest
   const results = JSON.parse(process.env.LIGHTHOUSE_RESULT);
 

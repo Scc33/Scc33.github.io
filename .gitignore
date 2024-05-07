@@ -14,3 +14,4 @@ yarn-error.log
 lighthouse-report
 .vscode/settings.json
 /test-results
+test-results.xml
