@@ -96,6 +96,11 @@ jobs:
       # Run Lighthouse Playwright tests
       - name: Run Playwright tests
         run: bun run test:lighthouse
+      - name: Read JSON and set output
+        id: json-reader
+        run: |
+          json_content=$(cat ./lighthouse-reports/lighthouse.json | jq -c .)
+          echo "::set-output name=json::$json_content"
       - name: Format Lighthouse Score
         # Transform the audit results into a single, friendlier output
         id: format-lighthouse-score
@@ -103,7 +108,7 @@ jobs:
         env:
           # using env as input to our script
           # see https://github.com/actions/github-script#use-env-as-input
-          LIGHTHOUSE_RESULT: ./lighthouse-reports/lighthouse.json
+          LIGHTHOUSE_RESULT: ${{ steps.json-reader.outputs.json }}
         with:
           # Run as a separate file so we do not have to inline all of our formatting logic.
           # See https://github.com/actions/github-script#run-a-separate-file for more info.
