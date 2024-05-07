@@ -27,12 +27,6 @@ export const formatLighthouseResults = ({ core }) => {
 
   // map over each url result, formatting and linking to the output
   const urlResults = results.map(({ url, summary }) => {
-    // make the tested link as a markdown link, without the long-generated host
-    const shortPreviewLink = `[${url.replace(
-      process.env.VERCEL_PREVIEW_URL,
-      ""
-    )}](${url})`;
-
     // make each formatted score from our lighthouse properties
     const performanceScore = formatScore(summary.performance);
     const accessibilityScore = formatScore(summary.accessibility);
@@ -40,7 +34,7 @@ export const formatLighthouseResults = ({ core }) => {
     const seoScore = formatScore(summary.seo);
 
     // create the markdown table row
-    return `${shortPreviewLink} | ${performanceScore} | ${accessibilityScore} | ${bestPracticesScore} | ${seoScore} | [🔗](${links[url]})`;
+    return `${url} | ${performanceScore} | ${accessibilityScore} | ${bestPracticesScore} | ${seoScore} | [🔗](${links[url]})`;
   });
 
   // join the header and  the rows together

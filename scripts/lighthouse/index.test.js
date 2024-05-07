@@ -30,28 +30,12 @@ describe("formatLighthouseResults", () => {
     process.env = {
       ...process.env,
       LIGHTHOUSE_RESULT: MOCK_LIGHTHOUSE_RESULT,
-      LIGHTHOUSE_LINKS: MOCK_LIGHTHOUSE_LINKS,
-      VERCEL_PREVIEW_URL: MOCK_VERCEL_PREVIEW_URL
+      LIGHTHOUSE_LINKS: MOCK_LIGHTHOUSE_LINKS
     };
   });
 
   afterEach(() => {
     process.env = originalEnv;
-  });
-
-  it("formats preview urls correctly", () => {
-    formatLighthouseResults({ core: mockCore });
-
-    const expectations = [
-      expect.stringContaining(`[/en](${MOCK_VERCEL_PREVIEW_URL}/en)`),
-      expect.stringContaining(
-        `[/en/download](${MOCK_VERCEL_PREVIEW_URL}/en/download)`
-      )
-    ];
-
-    expectations.forEach((expectation) => {
-      expect(mockCore.setOutput).toBeCalledWith("comment", expectation);
-    });
   });
 
   it("formats stoplight colors correctly", () => {
