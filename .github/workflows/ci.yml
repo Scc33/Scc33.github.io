@@ -40,6 +40,14 @@ jobs:
       # Finally we run svelte-check for some last minute svelte sanity
       - name: Run svelte-check
         run: bun run svelte-check
+      - name: Jest Coverage Comment
+        # This comments the current Jest Coverage Report containing JUnit XML reports
+        # and a Code Coverage Summary
+        uses: MishaKav/jest-coverage-comment@434e6d2d37116d23d812809b61d499639842fa3b # v1.0.26
+        with:
+          title: "Unit Test Coverage Report"
+          junitxml-path: ./test-results.xml
+          junitxml-title: Unit Test Report
 
   test:
     # Runs on execution of build

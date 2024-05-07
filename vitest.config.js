@@ -8,6 +8,8 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./vitest-setup.js",
     include: ["src/**/*.test.*", "scripts/**/*.test.*"],
+    outputFile: "test-results.xml",
+    reporters: ["default", "junit"],
     coverage: {
       include: ["src/components/**/*.svelte", "scripts/**/*.js"],
       thresholds: {
