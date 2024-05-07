@@ -15,7 +15,7 @@ const formatScore = (res) => {
 export const formatLighthouseResults = ({ core }) => {
   console.log("LIGHTHOUSE_RESULT", process.env.LIGHTHOUSE_RESULT);
   // this will be the shape of https://github.com/treosh/lighthouse-ci-action#manifest
-  const resultsJson = JSON.parse(process.env.LIGHTHOUSE_RESULT).categories;
+  const resultsJson = JSON.parse(process.env.LIGHTHOUSE_RESULT);
 
   // start creating our markdown table
   const header = [

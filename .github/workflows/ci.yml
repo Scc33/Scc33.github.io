@@ -99,8 +99,8 @@ jobs:
       - name: Read JSON and set output
         id: json-reader
         run: |
-          json_content=$(cat ./lighthouse-reports/lighthouse.json | jq -c .)
-          echo "::set-output name=json::$json_content"
+          categories=$(jq -c '.categories' ./lighthouse-reports/lighthouse.json)
+          echo "::set-output name=json::$categories"
       - name: Format Lighthouse Score
         # Transform the audit results into a single, friendlier output
         id: format-lighthouse-score
