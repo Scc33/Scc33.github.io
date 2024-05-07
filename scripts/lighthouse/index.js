@@ -14,34 +14,26 @@ const formatScore = (res) => {
  */
 export const formatLighthouseResults = ({ core }) => {
   console.log("LIGHTHOUSE_RESULT", process.env.LIGHTHOUSE_RESULT);
-  console.log("LIGHTHOUSE_LINKS", process.env.LIGHTHOUSE_LINKS);
   // this will be the shape of https://github.com/treosh/lighthouse-ci-action#manifest
-  const results = JSON.parse(process.env.LIGHTHOUSE_RESULT);
-
-  // this will be the shape of https://github.com/treosh/lighthouse-ci-action#links
-  const links = JSON.parse(process.env.LIGHTHOUSE_LINKS);
+  const resultsJson = JSON.parse(process.env.LIGHTHOUSE_RESULT).categories;
 
   // start creating our markdown table
   const header = [
     "Lighthouse Results",
-    "URL | Performance | Accessibility | Best Practices | SEO | Report",
-    "| - | - | - | - | - | - |"
+    "| Performance | Accessibility | Best Practices | SEO |",
+    "| - | - | - | - |"
   ];
 
-  // map over each url result, formatting and linking to the output
-  const urlResults = results.map(({ url, summary }) => {
-    // make each formatted score from our lighthouse properties
-    const performanceScore = formatScore(summary.performance);
-    const accessibilityScore = formatScore(summary.accessibility);
-    const bestPracticesScore = formatScore(summary["best-practices"]);
-    const seoScore = formatScore(summary.seo);
+  // make each formatted score from our lighthouse properties
+  const performanceScore = formatScore(resultsJson.performance.score);
+  const accessibilityScore = formatScore(resultsJson.accessibility.score);
+  const bestPracticesScore = formatScore(resultsJson["best-practices"].score);
+  const seoScore = formatScore(resultsJson.seo.score);
 
-    // create the markdown table row
-    return `${url} | ${performanceScore} | ${accessibilityScore} | ${bestPracticesScore} | ${seoScore} | [🔗](${links[url]})`;
-  });
+  const results = `${performanceScore} | ${accessibilityScore} | ${bestPracticesScore} | ${seoScore}`;
 
   // join the header and  the rows together
-  const finalResults = [...header, ...urlResults].join("\n");
+  const finalResults = header + results;
 
   // return our output to the github action
   core.setOutput("comment", finalResults);

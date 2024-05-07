@@ -20,6 +20,15 @@ test.describe("audit", () => {
         "best-practices": 100,
         seo: 100
       },
+      reports: {
+        formats: {
+          json: true, //defaults to false
+          html: false, //defaults to false
+          csv: false //defaults to false
+        },
+        name: "lighthouse", //defaults to `lighthouse-${new Date().getTime()}`
+        directory: "lighthouse-reports" //defaults to `${process.cwd()}/lighthouse`
+      },
       port: 9222
     });
 

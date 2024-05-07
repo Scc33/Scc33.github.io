@@ -25,7 +25,8 @@ export default defineConfig({
     {
       name: "lighthouse",
       testMatch: "lighthouse.test.js",
-      use: { baseURL: "http://localhost:4173" }
+      use: { baseURL: "http://localhost:4173" },
+      outputDir: "lighthouse-reports"
     },
 
     /* Test against desktop viewports. */

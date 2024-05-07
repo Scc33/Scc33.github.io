@@ -103,8 +103,7 @@ jobs:
         env:
           # using env as input to our script
           # see https://github.com/actions/github-script#use-env-as-input
-          LIGHTHOUSE_RESULT: ${{ steps.lighthouse-test.outputs.manifest }}
-          LIGHTHOUSE_LINKS: ${{ steps.lighthouse-test.outputs.links }}
+          LIGHTHOUSE_RESULT: ./lighthouse-reports/lighthouse.json
         with:
           # Run as a separate file so we do not have to inline all of our formatting logic.
           # See https://github.com/actions/github-script#run-a-separate-file for more info.
