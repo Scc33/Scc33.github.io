@@ -112,8 +112,6 @@ jobs:
           # Run as a separate file so we do not have to inline all of our formatting logic.
           # See https://github.com/actions/github-script#run-a-separate-file for more info.
           script: |
-            console.log(`Lighthouse LIGHTHOUSE_RESULT: ${process.env.LIGHTHOUSE_RESULT}`);
-            console.log(`Lighthouse Categories: ${process.env.CATEGORIES}`);
             const { formatLighthouseResults } = await import('${{github.workspace}}/scripts/lighthouse/index.js')
             await formatLighthouseResults({core})
       - name: Add Comment to PR
