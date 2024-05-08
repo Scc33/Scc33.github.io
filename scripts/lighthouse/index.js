@@ -13,7 +13,6 @@ const formatScore = (res) => {
  */
 export const formatLighthouseResults = ({ core }) => {
   // this will be the shape of https://github.com/treosh/lighthouse-ci-action#manifest
-  console.log(process.env.LIGHTHOUSE_RESULT);
   const resultsJson = JSON.parse(process.env.LIGHTHOUSE_RESULT);
 
   // start creating our markdown table
