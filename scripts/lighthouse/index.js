@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable jsdoc/require-param */
 "use strict";
 
