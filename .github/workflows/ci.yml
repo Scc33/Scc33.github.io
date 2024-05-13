@@ -40,6 +40,14 @@ jobs:
       # Finally we run svelte-check for some last minute svelte sanity
       - name: Run svelte-check
         run: bun run svelte-check
+      - name: Jest Coverage Comment
+        # This comments the current Jest Coverage Report containing JUnit XML reports
+        # and a Code Coverage Summary
+        uses: MishaKav/jest-coverage-comment@434e6d2d37116d23d812809b61d499639842fa3b # v1.0.26
+        with:
+          title: "Unit Test Coverage Report"
+          junitxml-path: ./test-results.xml
+          junitxml-title: Unit Test Report
 
   test:
     # Runs on execution of build
@@ -88,3 +96,30 @@ jobs:
       # Run Lighthouse Playwright tests
       - name: Run Playwright tests
         run: bun run test:lighthouse
+      - name: Read JSON and set output
+        id: json-reader
+        run: |
+          categories=$(jq -c '.categories' ./lighthouse-reports/lighthouse.json)
+          echo "::set-output name=json::$categories"
+      - name: Format Lighthouse Score
+        # Transform the audit results into a single, friendlier output
+        id: format-lighthouse-score
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
+        env:
+          # using env as input to our script
+          # see https://github.com/actions/github-script#use-env-as-input
+          LIGHTHOUSE_RESULT: ${{ steps.json-reader.outputs.json }}
+        with:
+          # Run as a separate file so we do not have to inline all of our formatting logic.
+          # See https://github.com/actions/github-script#run-a-separate-file for more info.
+          script: |
+            const { formatLighthouseResults } = await import('${{github.workspace}}/scripts/lighthouse/index.js')
+            await formatLighthouseResults({core})
+      - name: Add Comment to PR
+        # Replace the previous message with our formatted lighthouse results
+        uses: thollander/actions-comment-pull-request@d61db783da9abefc3437960d0cce08552c7c004f # v2.4.2
+        with:
+          # Reference the previously created comment
+          comment_tag: "lighthouse-audit"
+          message: |
+            ${{ steps.format-lighthouse-score.outputs.comment }}
