@@ -118,7 +118,7 @@ jobs:
       - name: Add Comment to PR
         if: ${{ github.event_name == 'pull_request' && github.base_ref != 'master' }}
         # Replace the previous message with our formatted lighthouse results
-        uses: thollander/actions-comment-pull-request@d61db783da9abefc3437960d0cce08552c7c004f # v2.4.2
+        uses: thollander/actions-comment-pull-request@fabd468d3a1a0b97feee5f6b9e499eab0dd903f6 # v2.5.0
         with:
           # Reference the previously created comment
           comment_tag: "lighthouse-audit"
