@@ -116,6 +116,7 @@ jobs:
             const { formatLighthouseResults } = await import('${{github.workspace}}/scripts/lighthouse/index.js')
             await formatLighthouseResults({core})
       - name: Add Comment to PR
+        if: ${{ github.event_name == 'pull_request' && github.base_ref != 'master' }}
         # Replace the previous message with our formatted lighthouse results
         uses: thollander/actions-comment-pull-request@d61db783da9abefc3437960d0cce08552c7c004f # v2.4.2
         with:
