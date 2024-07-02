@@ -26,6 +26,16 @@ describe("footer Component", () => {
     expect(link.getAttribute("target")).toBe("_blank");
   });
 
+  it("has correct link to Portfolio", () => {
+    expect.assertions(2);
+    const { container } = render(Footer);
+    const link = container.querySelector(
+      'a[href="https://portfolio.seancoughlin.me"]'
+    );
+    expect(link).toBeTruthy();
+    expect(link.getAttribute("target")).toBe("_blank");
+  });
+
   it("has correct link to LinkedIn", () => {
     expect.assertions(2);
     const { container } = render(Footer);

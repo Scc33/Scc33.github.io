@@ -15,15 +15,16 @@ describe("header Component", () => {
   });
 
   it("renders all header text with correct text", () => {
-    expect.assertions(3);
+    expect.assertions(4);
     const { getByText } = render(Header, { y: 0 });
     expect(getByText("LinkedIn")).toBeVisible();
     expect(getByText("GitHub")).toBeVisible();
+    expect(getByText("Portfolio")).toBeVisible();
     expect(getByText("Blog")).toBeVisible();
   });
 
   it("renders all header text with correct links", () => {
-    expect.assertions(3);
+    expect.assertions(4);
     const { getByText } = render(Header, { y: 0 });
     expect(getByText("LinkedIn").closest("a")).toHaveAttribute(
       "href",
@@ -32,6 +33,10 @@ describe("header Component", () => {
     expect(getByText("GitHub").closest("a")).toHaveAttribute(
       "href",
       "https://github.com/Scc33"
+    );
+    expect(getByText("Portfolio").closest("a")).toHaveAttribute(
+      "href",
+      "https://portfolio.seancoughlin.me"
     );
     expect(getByText("Blog").closest("a")).toHaveAttribute(
       "href",
