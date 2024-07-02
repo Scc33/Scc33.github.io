@@ -6,12 +6,16 @@ interface Links {
 const links: Links[] = [
   { name: "Email", url: "mailto:coughlinscc33@gmail.com" },
   {
-    name: " LinkedIn",
+    name: "LinkedIn",
     url: "https://www.linkedin.com/in/sean-m-coughlin"
   },
   {
-    name: " GitHub",
+    name: "GitHub",
     url: "https://github.com/Scc33"
+  },
+  {
+    name: "Portfolio",
+    url: "https://portfolio.seancoughlin.me"
   },
   {
     name: "Blog",
