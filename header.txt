@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
+        <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/images/s_small.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,18 +95,3 @@
       }
     </script>
   </head>
-
-  <body
-    data-sveltekit-preload-data="hover"
-    class="bg-slate-950 text-white relative"
-  >
-    <div style="display: contents" class="relative z-[1]">%sveltekit.body%</div>
-
-    <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">
-      <div id="particles-js" class="absolute inset-0" aria-hidden="true" />
-    </div>
-    <script>
-      particlesJS.load("particles-js", "assets/particles.json", function () {});
-    </script>
-  </body>
-</html>

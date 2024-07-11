@@ -11,6 +11,3 @@ bun run lint-staged
 
 echo "Running prettier..."
 bun run pretty-check
-
-echo "Running svelte-checks..."
-bun run svelte-check
