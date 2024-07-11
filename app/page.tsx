@@ -4,7 +4,6 @@ import Intro from "@/components/intro";
 //import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
-import { educationData, experiencesData } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -14,10 +13,7 @@ export default function Home() {
       <About />
       {/*Projects />*/}
       <Skills />
-      <div id="experience" className="scroll-mt-28 ">
-        <VerticalHistory title="My Experience" data={experiencesData} />
-        <VerticalHistory title="My Education" data={educationData} />
-      </div>
+      <VerticalHistory />
     </main>
   );
 }

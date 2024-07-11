@@ -7,7 +7,7 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
-export type data = {
+type data = {
   title: string;
   location: string;
   description: string;
@@ -52,6 +52,16 @@ export const experiencesData: data[] = [
     institution: "Discover Financial Services"
   },
   {
+    title: "Master of Computer Science",
+    location: "Champaign, IL",
+    description:
+      "While working full-time, I obtained my Master of Computer Science.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
+    skills: ["Cloud Computing", "Software Engineering", "Data Science"],
+    institution: "University of Illinois Urbana-Champaign"
+  },
+  {
     title: "Software Engineer I",
     location: "Chicago, IL",
     description:
@@ -70,19 +80,6 @@ export const experiencesData: data[] = [
     date: "2022 - 2023",
     skills: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"],
     institution: "Discover Financial Services"
-  }
-] as const;
-
-export const educationData: data[] = [
-  {
-    title: "Master of Computer Science",
-    location: "Champaign, IL",
-    description:
-      "While working full-time, I pursued my Master of Computer Science.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2024",
-    skills: ["Cloud Computing", "Software Engineering", "Data Science"],
-    institution: "University of Illinois Urbana-Champaign"
   },
   {
     title: "Bachelor of Computer Science",

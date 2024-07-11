@@ -11,7 +11,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 import { Fragment } from "react";
-import { data } from "@/lib/data";
+import { experiencesData } from "@/lib/data";
 
 const VerticalTimeline = VerticalTimelineComponent as React.ComponentType<
   React.PropsWithChildren<VerticalTimelineProps>
@@ -21,21 +21,19 @@ const VerticalTimelineElement =
     React.PropsWithChildren<VerticalTimelineElementProps>
   >;
 
-export default function VerticalHistory({
-  title,
-  data
-}: {
-  title: string;
-  data: data[];
-}) {
+export default function VerticalHistory() {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
   return (
-    <section ref={ref} className="flex flex-col items-center mb-24 sm:mb-40">
-      <SectionHeading>{title}</SectionHeading>
+    <section
+      id="experience"
+      ref={ref}
+      className="scroll-mt-28 flex flex-col items-center mb-24 sm:mb-40"
+    >
+      <SectionHeading>My Experience</SectionHeading>
       <VerticalTimeline lineColor="" className="!mr-0 !ml-0 !w-full">
-        {data.map((item, index) => (
+        {experiencesData.map((item, index) => (
           <Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
