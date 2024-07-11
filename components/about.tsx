@@ -18,13 +18,13 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">computer science</span>, I decided to
-        pursue my passion for programming. I enrolled in a coding bootcamp and
-        learned <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem.
+        I have my undergraduate and graduate degrees in{" "}
+        <span className="font-medium">computer science</span>. I am currently a{" "}
+        <span className="font-medium">full-stack web developer</span> with
+        Discover.{" "}
+        <span className="italic">My favorite part of programming</span> is
+        seeing creations come to life. I <span className="underline">love</span>{" "}
+        the feeling of finally shipping code.
       </p>
       <p className="mb-3">
         My core stack is{" "}
@@ -32,16 +32,15 @@ export default function About() {
           React, Next.js, Java, and Spring Boot
         </span>
         . I am also familiar with TypeScript and cloud development. I am always
-        looking to learn new technologies.
+        looking to learn new technologies. Currently, I am studying for{" "}
+        <span className="font-medium">cloud certifications</span>.
       </p>
       <p>
-        When I&apos;m not coding, I enjoy
+        When I&apos;m not coding, I enjoy{" "}
         <span className="font-medium">
           working out, hiking, exploring National Parks, and reading
         </span>
-        . I also enjoy <span className="font-medium">learning new things</span>.
-        I am currently learning about{" "}
-        <span className="font-medium">economics and history</span>.
+        .
       </p>
     </motion.section>
   );
