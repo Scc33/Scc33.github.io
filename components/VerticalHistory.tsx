@@ -11,12 +11,18 @@ import { useTheme } from "@/context/theme-context";
 import { Fragment } from "react";
 import { data } from "@/lib/data";
 
-export default function VerticalHistory({ title, data }: { title: string, data: data[]}) {
+export default function VerticalHistory({
+  title,
+  data
+}: {
+  title: string;
+  data: data[];
+}) {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section ref={ref} className="scroll-mt-28 mb-24 sm:mb-40">
       <SectionHeading>{title}</SectionHeading>
       <VerticalTimeline lineColor="">
         {data.map((item, index) => (
@@ -43,6 +49,7 @@ export default function VerticalHistory({ title, data }: { title: string, data: 
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                 fontSize: "1.5rem"
               }}
+              visible={true}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>

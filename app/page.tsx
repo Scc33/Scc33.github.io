@@ -14,8 +14,10 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
-      <VerticalHistory title="My Experience" data={experiencesData} />
-      <VerticalHistory title="My Education" data={educationData} />
+      <div id="experience">
+      <VerticalHistory id="experience" title="My Experience" data={experiencesData} />
+      <VerticalHistory id="education" title="My Education" data={educationData} />
+      </div>
     </main>
   );
 }
