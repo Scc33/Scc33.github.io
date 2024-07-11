@@ -44,17 +44,17 @@ export const experiencesData: data[] = [
     title: "Software Engineer II",
     location: "Chicago, IL",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
+      "I'm now a full-stack application developer. My current stack includes React, Redux, TypeScript, Java, and AWS.",
+    icon: React.createElement(CgWorkAlt),
     date: "2024 - present",
-    skills: ["React", "Node.js", "TypeScript", "Java"]
+    skills: ["React", "Node.js", "TypeScript", "Java", "Spring Boot", "AWS"]
   },
   {
     title: "Software Engineer I",
     location: "Chicago, IL",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
+      "I was a frontend React developer supporting the complete redesign of the Discover Home Loan website.",
+    icon: React.createElement(FaReact),
     date: "2023 - 2024",
     skills: ["React", "Redux", "JavaScript"]
   },
@@ -62,10 +62,10 @@ export const experiencesData: data[] = [
     title: "Software Engineer I",
     location: "Chicago, IL",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I was a full-stack web developer at Discover Financial Services supporting credit card applications.",
     icon: React.createElement(SiSpringboot),
     date: "2022 - 2023",
-    skills: ["Java", "Spring Boot"]
+    skills: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"]
   }
 ] as const;
 
@@ -74,19 +74,19 @@ export const educationData: data[] = [
     title: "Master of Computer Science",
     location: "Champaign, IL",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "While working full-time, I pursued my Master of Computer Science from the University of Illinois Urbana-Champaign.",
     icon: React.createElement(LuGraduationCap),
     date: "2024",
-    skills: []
+    skills: ["Cloud Computing", "Software Engineering", "Data Science"]
   },
   {
     title: "Bachelor of Computer Science",
     location: "Champaign, IL",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I studied Computer Science and minored in Economics at the University of Illinois Urbana-Champaign.",
     icon: React.createElement(LuGraduationCap),
     date: "2021",
-    skills: []
+    skills: ["Algorithms", "Data Structures", "Web Development", "Economics"]
   }
 ] as const;
 
@@ -128,8 +128,9 @@ export const skillsData: string[] = [
   "Git",
   "Tailwind",
   "MongoDB",
-  "GraphQL",
-  "PostgreSQL",
+  "REST APIs",
+  "SQL",
+  "AWS",
   "Python",
   "Playwright"
 ] as const;
