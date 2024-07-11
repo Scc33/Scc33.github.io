@@ -12,7 +12,7 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <About />
-      <Projects />
+      {/*Projects />*/}
       <Skills />
       <div id="experience" className="scroll-mt-28 ">
         <VerticalHistory title="My Experience" data={experiencesData} />

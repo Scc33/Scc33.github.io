@@ -29,12 +29,10 @@ export default function About() {
       <p className="mb-3">
         My core stack is{" "}
         <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
+          React, Next.js, Java, and Spring Boot
         </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        . I am also familiar with TypeScript and cloud development. I am always
+        looking to learn new technologies.
       </p>
       <p>
         When I&apos;m not coding, I enjoy
