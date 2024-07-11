@@ -8,6 +8,3 @@ bun run test
 
 echo "Running eslint with lint-staged..."
 bun run lint-staged
-
-echo "Running prettier..."
-bun run pretty-check

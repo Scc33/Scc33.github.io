@@ -32,7 +32,7 @@ export default function VerticalHistory({
   const { theme } = useTheme();
 
   return (
-    <section ref={ref} className="scroll-mt-28 mb-24 sm:mb-40">
+    <section ref={ref} className="mb-24 sm:mb-40">
       <SectionHeading>{title}</SectionHeading>
       <VerticalTimeline lineColor="">
         {data.map((item, index) => (
