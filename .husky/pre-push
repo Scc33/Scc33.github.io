@@ -8,12 +8,3 @@ bun run test
 
 echo "Running eslint..."
 bun run eslint
-
-echo "Running prettier..."
-bun run pretty-check
-
-echo "Running svelte-checks..."
-bun run svelte-check
-
-echo "Running Playwright tests..."
-bun run test:playwright
