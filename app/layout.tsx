@@ -6,13 +6,40 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ricardo | Personal Portfolio",
-  description: "Ricardo is a full-stack developer with 8 years of experience.",
-  icons: [{ url: "/s.webp", sizes: "any" }]
+  title: "Sean Coughlin | Software Engineer",
+  description:
+    "Sean is a full-stack developer with 3 years of experience. He is experienced in web and app development.",
+  icons: [{ url: "/s.webp", sizes: "any" }],
+  authors: [{ name: "Sean Coughlin", url: "https://seancoughlin.me" }],
+  metadataBase: new URL("https://seancoughlin.com"),
+  robots: {
+    index: true,
+    follow: true
+  },
+  openGraph: {
+    title: "Sean Coughlin | Software Engineer",
+    description:
+      "Sean is a full-stack developer with 3 years of experience. He is experienced in web and app development.",
+    url: "https://seancoughlin.me",
+    siteName: "Next.js",
+    images: [
+      {
+        url: "https://nextjs.org/profile.jpeg",
+        alt: "Profile picture of Sean Coughlin"
+      },
+      {
+        url: "https://nextjs.org/s.webp",
+        alt: "Fancy S favicon"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  }
 };
 
 export default function RootLayout({
@@ -37,6 +64,7 @@ export default function RootLayout({
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
+      <GoogleAnalytics gaId="G-XJSB0P6X9K" />
     </html>
   );
 }
