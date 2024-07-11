@@ -42,3 +42,4 @@ playwright-report
 test-results
 lighthouse-report
 test-report.xml
+test-results.xml

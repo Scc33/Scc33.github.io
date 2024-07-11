@@ -1,13 +1,13 @@
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
-  plugins: [svelte({ hot: !process.env.VITEST })],
+  plugins: [react()],
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./vitest-setup.js",
-    include: ["src/**/*.test.*", "scripts/**/*.test.*"],
+    include: ["**/*.test.*", "scripts/**/*.test.*"],
     outputFile: "test-results.xml",
     reporters: ["default", "junit"],
     coverage: {

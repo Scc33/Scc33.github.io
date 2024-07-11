@@ -2,62 +2,92 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { SiSpringboot } from "react-icons/si";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
+export type data = {
+  title: string;
+  location: string;
+  description: string;
+  icon: JSX.Element;
+  date: string;
+  skills: string[];
+};
+
 export const links = [
   {
     name: "Home",
-    hash: "#home",
+    hash: "#home"
   },
   {
     name: "About",
-    hash: "#about",
+    hash: "#about"
   },
   {
     name: "Projects",
-    hash: "#projects",
+    hash: "#projects"
   },
   {
     name: "Skills",
-    hash: "#skills",
+    hash: "#skills"
   },
   {
     name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+    hash: "#experience"
+  }
 ] as const;
 
-export const experiencesData = [
+export const experiencesData: data[] = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Software Engineer II",
+    location: "Chicago, IL",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I'm now a full-stack application developer. My current stack includes React, Redux, TypeScript, Java, and AWS.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2024 - present",
+    skills: ["React", "Node.js", "TypeScript", "Java", "Spring Boot", "AWS"]
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Software Engineer I",
+    location: "Chicago, IL",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I was a frontend React developer supporting the complete redesign of the Discover Home Loan website.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023 - 2024",
+    skills: ["React", "Redux", "JavaScript"]
   },
+  {
+    title: "Software Engineer I",
+    location: "Chicago, IL",
+    description:
+      "I was a full-stack web developer at Discover Financial Services supporting credit card applications.",
+    icon: React.createElement(SiSpringboot),
+    date: "2022 - 2023",
+    skills: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"]
+  }
+] as const;
+
+export const educationData: data[] = [
+  {
+    title: "Master of Computer Science",
+    location: "Champaign, IL",
+    description:
+      "While working full-time, I pursued my Master of Computer Science from the University of Illinois Urbana-Champaign.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
+    skills: ["Cloud Computing", "Software Engineering", "Data Science"]
+  },
+  {
+    title: "Bachelor of Computer Science",
+    location: "Champaign, IL",
+    description:
+      "I studied Computer Science and minored in Economics at the University of Illinois Urbana-Champaign.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2021",
+    skills: ["Algorithms", "Data Structures", "Web Development", "Economics"]
+  }
 ] as const;
 
 export const projectsData = [
@@ -66,42 +96,41 @@ export const projectsData = [
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    imageUrl: corpcommentImg
   },
   {
     title: "rmtDev",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    imageUrl: rmtdevImg
   },
   {
     title: "Word Analytics",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
-  },
+    imageUrl: wordanalyticsImg
+  }
 ] as const;
 
-export const skillsData = [
+export const skillsData: string[] = [
   "HTML",
   "CSS",
   "JavaScript",
   "TypeScript",
   "React",
+  "Redux",
   "Next.js",
   "Node.js",
+  "Java",
+  "Spring Boot",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
+  "REST APIs",
+  "SQL",
+  "AWS",
   "Python",
-  "Django",
-  "Framer Motion",
+  "Playwright"
 ] as const;
