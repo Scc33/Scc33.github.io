@@ -13,8 +13,13 @@ import { useTheme } from "@/context/theme-context";
 import { Fragment } from "react";
 import { data } from "@/lib/data";
 
-const VerticalTimeline = VerticalTimelineComponent as React.ComponentType<React.PropsWithChildren<VerticalTimelineProps>>;
-const VerticalTimelineElement = VerticalTimelineElementComponent as React.ComponentType<React.PropsWithChildren<VerticalTimelineElementProps>>;
+const VerticalTimeline = VerticalTimelineComponent as React.ComponentType<
+  React.PropsWithChildren<VerticalTimelineProps>
+>;
+const VerticalTimelineElement =
+  VerticalTimelineElementComponent as React.ComponentType<
+    React.PropsWithChildren<VerticalTimelineElementProps>
+  >;
 
 export default function VerticalHistory({
   title,

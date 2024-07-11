@@ -72,38 +72,38 @@ export default function Intro() {
           delay: 0.1
         }}
       >
-          <a
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-            href="https://www.linkedin.com/in/sean-m-coughlin/"
-            target="_blank"
-          >
-            LinkedIn
-            <BsLinkedin />
-          </a>
-          <a
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-            href="https://github.com/scc33"
-            target="_blank"
-          >
-            GitHub
-            <FaGithubSquare />
-          </a>
-          <a
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-            href="https://blog.seancoughlin.me"
-            target="_blank"
-          >
-            Blog
-            <CgWebsite className="opacity-60" />
-          </a>
-          <a
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-            href="https://portfolio.seancoughlin.me"
-            target="_blank"
-          >
-            Portfolio
-            <LuFolder className="opacity-60" />
-          </a>
+        <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          href="https://www.linkedin.com/in/sean-m-coughlin/"
+          target="_blank"
+        >
+          LinkedIn
+          <BsLinkedin />
+        </a>
+        <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          href="https://github.com/scc33"
+          target="_blank"
+        >
+          GitHub
+          <FaGithubSquare />
+        </a>
+        <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          href="https://blog.seancoughlin.me"
+          target="_blank"
+        >
+          Blog
+          <CgWebsite className="opacity-60" />
+        </a>
+        <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          href="https://portfolio.seancoughlin.me"
+          target="_blank"
+        >
+          Portfolio
+          <LuFolder className="opacity-60" />
+        </a>
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="/Resume.pdf"
