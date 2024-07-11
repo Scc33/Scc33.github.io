@@ -14,6 +14,7 @@ export type data = {
   icon: JSX.Element;
   date: string;
   skills: string[];
+  institution: string;
 };
 
 export const links = [
@@ -47,7 +48,8 @@ export const experiencesData: data[] = [
       "I'm now a full-stack application developer. My current stack includes React, Redux, TypeScript, Java, and AWS.",
     icon: React.createElement(CgWorkAlt),
     date: "2024 - present",
-    skills: ["React", "Node.js", "TypeScript", "Java", "Spring Boot", "AWS"]
+    skills: ["React", "Node.js", "TypeScript", "Java", "Spring Boot", "AWS"],
+    institution: "Discover Financial Services"
   },
   {
     title: "Software Engineer I",
@@ -56,7 +58,8 @@ export const experiencesData: data[] = [
       "I was a frontend React developer supporting the complete redesign of the Discover Home Loan website.",
     icon: React.createElement(FaReact),
     date: "2023 - 2024",
-    skills: ["React", "Redux", "JavaScript"]
+    skills: ["React", "Redux", "JavaScript"],
+    institution: "Discover Financial Services"
   },
   {
     title: "Software Engineer I",
@@ -65,7 +68,8 @@ export const experiencesData: data[] = [
       "I was a full-stack web developer at Discover Financial Services supporting credit card applications.",
     icon: React.createElement(SiSpringboot),
     date: "2022 - 2023",
-    skills: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"]
+    skills: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"],
+    institution: "Discover Financial Services"
   }
 ] as const;
 
@@ -74,19 +78,20 @@ export const educationData: data[] = [
     title: "Master of Computer Science",
     location: "Champaign, IL",
     description:
-      "While working full-time, I pursued my Master of Computer Science from the University of Illinois Urbana-Champaign.",
+      "While working full-time, I pursued my Master of Computer Science.",
     icon: React.createElement(LuGraduationCap),
     date: "2024",
-    skills: ["Cloud Computing", "Software Engineering", "Data Science"]
+    skills: ["Cloud Computing", "Software Engineering", "Data Science"],
+    institution: "University of Illinois Urbana-Champaign"
   },
   {
     title: "Bachelor of Computer Science",
     location: "Champaign, IL",
-    description:
-      "I studied Computer Science and minored in Economics at the University of Illinois Urbana-Champaign.",
+    description: "I studied Computer Science and minored in Economics.",
     icon: React.createElement(LuGraduationCap),
     date: "2021",
-    skills: ["Algorithms", "Data Structures", "Web Development", "Economics"]
+    skills: ["Algorithms", "Data Structures", "Web Development", "Economics"],
+    institution: "University of Illinois Urbana-Champaign"
   }
 ] as const;
 

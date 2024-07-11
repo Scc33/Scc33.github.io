@@ -32,9 +32,9 @@ export default function VerticalHistory({
   const { theme } = useTheme();
 
   return (
-    <section ref={ref} className="mb-24 sm:mb-40">
+    <section ref={ref} className="flex flex-col items-center mb-24 sm:mb-40">
       <SectionHeading>{title}</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="" className="!mr-0 !ml-0 !w-full">
         {data.map((item, index) => (
           <Fragment key={index}>
             <VerticalTimelineElement
@@ -61,12 +61,13 @@ export default function VerticalHistory({
               }}
               visible={true}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
+              <h3 className="font-bold">{item.title}</h3>
+              <h4 className="font-normal">{item.institution}</h4>
+              <h4 className="font-normal !mt-0">{item.location}</h4>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
-              <ul className="flex flex-wrap !mt-1 gap-2 sm:mt-auto">
+              <ul className="flex flex-wrap !mt-2 gap-2 sm:mt-auto">
                 {item.skills.map((skill, index) => (
                   <li
                     key={index}
