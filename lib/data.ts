@@ -134,5 +134,9 @@ export const skillsData: string[] = [
   "SQL",
   "AWS",
   "Python",
-  "Playwright"
+  "Playwright",
+  "Docker",
+  "Kubernetes",
+  "Terraform",
+  "Jenkins"
 ] as const;
