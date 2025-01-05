@@ -22,7 +22,7 @@ const VerticalTimelineElement =
   >;
 
 export default function VerticalHistory() {
-  const { ref } = useSectionInView("Experience", 0.5);
+  const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
   return (
