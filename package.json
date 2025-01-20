@@ -20,7 +20,7 @@
     ]
   },
   "dependencies": {
-    "@next/third-parties": "^14.2.5",
+    "@next/third-parties": "^15.1.5",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@types/node": "20.14.10",
