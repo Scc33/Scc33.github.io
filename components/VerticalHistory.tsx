@@ -18,7 +18,11 @@ const VerticalTimeline = VerticalTimelineComponent as React.ComponentType<
 >;
 const VerticalTimelineElement =
   VerticalTimelineElementComponent as React.ComponentType<
-    React.PropsWithChildren<VerticalTimelineElementProps>
+    React.PropsWithChildren<
+      Omit<VerticalTimelineElementProps, "icon"> & {
+        icon: React.ReactNode;
+      }
+    >
   >;
 
 export default function VerticalHistory() {

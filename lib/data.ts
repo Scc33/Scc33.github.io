@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode, createElement } from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
@@ -11,7 +11,7 @@ type data = {
   title: string;
   location: string;
   description: string;
-  icon: JSX.Element;
+  icon: ReactNode;
   date: string;
   skills: string[];
   institution: string;
@@ -46,7 +46,7 @@ export const experiencesData: data[] = [
     location: "Chicago, IL",
     description:
       "I'm now a full-stack application developer. My current stack includes React, Redux, TypeScript, Java, and AWS.",
-    icon: React.createElement(CgWorkAlt),
+    icon: createElement(CgWorkAlt),
     date: "2024 - present",
     skills: ["React", "Node.js", "TypeScript", "Java", "Spring Boot", "AWS"],
     institution: "Discover Financial Services"
@@ -56,7 +56,7 @@ export const experiencesData: data[] = [
     location: "Champaign, IL",
     description:
       "While working full-time, I obtained my Master of Computer Science.",
-    icon: React.createElement(LuGraduationCap),
+    icon: createElement(LuGraduationCap),
     date: "2024",
     skills: ["Cloud Computing", "Software Engineering", "Data Science"],
     institution: "University of Illinois Urbana-Champaign"
@@ -66,7 +66,7 @@ export const experiencesData: data[] = [
     location: "Chicago, IL",
     description:
       "I was a frontend React developer supporting the complete redesign of the Discover Home Loan website.",
-    icon: React.createElement(FaReact),
+    icon: createElement(FaReact),
     date: "2023 - 2024",
     skills: ["React", "Redux", "JavaScript"],
     institution: "Discover Financial Services"
@@ -76,7 +76,7 @@ export const experiencesData: data[] = [
     location: "Chicago, IL",
     description:
       "I was a full-stack web developer at Discover Financial Services supporting credit card applications.",
-    icon: React.createElement(SiSpringboot),
+    icon: createElement(SiSpringboot),
     date: "2022 - 2023",
     skills: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"],
     institution: "Discover Financial Services"
@@ -85,7 +85,7 @@ export const experiencesData: data[] = [
     title: "Bachelor of Computer Science",
     location: "Champaign, IL",
     description: "I studied Computer Science and minored in Economics.",
-    icon: React.createElement(LuGraduationCap),
+    icon: createElement(LuGraduationCap),
     date: "2021",
     skills: ["Algorithms", "Data Structures", "Web Development", "Economics"],
     institution: "University of Illinois Urbana-Champaign"
