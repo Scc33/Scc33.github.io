@@ -36,7 +36,7 @@ export default function VerticalHistory() {
       className="scroll-mt-28 flex flex-col items-center mb-24 sm:mb-40"
     >
       <SectionHeading>My Experience</SectionHeading>
-      <VerticalTimeline lineColor="" className="!mr-0 !ml-0 !w-full">
+      <VerticalTimeline lineColor="" className="mr-0! ml-0! w-full!">
         {experiencesData.map((item, index) => (
           <Fragment key={index}>
             <VerticalTimelineElement
@@ -65,11 +65,11 @@ export default function VerticalHistory() {
             >
               <h3 className="font-bold">{item.title}</h3>
               <h4 className="font-normal">{item.institution}</h4>
-              <h4 className="font-normal !mt-0">{item.location}</h4>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <h4 className="font-normal mt-0!">{item.location}</h4>
+              <p className="mt-1! font-normal! text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
-              <ul className="flex flex-wrap !mt-2 gap-2 sm:mt-auto">
+              <ul className="flex flex-wrap mt-2! gap-2 sm:mt-auto">
                 {item.skills.map((skill, index) => (
                   <li
                     key={index}
