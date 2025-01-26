@@ -4,7 +4,7 @@
 echo "Running pre-push hooks"
 
 echo "Running tests..."
-bun run test
+pnpm run test
 
 echo "Running eslint..."
-bun run eslint
+pnpm run lint
