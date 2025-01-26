@@ -4,7 +4,7 @@
 echo "Running pre-commit hooks"
 
 echo "Running tests..."
-bun run test
+pnpm run test
 
 echo "Running eslint with lint-staged..."
-bun run lint-staged
+pnpm lint-staged

@@ -1,40 +1,55 @@
 name: CI
 
 on:
-  # Can run on command
   workflow_dispatch:
-  # Can be run by other actions
   workflow_call:
-  # Runs on pull requests
   pull_request:
     branches: [master]
 
 jobs:
   build:
     name: build-and-test
-    # Running on ubuntu-latest, nothing special
     runs-on: ubuntu-latest
     steps:
-      # As usual, we simply checkout the project
       - name: Checkout
-        uses: actions/checkout@v4
-      # Setup the latest version of Bun
-      - uses: oven-sh/setup-bun@v2
+        uses: actions/checkout@v4 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          bun-version: latest
-      # Install project dependencies
+          node-version: '20'
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Cache pnpm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-  
       - name: Install dependencies
-        run: bun install --frozen-lockfile
-      # Make sure the application can build
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm run lint
       - name: Build application
-        run: bun run build
-      # Now we run our tests
+        run: pnpm run build
       - name: Run tests
-        run: bun run test
-      # This comments the current Jest Coverage Report containing JUnit XML reports and a Code Coverage Summary
+        run: pnpm run test
       - name: Jest Coverage Comment
         uses: MishaKav/jest-coverage-comment@d74238813c33e6ea20530ff91b5ea37953d11c91 # v1.0.27
         with:
           title: "Unit Test Coverage Report"
           junitxml-path: ./test-results.xml
-          junitxml-title: Unit Test Report
+          junitxml-title: Unit Test Report 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: dist/
+          retention-days: 7
