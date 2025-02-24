@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.8",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.2.0",
     "@types/node": "22.10.10",
