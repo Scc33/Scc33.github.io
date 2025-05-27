@@ -21,7 +21,7 @@ export default function About() {
         I have my undergraduate and graduate degrees in{" "}
         <span className="font-medium">computer science</span>. I am currently a{" "}
         <span className="font-medium">full-stack web developer</span> with
-        Discover.{" "}
+        Capital One (formerly Discover).{" "}
         <span className="italic">My favorite part of programming</span> is
         seeing creations come to life. I <span className="underline">love</span>{" "}
         the feeling of finally shipping code.
