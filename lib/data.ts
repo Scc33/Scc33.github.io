@@ -1,5 +1,6 @@
 import { ReactNode, createElement } from "react";
 import { CgWorkAlt } from "react-icons/cg";
+import { CiCreditCard1 } from "react-icons/ci";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiSpringboot } from "react-icons/si";
@@ -45,10 +46,20 @@ export const experiencesData: data[] = [
     title: "Software Engineer II",
     location: "Chicago, IL",
     description:
-      "I'm now a full-stack application developer. My current stack includes React, Redux, TypeScript, Java, and AWS.",
+      "In May 2025 Discover was acquired by Capital One and I joined integration efforts.",
+    icon: createElement(CiCreditCard1),
+    date: "2025 - present",
+    skills: ["React", "TypeScript", "Java", "Spring Boot", "AWS"],
+    institution: "Capital One"
+  },
+  {
+    title: "Software Engineer II",
+    location: "Chicago, IL",
+    description:
+      "I was a fullstack engineer working on financial integrations. My stack included React, Redux, TypeScript, Java, and AWS.",
     icon: createElement(CgWorkAlt),
-    date: "2024 - present",
-    skills: ["React", "Node.js", "TypeScript", "Java", "Spring Boot", "AWS"],
+    date: "2024 - 2025",
+    skills: ["React", "TypeScript", "Java", "Spring Boot", "AWS"],
     institution: "Discover Financial Services"
   },
   {
