@@ -8,7 +8,10 @@ import ThemeContextProvider from "@/context/theme-context";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap" // Add this line
+});
 
 export const metadata = {
   title: "Sean Coughlin | Software Engineer",

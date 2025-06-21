@@ -1,9 +1,15 @@
-import VerticalHistory from "@/components/VerticalHistory";
 import About from "@/components/about";
 import Intro from "@/components/intro";
-//import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
-import Skills from "@/components/skills";
+import dynamic from "next/dynamic";
+
+const Skills = dynamic(() => import("@/components/skills"), {
+  loading: () => <div>Loading...</div>
+});
+
+const VerticalHistory = dynamic(() => import("@/components/VerticalHistory"), {
+  loading: () => <div>Loading...</div>
+});
 
 export default function Home() {
   return (
@@ -11,7 +17,6 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <About />
-      {/*Projects />*/}
       <Skills />
       <VerticalHistory />
     </main>
