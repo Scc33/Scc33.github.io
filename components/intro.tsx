@@ -29,7 +29,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/profile.jpeg"
+              src="/profile.webp"
               alt="Sean Coughlin portrait"
               width="245"
               height="245"
