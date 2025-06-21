@@ -15,6 +15,11 @@ type data = {
   institution: string;
 };
 
+type Skill = {
+  name: string;
+  link: string;
+};
+
 export const links = [
   {
     name: "Home",
@@ -96,27 +101,30 @@ export const experiencesData: data[] = [
   }
 ] as const;
 
-export const skillsData: string[] = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Redux",
-  "Next.js",
-  "Node.js",
-  "Java",
-  "Spring Boot",
-  "Git",
-  "Tailwind",
-  "MongoDB",
-  "REST APIs",
-  "SQL",
-  "AWS",
-  "Python",
-  "Playwright",
-  "Docker",
-  "Kubernetes",
-  "Terraform",
-  "Jenkins"
+export const skillsData: Skill[] = [
+  { name: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  {
+    name: "JavaScript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  { name: "TypeScript", link: "https://www.typescriptlang.org/" },
+  { name: "React", link: "https://react.dev/" },
+  { name: "Redux", link: "https://redux.js.org/" },
+  { name: "Next.js", link: "https://nextjs.org/" },
+  { name: "Node.js", link: "https://nodejs.org/" },
+  { name: "Java", link: "https://www.oracle.com/java/" },
+  { name: "Spring Boot", link: "https://spring.io/projects/spring-boot" },
+  { name: "Git", link: "https://git-scm.com/" },
+  { name: "Tailwind", link: "https://tailwindcss.com/" },
+  { name: "MongoDB", link: "https://www.mongodb.com/" },
+  { name: "REST APIs", link: "https://restfulapi.net/" },
+  { name: "SQL", link: "https://en.wikipedia.org/wiki/SQL" },
+  { name: "AWS", link: "https://aws.amazon.com/" },
+  { name: "Python", link: "https://www.python.org/" },
+  { name: "Playwright", link: "https://playwright.dev/" },
+  { name: "Docker", link: "https://www.docker.com/" },
+  { name: "Kubernetes", link: "https://kubernetes.io/" },
+  { name: "Terraform", link: "https://www.terraform.io/" },
+  { name: "Jenkins", link: "https://www.jenkins.io/" }
 ] as const;
