@@ -1,5 +1,4 @@
 import React from "react";
-import { useTheme } from "@/context/theme-context";
 
 type VerticalTimelineProps = {
   children: React.ReactNode;
@@ -30,18 +29,11 @@ export function VerticalTimelineElement({
   index,
   isLast
 }: VerticalTimelineElementProps) {
-  const { theme } = useTheme();
   const isOdd = index % 2 !== 0;
 
   return (
     <div className={`relative ${!isLast ? "mb-10 sm:mb-16" : ""}`}>
-      <div
-        className="flex items-center justify-center w-10 h-10 rounded-full absolute left-5 sm:left-1/2 -translate-x-1/2 z-10"
-        style={{
-          background: theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-          fontSize: "1.5rem"
-        }}
-      >
+      <div className="flex items-center justify-center w-10 h-10 rounded-full absolute left-5 sm:left-1/2 -translate-x-1/2 z-10 bg-white dark:bg-white/15 text-2xl">
         {icon}
       </div>
 
@@ -51,17 +43,7 @@ export function VerticalTimelineElement({
         } ml-16 sm:ml-0`}
       >
         <div className={`sm:w-1/2 ${isOdd ? "sm:pl-8" : "sm:pr-8"}`}>
-          <div
-            className="bg-gray-100 dark:bg-white/5 p-5 rounded-lg border border-black/5 relative"
-            style={{
-              background:
-                theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
-              boxShadow: "none",
-              border: "1px solid rgba(0, 0, 0, 0.05)",
-              textAlign: "left",
-              padding: "1.3rem 2rem"
-            }}
-          >
+          <div className="bg-gray-100 dark:bg-white/5 p-[1.3rem_2rem] rounded-lg border border-black/5 relative shadow-none text-left">
             <p className="sm:hidden font-semibold mb-2">{date}</p>
             {children}
           </div>
