@@ -10,7 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: "swap" // Add this line
+  display: "swap"
 });
 
 export const metadata = {
