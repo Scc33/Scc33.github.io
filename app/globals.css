@@ -30,3 +30,211 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+/* Animation classes to replace framer-motion */
+@layer components {
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up-delay-1 {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 0.6s ease-out 0.1s forwards;
+  }
+
+  .animate-fade-in-up-delay-2 {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  }
+
+  .animate-fade-in-up-delay-175 {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 0.6s ease-out 0.175s forwards;
+  }
+
+  .animate-scale-in {
+    opacity: 0;
+    transform: scale(0);
+    animation: scaleIn 0.2s ease-out forwards;
+  }
+
+  .animate-scale-in-delay-1 {
+    opacity: 0;
+    transform: scale(0);
+    animation: scaleIn 0.7s ease-out 0.1s forwards;
+  }
+
+  .animate-slide-in-down {
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: slideInDown 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-down-delay-1 {
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: slideInDown 0.6s ease-out 0.1s forwards;
+  }
+
+  .animate-header-slide-in-down {
+    opacity: 0;
+    transform: translateY(-100px) translateX(-50%);
+    animation: headerSlideInDown 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-125 {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out 0.125s forwards;
+  }
+
+  /* Staggered animations for skills */
+  .animate-skills-item {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-skills-item:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+
+  .animate-skills-item:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .animate-skills-item:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+
+  .animate-skills-item:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+
+  .animate-skills-item:nth-child(5) {
+    animation-delay: 0.25s;
+  }
+
+  .animate-skills-item:nth-child(6) {
+    animation-delay: 0.3s;
+  }
+
+  .animate-skills-item:nth-child(7) {
+    animation-delay: 0.35s;
+  }
+
+  .animate-skills-item:nth-child(8) {
+    animation-delay: 0.4s;
+  }
+
+  .animate-skills-item:nth-child(9) {
+    animation-delay: 0.45s;
+  }
+
+  .animate-skills-item:nth-child(10) {
+    animation-delay: 0.5s;
+  }
+
+  .animate-skills-item:nth-child(11) {
+    animation-delay: 0.55s;
+  }
+
+  .animate-skills-item:nth-child(12) {
+    animation-delay: 0.6s;
+  }
+
+  .animate-skills-item:nth-child(13) {
+    animation-delay: 0.65s;
+  }
+
+  .animate-skills-item:nth-child(14) {
+    animation-delay: 0.7s;
+  }
+
+  .animate-skills-item:nth-child(15) {
+    animation-delay: 0.75s;
+  }
+
+  .animate-skills-item:nth-child(16) {
+    animation-delay: 0.8s;
+  }
+
+  .animate-skills-item:nth-child(17) {
+    animation-delay: 0.85s;
+  }
+
+  .animate-skills-item:nth-child(18) {
+    animation-delay: 0.9s;
+  }
+
+  .animate-skills-item:nth-child(19) {
+    animation-delay: 0.95s;
+  }
+
+  .animate-skills-item:nth-child(20) {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes headerSlideInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-fade-in-up,
+  .animate-fade-in-up-delay-1,
+  .animate-fade-in-up-delay-2,
+  .animate-fade-in-up-delay-175,
+  .animate-scale-in,
+  .animate-scale-in-delay-1,
+  .animate-slide-in-down,
+  .animate-slide-in-down-delay-1,
+  .animate-fade-in,
+  .animate-fade-in-delay-125,
+  .animate-skills-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
