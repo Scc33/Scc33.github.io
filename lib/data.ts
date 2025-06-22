@@ -4,9 +4,6 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiSpringboot } from "react-icons/si";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 type data = {
   title: string;
@@ -18,6 +15,11 @@ type data = {
   institution: string;
 };
 
+type Skill = {
+  name: string;
+  link: string;
+};
+
 export const links = [
   {
     name: "Home",
@@ -27,10 +29,6 @@ export const links = [
     name: "About",
     hash: "#about"
   },
-  /*{
-    name: "Projects",
-    hash: "#projects"
-  },*/
   {
     name: "Skills",
     hash: "#skills"
@@ -103,51 +101,30 @@ export const experiencesData: data[] = [
   }
 ] as const;
 
-export const projectsData = [
+export const skillsData: Skill[] = [
+  { name: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg
+    name: "JavaScript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
-  {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg
-  }
-] as const;
-
-export const skillsData: string[] = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Redux",
-  "Next.js",
-  "Node.js",
-  "Java",
-  "Spring Boot",
-  "Git",
-  "Tailwind",
-  "MongoDB",
-  "REST APIs",
-  "SQL",
-  "AWS",
-  "Python",
-  "Playwright",
-  "Docker",
-  "Kubernetes",
-  "Terraform",
-  "Jenkins"
+  { name: "TypeScript", link: "https://www.typescriptlang.org/" },
+  { name: "React", link: "https://react.dev/" },
+  { name: "Redux", link: "https://redux.js.org/" },
+  { name: "Next.js", link: "https://nextjs.org/" },
+  { name: "Node.js", link: "https://nodejs.org/" },
+  { name: "Java", link: "https://www.oracle.com/java/" },
+  { name: "Spring Boot", link: "https://spring.io/projects/spring-boot" },
+  { name: "Git", link: "https://git-scm.com/" },
+  { name: "Tailwind", link: "https://tailwindcss.com/" },
+  { name: "MongoDB", link: "https://www.mongodb.com/" },
+  { name: "REST APIs", link: "https://restfulapi.net/" },
+  { name: "SQL", link: "https://en.wikipedia.org/wiki/SQL" },
+  { name: "AWS", link: "https://aws.amazon.com/" },
+  { name: "Python", link: "https://www.python.org/" },
+  { name: "Playwright", link: "https://playwright.dev/" },
+  { name: "Docker", link: "https://www.docker.com/" },
+  { name: "Kubernetes", link: "https://kubernetes.io/" },
+  { name: "Terraform", link: "https://www.terraform.io/" },
+  { name: "Jenkins", link: "https://www.jenkins.io/" }
 ] as const;
