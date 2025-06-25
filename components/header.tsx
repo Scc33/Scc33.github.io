@@ -10,18 +10,26 @@ export default function Header() {
     useActiveSectionContext();
 
   return (
-    <header className="z-999 relative">
+    <header className="z-999 relative" role="banner">
       <div className="fixed top-0 left-1/2 h-[3.25rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[23rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 animate-header-slide-in-down"></div>
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-700 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+      <nav
+        className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0"
+        aria-label="Main navigation"
+        role="navigation"
+      >
+        <ul
+          className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-700 sm:w-[initial] sm:flex-nowrap sm:gap-5"
+          role="menubar"
+        >
           {links.map((link) => (
             <li
               className="h-3/4 flex items-center justify-center relative animate-slide-in-down-delay-1"
               key={link.hash}
+              role="none"
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-300 dark:hover:text-gray-50",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-300 dark:hover:text-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md",
                   {
                     "text-gray-950 dark:text-gray-100":
                       activeSection === link.name
@@ -32,11 +40,16 @@ export default function Header() {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
+                aria-current={activeSection === link.name ? "page" : undefined}
+                role="menuitem"
               >
                 {link.name}
 
                 {link.name === activeSection && (
-                  <span className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800 transition-all duration-300 ease-out"></span>
+                  <span
+                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800 transition-all duration-300 ease-out"
+                    aria-hidden="true"
+                  ></span>
                 )}
               </Link>
             </li>
