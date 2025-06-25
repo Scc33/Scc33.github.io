@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "24"
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -32,7 +32,7 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-  
+            ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Lint
@@ -46,7 +46,7 @@ jobs:
         with:
           title: "Unit Test Coverage Report"
           junitxml-path: ./test-results.xml
-          junitxml-title: Unit Test Report 
+          junitxml-title: Unit Test Report
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
