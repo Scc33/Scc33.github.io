@@ -5,19 +5,19 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiSpringboot } from "react-icons/si";
 
+type Skill = {
+  name: string;
+  link: string;
+};
+
 type data = {
   title: string;
   location: string;
   description: string;
   icon: ReactNode;
   date: string;
-  skills: string[];
+  skills: Skill[];
   institution: string;
-};
-
-type Skill = {
-  name: string;
-  link: string;
 };
 
 export const links = [
@@ -47,7 +47,13 @@ export const experiencesData: data[] = [
       "In May 2025 Discover was acquired by Capital One and I joined integration efforts.",
     icon: createElement(CiCreditCard1),
     date: "2025 - present",
-    skills: ["React", "TypeScript", "Java", "Spring Boot", "AWS"],
+    skills: [
+      { name: "React", link: "https://react.dev/" },
+      { name: "TypeScript", link: "https://www.typescriptlang.org/" },
+      { name: "Java", link: "https://www.oracle.com/java/" },
+      { name: "Spring Boot", link: "https://spring.io/projects/spring-boot" },
+      { name: "AWS", link: "https://aws.amazon.com/" }
+    ],
     institution: "Capital One"
   },
   {
@@ -57,7 +63,13 @@ export const experiencesData: data[] = [
       "I was a fullstack engineer working on financial integrations. My stack included React, Redux, TypeScript, Java, and AWS.",
     icon: createElement(CgWorkAlt),
     date: "2024 - 2025",
-    skills: ["React", "TypeScript", "Java", "Spring Boot", "AWS"],
+    skills: [
+      { name: "React", link: "https://react.dev/" },
+      { name: "TypeScript", link: "https://www.typescriptlang.org/" },
+      { name: "Java", link: "https://www.oracle.com/java/" },
+      { name: "Spring Boot", link: "https://spring.io/projects/spring-boot" },
+      { name: "AWS", link: "https://aws.amazon.com/" }
+    ],
     institution: "Discover Financial Services"
   },
   {
@@ -67,7 +79,20 @@ export const experiencesData: data[] = [
       "While working full-time, I obtained my Master of Computer Science.",
     icon: createElement(LuGraduationCap),
     date: "2024",
-    skills: ["Cloud Computing", "Software Engineering", "Data Science"],
+    skills: [
+      {
+        name: "Cloud Computing",
+        link: "https://en.wikipedia.org/wiki/Cloud_computing"
+      },
+      {
+        name: "Software Engineering",
+        link: "https://en.wikipedia.org/wiki/Software_engineering"
+      },
+      {
+        name: "Data Science",
+        link: "https://en.wikipedia.org/wiki/Data_science"
+      }
+    ],
     institution: "University of Illinois Urbana-Champaign"
   },
   {
@@ -77,7 +102,14 @@ export const experiencesData: data[] = [
       "I was a frontend React developer supporting the complete redesign of the Discover Home Loan website.",
     icon: createElement(FaReact),
     date: "2023 - 2024",
-    skills: ["React", "Redux", "JavaScript"],
+    skills: [
+      { name: "React", link: "https://react.dev/" },
+      { name: "Redux", link: "https://redux.js.org/" },
+      {
+        name: "JavaScript",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      }
+    ],
     institution: "Discover Financial Services"
   },
   {
@@ -87,7 +119,19 @@ export const experiencesData: data[] = [
       "I was a full-stack web developer at Discover Financial Services supporting credit card applications.",
     icon: createElement(SiSpringboot),
     date: "2022 - 2023",
-    skills: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"],
+    skills: [
+      { name: "Java", link: "https://www.oracle.com/java/" },
+      { name: "Spring Boot", link: "https://spring.io/projects/spring-boot" },
+      {
+        name: "HTML",
+        link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+      {
+        name: "JavaScript",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      }
+    ],
     institution: "Discover Financial Services"
   },
   {
@@ -96,7 +140,18 @@ export const experiencesData: data[] = [
     description: "I studied Computer Science and minored in Economics.",
     icon: createElement(LuGraduationCap),
     date: "2021",
-    skills: ["Algorithms", "Data Structures", "Web Development", "Economics"],
+    skills: [
+      { name: "Algorithms", link: "https://en.wikipedia.org/wiki/Algorithm" },
+      {
+        name: "Data Structures",
+        link: "https://en.wikipedia.org/wiki/Data_structure"
+      },
+      {
+        name: "Web Development",
+        link: "https://en.wikipedia.org/wiki/Web_development"
+      },
+      { name: "Economics", link: "https://en.wikipedia.org/wiki/Economics" }
+    ],
     institution: "University of Illinois Urbana-Champaign"
   }
 ] as const;
@@ -147,9 +202,3 @@ export const skillsData: Skill[] = [
   },
   { name: "Economics", link: "https://en.wikipedia.org/wiki/Economics" }
 ] as const;
-
-// Helper function to find skill link by name
-export const getSkillLink = (skillName: string): string => {
-  const skill = skillsData.find((skill) => skill.name === skillName);
-  return skill?.link || "#";
-};

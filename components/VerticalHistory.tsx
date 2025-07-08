@@ -3,7 +3,7 @@
 import SectionHeading from "./section-heading";
 import { VerticalTimeline, VerticalTimelineElement } from "./VerticalTimeline";
 import { useSectionInView } from "@/lib/hooks";
-import { experiencesData, getSkillLink } from "@/lib/data";
+import { experiencesData } from "@/lib/data";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience", 0.5);
@@ -33,12 +33,12 @@ export default function Experience() {
               {item.skills.map((skill, index) => (
                 <li key={index}>
                   <a
-                    href={getSkillLink(skill)}
+                    href={skill.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70 hover:bg-black/[0.9] transition-colors cursor-pointer inline-block"
                   >
-                    {skill}
+                    {skill.name}
                   </a>
                 </li>
               ))}
