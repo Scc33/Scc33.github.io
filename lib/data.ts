@@ -136,12 +136,12 @@ export const experiencesData: data[] = [
   }
 ] as const;
 
-export const skillsData: Skill[] = Object.entries(skillsLookup).map(
-  ([name, skill]) => ({
-    name,
-    link: skill.link
-  })
-);
+export const skillsData: { name: string; link: string }[] = Object.entries(
+  skillsLookup
+).map(([name, skill]) => ({
+  name,
+  link: skill.link
+}));
 
 export const getSkill = (skillName: string): { name: string; link: string } => {
   const skill = skillsLookup[skillName];
