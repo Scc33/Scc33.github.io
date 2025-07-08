@@ -126,5 +126,30 @@ export const skillsData: Skill[] = [
   { name: "Docker", link: "https://www.docker.com/" },
   { name: "Kubernetes", link: "https://kubernetes.io/" },
   { name: "Terraform", link: "https://www.terraform.io/" },
-  { name: "Jenkins", link: "https://www.jenkins.io/" }
+  { name: "Jenkins", link: "https://www.jenkins.io/" },
+  {
+    name: "Cloud Computing",
+    link: "https://en.wikipedia.org/wiki/Cloud_computing"
+  },
+  {
+    name: "Software Engineering",
+    link: "https://en.wikipedia.org/wiki/Software_engineering"
+  },
+  { name: "Data Science", link: "https://en.wikipedia.org/wiki/Data_science" },
+  { name: "Algorithms", link: "https://en.wikipedia.org/wiki/Algorithm" },
+  {
+    name: "Data Structures",
+    link: "https://en.wikipedia.org/wiki/Data_structure"
+  },
+  {
+    name: "Web Development",
+    link: "https://en.wikipedia.org/wiki/Web_development"
+  },
+  { name: "Economics", link: "https://en.wikipedia.org/wiki/Economics" }
 ] as const;
+
+// Helper function to find skill link by name
+export const getSkillLink = (skillName: string): string => {
+  const skill = skillsData.find((skill) => skill.name === skillName);
+  return skill?.link || "#";
+};
