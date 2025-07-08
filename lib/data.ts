@@ -5,6 +5,10 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiSpringboot } from "react-icons/si";
 
+type Skill = {
+  link: string;
+};
+
 type data = {
   title: string;
   location: string;
@@ -13,11 +17,6 @@ type data = {
   date: string;
   skills: string[];
   institution: string;
-};
-
-type Skill = {
-  name: string;
-  link: string;
 };
 
 export const links = [
@@ -38,6 +37,42 @@ export const links = [
     hash: "#experience"
   }
 ] as const;
+
+export const skillsLookup: Record<string, Skill> = {
+  HTML: { link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  CSS: { link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  JavaScript: {
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  TypeScript: { link: "https://www.typescriptlang.org/" },
+  React: { link: "https://react.dev/" },
+  Redux: { link: "https://redux.js.org/" },
+  "Next.js": { link: "https://nextjs.org/" },
+  "Node.js": { link: "https://nodejs.org/" },
+  Java: { link: "https://www.oracle.com/java/" },
+  "Spring Boot": { link: "https://spring.io/projects/spring-boot" },
+  Git: { link: "https://git-scm.com/" },
+  Tailwind: { link: "https://tailwindcss.com/" },
+  MongoDB: { link: "https://www.mongodb.com/" },
+  "REST APIs": { link: "https://en.wikipedia.org/wiki/REST" },
+  SQL: { link: "https://en.wikipedia.org/wiki/SQL" },
+  AWS: { link: "https://aws.amazon.com/" },
+  Python: { link: "https://www.python.org/" },
+  Playwright: { link: "https://playwright.dev/" },
+  Docker: { link: "https://www.docker.com/" },
+  Kubernetes: { link: "https://kubernetes.io/" },
+  Terraform: { link: "https://www.terraform.io/" },
+  Jenkins: { link: "https://www.jenkins.io/" },
+  "Cloud Computing": { link: "https://en.wikipedia.org/wiki/Cloud_computing" },
+  "Software Engineering": {
+    link: "https://en.wikipedia.org/wiki/Software_engineering"
+  },
+  "Data Science": { link: "https://en.wikipedia.org/wiki/Data_science" },
+  Algorithms: { link: "https://en.wikipedia.org/wiki/Algorithm" },
+  "Data Structures": { link: "https://en.wikipedia.org/wiki/Data_structure" },
+  "Web Development": { link: "https://en.wikipedia.org/wiki/Web_development" },
+  Economics: { link: "https://en.wikipedia.org/wiki/Economics" }
+};
 
 export const experiencesData: data[] = [
   {
@@ -101,30 +136,16 @@ export const experiencesData: data[] = [
   }
 ] as const;
 
-export const skillsData: Skill[] = [
-  { name: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-  { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-  {
-    name: "JavaScript",
-    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-  },
-  { name: "TypeScript", link: "https://www.typescriptlang.org/" },
-  { name: "React", link: "https://react.dev/" },
-  { name: "Redux", link: "https://redux.js.org/" },
-  { name: "Next.js", link: "https://nextjs.org/" },
-  { name: "Node.js", link: "https://nodejs.org/" },
-  { name: "Java", link: "https://www.oracle.com/java/" },
-  { name: "Spring Boot", link: "https://spring.io/projects/spring-boot" },
-  { name: "Git", link: "https://git-scm.com/" },
-  { name: "Tailwind", link: "https://tailwindcss.com/" },
-  { name: "MongoDB", link: "https://www.mongodb.com/" },
-  { name: "REST APIs", link: "https://restfulapi.net/" },
-  { name: "SQL", link: "https://en.wikipedia.org/wiki/SQL" },
-  { name: "AWS", link: "https://aws.amazon.com/" },
-  { name: "Python", link: "https://www.python.org/" },
-  { name: "Playwright", link: "https://playwright.dev/" },
-  { name: "Docker", link: "https://www.docker.com/" },
-  { name: "Kubernetes", link: "https://kubernetes.io/" },
-  { name: "Terraform", link: "https://www.terraform.io/" },
-  { name: "Jenkins", link: "https://www.jenkins.io/" }
-] as const;
+export const skillsData: { name: string; link: string }[] = Object.entries(
+  skillsLookup
+).map(([name, skill]) => ({
+  name,
+  link: skill.link
+}));
+
+export const getSkill = (skillName: string): { name: string; link: string } => {
+  const skill = skillsLookup[skillName];
+  return skill
+    ? { name: skillName, link: skill.link }
+    : { name: skillName, link: "#" };
+};
