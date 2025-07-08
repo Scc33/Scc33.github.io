@@ -9,6 +9,16 @@ export default function Footer() {
         React, Next.js (App Router), TypeScript, Tailwind CSS, CSS animations,
         and Vercel hosting.
       </p>
+      <p className="text-xs mt-2">
+        <a
+          href="https://github.com/Scc33/Scc33.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-gray-700 transition-colors underline"
+        >
+          View source code on GitHub
+        </a>
+      </p>
     </footer>
   );
 }
