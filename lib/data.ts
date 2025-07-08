@@ -6,7 +6,6 @@ import { LuGraduationCap } from "react-icons/lu";
 import { SiSpringboot } from "react-icons/si";
 
 type Skill = {
-  name: string;
   link: string;
 };
 
@@ -40,68 +39,39 @@ export const links = [
 ] as const;
 
 export const skillsLookup: Record<string, Skill> = {
-  HTML: {
-    name: "HTML",
-    link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
-  },
-  CSS: {
-    name: "CSS",
-    link: "https://developer.mozilla.org/en-US/docs/Web/CSS"
-  },
+  HTML: { link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  CSS: { link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   JavaScript: {
-    name: "JavaScript",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
-  TypeScript: { name: "TypeScript", link: "https://www.typescriptlang.org/" },
-  React: { name: "React", link: "https://react.dev/" },
-  Redux: { name: "Redux", link: "https://redux.js.org/" },
-  "Next.js": { name: "Next.js", link: "https://nextjs.org/" },
-  "Node.js": { name: "Node.js", link: "https://nodejs.org/" },
-  Java: { name: "Java", link: "https://www.oracle.com/java/" },
-  "Spring Boot": {
-    name: "Spring Boot",
-    link: "https://spring.io/projects/spring-boot"
-  },
-  Git: { name: "Git", link: "https://git-scm.com/" },
-  Tailwind: { name: "Tailwind", link: "https://tailwindcss.com/" },
-  MongoDB: { name: "MongoDB", link: "https://www.mongodb.com/" },
-  "REST APIs": { name: "REST APIs", link: "https://restfulapi.net/" },
-  SQL: { name: "SQL", link: "https://en.wikipedia.org/wiki/SQL" },
-  AWS: { name: "AWS", link: "https://aws.amazon.com/" },
-  Python: { name: "Python", link: "https://www.python.org/" },
-  Playwright: { name: "Playwright", link: "https://playwright.dev/" },
-  Docker: { name: "Docker", link: "https://www.docker.com/" },
-  Kubernetes: { name: "Kubernetes", link: "https://kubernetes.io/" },
-  Terraform: { name: "Terraform", link: "https://www.terraform.io/" },
-  Jenkins: { name: "Jenkins", link: "https://www.jenkins.io/" },
-  "Cloud Computing": {
-    name: "Cloud Computing",
-    link: "https://en.wikipedia.org/wiki/Cloud_computing"
-  },
+  TypeScript: { link: "https://www.typescriptlang.org/" },
+  React: { link: "https://react.dev/" },
+  Redux: { link: "https://redux.js.org/" },
+  "Next.js": { link: "https://nextjs.org/" },
+  "Node.js": { link: "https://nodejs.org/" },
+  Java: { link: "https://www.oracle.com/java/" },
+  "Spring Boot": { link: "https://spring.io/projects/spring-boot" },
+  Git: { link: "https://git-scm.com/" },
+  Tailwind: { link: "https://tailwindcss.com/" },
+  MongoDB: { link: "https://www.mongodb.com/" },
+  "REST APIs": { link: "https://restfulapi.net/" },
+  SQL: { link: "https://en.wikipedia.org/wiki/SQL" },
+  AWS: { link: "https://aws.amazon.com/" },
+  Python: { link: "https://www.python.org/" },
+  Playwright: { link: "https://playwright.dev/" },
+  Docker: { link: "https://www.docker.com/" },
+  Kubernetes: { link: "https://kubernetes.io/" },
+  Terraform: { link: "https://www.terraform.io/" },
+  Jenkins: { link: "https://www.jenkins.io/" },
+  "Cloud Computing": { link: "https://en.wikipedia.org/wiki/Cloud_computing" },
   "Software Engineering": {
-    name: "Software Engineering",
     link: "https://en.wikipedia.org/wiki/Software_engineering"
   },
-  "Data Science": {
-    name: "Data Science",
-    link: "https://en.wikipedia.org/wiki/Data_science"
-  },
-  Algorithms: {
-    name: "Algorithms",
-    link: "https://en.wikipedia.org/wiki/Algorithm"
-  },
-  "Data Structures": {
-    name: "Data Structures",
-    link: "https://en.wikipedia.org/wiki/Data_structure"
-  },
-  "Web Development": {
-    name: "Web Development",
-    link: "https://en.wikipedia.org/wiki/Web_development"
-  },
-  Economics: {
-    name: "Economics",
-    link: "https://en.wikipedia.org/wiki/Economics"
-  }
+  "Data Science": { link: "https://en.wikipedia.org/wiki/Data_science" },
+  Algorithms: { link: "https://en.wikipedia.org/wiki/Algorithm" },
+  "Data Structures": { link: "https://en.wikipedia.org/wiki/Data_structure" },
+  "Web Development": { link: "https://en.wikipedia.org/wiki/Web_development" },
+  Economics: { link: "https://en.wikipedia.org/wiki/Economics" }
 };
 
 export const experiencesData: data[] = [
@@ -166,8 +136,16 @@ export const experiencesData: data[] = [
   }
 ] as const;
 
-export const skillsData: Skill[] = Object.values(skillsLookup);
+export const skillsData: Skill[] = Object.entries(skillsLookup).map(
+  ([name, skill]) => ({
+    name,
+    link: skill.link
+  })
+);
 
-export const getSkill = (skillName: string): Skill => {
-  return skillsLookup[skillName] || { name: skillName, link: "#" };
+export const getSkill = (skillName: string): { name: string; link: string } => {
+  const skill = skillsLookup[skillName];
+  return skill
+    ? { name: skillName, link: skill.link }
+    : { name: skillName, link: "#" };
 };
