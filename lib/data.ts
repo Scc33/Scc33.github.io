@@ -54,7 +54,7 @@ export const skillsLookup: Record<string, Skill> = {
   Git: { link: "https://git-scm.com/" },
   Tailwind: { link: "https://tailwindcss.com/" },
   MongoDB: { link: "https://www.mongodb.com/" },
-  "REST APIs": { link: "https://restfulapi.net/" },
+  "REST APIs": { link: "https://en.wikipedia.org/wiki/REST" },
   SQL: { link: "https://en.wikipedia.org/wiki/SQL" },
   AWS: { link: "https://aws.amazon.com/" },
   Python: { link: "https://www.python.org/" },
