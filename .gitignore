@@ -35,11 +35,4 @@ yarn-error.log*
 next-env.d.ts
 
 # old
-.svelte-kit
 .vscode
-lighthouse-reports
-playwright-report
-test-results
-lighthouse-report
-test-report.xml
-test-results.xml

@@ -6,7 +6,9 @@ on:
 
 jobs:
   pkg-size-report:
-    permissions: write-all
+    permissions:
+      pull-requests: write
+      contents: read
     name: Package Size Report
     runs-on: ubuntu-latest
     steps:
