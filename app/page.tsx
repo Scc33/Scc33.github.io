@@ -7,8 +7,6 @@ export default function Home() {
         <div>
           <h1 className="text-4xl font-bold mb-4">Sean Coughlin</h1>
           <nav className="text-base">
-            <a href="mailto:coughlinscc33@gmail.com">email</a>
-            <span className="mx-2 opacity-40">|</span>
             <a
               href="https://linkedin.com/in/sean-m-coughlin"
               target="_blank"
