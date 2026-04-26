@@ -12,8 +12,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test-watch": "vitest --watch",
-    "test": "vitest --no-watch",
     "pretty-check": "prettier --check **/*.{ts,tsx}",
     "pretty-write": "prettier --write **/*.{ts,tsx}"
   },
