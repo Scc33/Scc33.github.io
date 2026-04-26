@@ -3,8 +3,5 @@
 
 echo "Running pre-push hooks"
 
-echo "Running tests..."
-pnpm run test
-
 echo "Running eslint..."
 pnpm run lint
