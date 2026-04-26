@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@eslint/eslintrc':
+        specifier: ^3.3.5
+        version: 3.3.5
       '@next/third-parties':
         specifier: ^15.5.15
         version: 15.5.15(next@15.5.15(@babel/core@7.29.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)

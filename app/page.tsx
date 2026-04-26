@@ -3,10 +3,6 @@ import Intro from "@/components/intro";
 import SectionDivider from "@/components/section-divider";
 import dynamic from "next/dynamic";
 
-const Skills = dynamic(() => import("@/components/skills"), {
-  loading: () => <div>Loading...</div>
-});
-
 const VerticalHistory = dynamic(() => import("@/components/VerticalHistory"), {
   loading: () => <div>Loading...</div>
 });
@@ -17,7 +13,6 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <About />
-      <Skills />
       <VerticalHistory />
     </main>
   );
