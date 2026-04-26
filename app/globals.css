@@ -1,240 +1,112 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:is(.dark *));
-
-@theme {
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%,
-      var(--tw-gradient-stops));
-}
-
 @layer base {
+  html {
+    background-color: #fafaf7;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+  }
 
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    color: inherit;
+  }
+
+  a:hover {
+    opacity: 0.65;
+    text-decoration: none;
   }
 }
 
-html {
-  --line-color: #e5e7eb;
+/* Prose styles for blog post content */
+.prose p {
+  margin-bottom: 1.1rem;
 }
 
-html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+.prose h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
 }
 
-.borderBlack {
-  @apply border border-black/10;
+.prose h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 
-/* Animation classes to replace framer-motion */
-@layer components {
-  .animate-fade-in-up {
-    opacity: 0;
-    transform: translateY(100px);
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-
-  .animate-fade-in-up-delay-1 {
-    opacity: 0;
-    transform: translateY(100px);
-    animation: fadeInUp 0.6s ease-out 0.1s forwards;
-  }
-
-  .animate-fade-in-up-delay-2 {
-    opacity: 0;
-    transform: translateY(100px);
-    animation: fadeInUp 0.6s ease-out 0.2s forwards;
-  }
-
-  .animate-fade-in-up-delay-175 {
-    opacity: 0;
-    transform: translateY(100px);
-    animation: fadeInUp 0.6s ease-out 0.175s forwards;
-  }
-
-  .animate-scale-in {
-    opacity: 0;
-    transform: scale(0);
-    animation: scaleIn 0.2s ease-out forwards;
-  }
-
-  .animate-scale-in-delay-1 {
-    opacity: 0;
-    transform: scale(0);
-    animation: scaleIn 0.7s ease-out 0.1s forwards;
-  }
-
-  .animate-slide-in-down {
-    opacity: 0;
-    transform: translateY(-100px);
-    animation: slideInDown 0.6s ease-out forwards;
-  }
-
-  .animate-slide-in-down-delay-1 {
-    opacity: 0;
-    transform: translateY(-100px);
-    animation: slideInDown 0.6s ease-out 0.1s forwards;
-  }
-
-  .animate-header-slide-in-down {
-    opacity: 0;
-    transform: translateY(-100px) translateX(-50%);
-    animation: headerSlideInDown 0.6s ease-out forwards;
-  }
-
-  .animate-fade-in {
-    opacity: 0;
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  .animate-fade-in-delay-125 {
-    opacity: 0;
-    animation: fadeIn 0.6s ease-out 0.125s forwards;
-  }
-
-  /* Staggered animations for skills */
-  .animate-skills-item {
-    opacity: 0;
-    transform: translateY(100px);
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-
-  .animate-skills-item:nth-child(1) {
-    animation-delay: 0.05s;
-  }
-
-  .animate-skills-item:nth-child(2) {
-    animation-delay: 0.1s;
-  }
-
-  .animate-skills-item:nth-child(3) {
-    animation-delay: 0.15s;
-  }
-
-  .animate-skills-item:nth-child(4) {
-    animation-delay: 0.2s;
-  }
-
-  .animate-skills-item:nth-child(5) {
-    animation-delay: 0.25s;
-  }
-
-  .animate-skills-item:nth-child(6) {
-    animation-delay: 0.3s;
-  }
-
-  .animate-skills-item:nth-child(7) {
-    animation-delay: 0.35s;
-  }
-
-  .animate-skills-item:nth-child(8) {
-    animation-delay: 0.4s;
-  }
-
-  .animate-skills-item:nth-child(9) {
-    animation-delay: 0.45s;
-  }
-
-  .animate-skills-item:nth-child(10) {
-    animation-delay: 0.5s;
-  }
-
-  .animate-skills-item:nth-child(11) {
-    animation-delay: 0.55s;
-  }
-
-  .animate-skills-item:nth-child(12) {
-    animation-delay: 0.6s;
-  }
-
-  .animate-skills-item:nth-child(13) {
-    animation-delay: 0.65s;
-  }
-
-  .animate-skills-item:nth-child(14) {
-    animation-delay: 0.7s;
-  }
-
-  .animate-skills-item:nth-child(15) {
-    animation-delay: 0.75s;
-  }
-
-  .animate-skills-item:nth-child(16) {
-    animation-delay: 0.8s;
-  }
-
-  .animate-skills-item:nth-child(17) {
-    animation-delay: 0.85s;
-  }
-
-  .animate-skills-item:nth-child(18) {
-    animation-delay: 0.9s;
-  }
-
-  .animate-skills-item:nth-child(19) {
-    animation-delay: 0.95s;
-  }
-
-  .animate-skills-item:nth-child(20) {
-    animation-delay: 1s;
-  }
+.prose ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.1rem;
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.prose ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.1rem;
 }
 
-@keyframes scaleIn {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.prose li {
+  margin-bottom: 0.3rem;
 }
 
-@keyframes slideInDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.prose blockquote {
+  border-left: 3px solid #d1cec8;
+  padding-left: 1rem;
+  color: #555;
+  margin: 1.25rem 0;
+  font-style: italic;
 }
 
-@keyframes headerSlideInDown {
-  to {
-    opacity: 1;
-    transform: translateY(0) translateX(-50%);
-  }
+.prose code {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  font-size: 0.875em;
+  background: #f0ede8;
+  padding: 0.1em 0.3em;
+  border-radius: 0.25rem;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+.prose pre {
+  background: #f0ede8;
+  padding: 1rem 1.25rem;
+  border-radius: 0.4rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
 }
 
-/* Respect user's motion preferences */
+.prose pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid #d1cec8;
+  margin: 2rem 0;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.prose strong {
+  font-weight: bold;
+}
+
+.prose em {
+  font-style: italic;
+}
+
 @media (prefers-reduced-motion: reduce) {
-
-  .animate-fade-in-up,
-  .animate-fade-in-up-delay-1,
-  .animate-fade-in-up-delay-2,
-  .animate-fade-in-up-delay-175,
-  .animate-scale-in,
-  .animate-scale-in-delay-1,
-  .animate-slide-in-down,
-  .animate-slide-in-down-delay-1,
-  .animate-fade-in,
-  .animate-fade-in-delay-125,
-  .animate-skills-item {
-    animation: none;
-    opacity: 1;
-    transform: none;
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }

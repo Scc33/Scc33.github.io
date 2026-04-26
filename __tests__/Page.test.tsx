@@ -1,36 +1,28 @@
-import Home from "@/app/page";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import ThemeContextProvider from "@/context/theme-context";
-import { render } from "@testing-library/react";
-import { it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
+import { getPosts, getPost } from "@/lib/posts";
 
-const mockIntersectionObserver = vi.fn();
-mockIntersectionObserver.mockReturnValue({
-  observe: () => null,
-  unobserve: () => null,
-  disconnect: () => null
-});
-window.IntersectionObserver = mockIntersectionObserver;
-window.matchMedia = vi.fn().mockImplementation((query) => ({
-  matches: false,
-  media: query,
-  onchange: null,
-  addListener: vi.fn(), // Deprecated
-  removeListener: vi.fn(), // Deprecated
-  addEventListener: vi.fn(),
-  removeEventListener: vi.fn(),
-  dispatchEvent: vi.fn()
-}));
+describe("posts", () => {
+  it("returns a sorted array of posts", () => {
+    const posts = getPosts();
+    expect(Array.isArray(posts)).toBe(true);
+    for (let i = 0; i < posts.length - 1; i++) {
+      expect(posts[i].date >= posts[i + 1].date).toBe(true);
+    }
+  });
 
-it("Renders page correctly", async () => {
-  const { asFragment } = render(
-    <ThemeContextProvider>
-      <ActiveSectionContextProvider>
-        <Home />
-      </ActiveSectionContextProvider>
-    </ThemeContextProvider>
-  );
-  await expect(asFragment()).toMatchFileSnapshot(
-    "./__snapshots__/Page.snap.html"
-  );
+  it("each post has required fields", () => {
+    const posts = getPosts();
+    for (const post of posts) {
+      expect(typeof post.slug).toBe("string");
+      expect(typeof post.title).toBe("string");
+      expect(typeof post.date).toBe("string");
+      expect(typeof post.description).toBe("string");
+    }
+  });
+
+  it("getPost returns content for a known post", () => {
+    const post = getPost("hello-world");
+    expect(post.title).toBeTruthy();
+    expect(post.content).toBeTruthy();
+  });
 });
