@@ -4,11 +4,6 @@ export default function Footer() {
       <small className="mb-2 block text-xs">
         &copy; {new Date().getFullYear()} Sean Coughlin
       </small>
-      <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React, Next.js (App Router), TypeScript, Tailwind CSS, CSS animations,
-        and Vercel hosting.
-      </p>
       <p className="text-xs mt-2">
         <a
           href="https://github.com/Scc33/Scc33.github.io"
