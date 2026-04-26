@@ -1,13 +1,12 @@
-import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
+import prettierConfig from "eslint-config-prettier";
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname
-});
-
-const eslintConfig = [
-  ...compat.config({
-    extends: ["next/core-web-vitals", "next/typescript", "prettier"]
-  })
-];
-
-export default eslintConfig;
+export default tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  prettierConfig,
+  {
+    ignores: [".next/**", "node_modules/**"]
+  }
+);
