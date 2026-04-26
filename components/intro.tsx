@@ -4,7 +4,6 @@ import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
-import { CgWebsite } from "react-icons/cg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -56,14 +55,6 @@ export default function Intro() {
         >
           GitHub
           <FaGithubSquare />
-        </a>
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-hidden focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="https://blog.seancoughlin.me"
-          target="_blank"
-        >
-          Blog
-          <CgWebsite className="opacity-60" />
         </a>
       </div>
     </section>
