@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { CgWebsite } from "react-icons/cg";
@@ -74,14 +73,6 @@ export default function Intro() {
         >
           Portfolio
           <LuFolder className="opacity-60" />
-        </a>
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-hidden focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Resume.pdf"
-          download
-        >
-          Download Resume
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
       </div>
     </section>
