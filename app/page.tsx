@@ -1,11 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { getPosts } from "@/lib/posts";
 
-export default async function Home() {
-  const posts = getPosts();
-  const recent = posts.slice(0, 5);
-
+export default function Home() {
   return (
     <main className="max-w-2xl mx-auto px-6 py-16">
       <div className="flex justify-between items-start gap-8 mb-10">
@@ -41,7 +36,7 @@ export default async function Home() {
         />
       </div>
 
-      <div className="space-y-4 mb-10">
+      <div className="mb-10">
         <p>
           I&apos;m a Forward Deployed Engineer at{" "}
           <a
@@ -56,13 +51,9 @@ export default async function Home() {
           I studied Computer Science at the University of Illinois
           Urbana-Champaign.
         </p>
-        <p>
-          I build software — web apps, internal tooling, and systems that need
-          to work well at scale. I care about clear thinking, good
-          documentation, and teams that ship.
-        </p>
       </div>
 
+      {/* recent writing — hidden until there are real posts
       {recent.length > 0 && (
         <div>
           <p className="mb-3">Some recent writing:</p>
@@ -82,6 +73,7 @@ export default async function Home() {
           </p>
         </div>
       )}
+      */}
     </main>
   );
 }

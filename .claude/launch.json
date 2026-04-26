@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Next.js Dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev"],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "Next.js Start (production build)",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["start"],
+      "port": 3000
+    }
+  ]
+}
