@@ -46,7 +46,7 @@ jobs:
           junitxml-path: ./test-results.xml
           junitxml-title: Unit Test Report
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build
           path: dist/
