@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "24"
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 9
       - name: Get pnpm store directory
@@ -40,13 +40,13 @@ jobs:
       - name: Build application
         run: pnpm run build
       - name: Jest Coverage Comment
-        uses: MishaKav/jest-coverage-comment@d74238813c33e6ea20530ff91b5ea37953d11c91 # v1.0.27
+        uses: MishaKav/jest-coverage-comment@40d7aed38d0fbaea266c34c12ab06356eec894eb # v1.0.33
         with:
           title: "Unit Test Coverage Report"
           junitxml-path: ./test-results.xml
           junitxml-title: Unit Test Report
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build
           path: dist/
