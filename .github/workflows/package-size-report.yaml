@@ -19,7 +19,12 @@ jobs:
         with:
           node-version: "24"
           cache: 'pnpm'
+      # Advisory only — never block a PR on the size report. It builds the base
+      # branch too, so it can fail transiently when base and head differ in
+      # install requirements (e.g. a new pnpm build-approval config not yet on
+      # base). Correctness is gated by the CI workflow, not this one.
       - name: Package size report
         uses: pkg-size/action@v1
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
