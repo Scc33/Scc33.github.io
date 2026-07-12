@@ -20,7 +20,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: 9
+          version: 10
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
@@ -37,6 +37,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm run lint
+      - name: Test
+        run: pnpm run test
       - name: Build application
         run: pnpm run build
       - name: Jest Coverage Comment
@@ -49,5 +51,5 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: build
-          path: dist/
+          path: .next/
           retention-days: 7
