@@ -19,6 +19,21 @@ pnpm pretty-write # format all ts/tsx files
 
 Package manager is **pnpm** — never use npm or yarn. Node 24 (see `.nvmrc`).
 
+## Workflow
+
+- **`master` is the source of truth** and is what deploys to production. Feature
+  branches can be far behind — don't assume the local checkout reflects the live
+  site.
+- **Start from a fresh remote view.** Run `git fetch` and check the actual
+  default branch (`gh repo view --json defaultBranchRef`) before starting — do
+  not trust a locally-cached or tool-provided notion of the default branch.
+- **See what's live** any time at [seancoughlin.me](https://www.seancoughlin.me).
+- **Always run the dev server and look at the page** before calling a change
+  done — a green `pnpm build` is necessary but not sufficient. Verify visually
+  (and check `/` and `/blog`).
+- **Keep the docs in sync** with every meaningful change: `README.md`,
+  `CLAUDE.md`, and `CHANGELOG.md` (add a dated entry with the commit).
+
 ## Architecture
 
 - `app/page.tsx` — homepage (name, links, photo, bio)
