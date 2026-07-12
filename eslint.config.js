@@ -1,12 +1,14 @@
-import js from "@eslint/js";
-import tseslint from "typescript-eslint";
+import next from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 import prettierConfig from "eslint-config-prettier";
 
-export default tseslint.config(
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
+const eslintConfig = [
+  ...next,
+  ...nextTypescript,
   prettierConfig,
   {
     ignores: [".next/**", "node_modules/**"]
   }
-);
+];
+
+export default eslintConfig;

@@ -2,19 +2,37 @@
 
 ## Project
 
-Personal portfolio and blog for Sean Coughlin. Built with Next.js 15 (App Router), TypeScript, Tailwind CSS v4, and Lora (Google Font). Hosted on Vercel.
+Personal portfolio and blog for Sean Coughlin. Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, and Lora (Google Font). Hosted on Vercel at [seancoughlin.me](https://www.seancoughlin.me). The live site is deployed from the `master` branch.
 
 ## Commands
 
 ```bash
-pnpm dev        # start dev server
-pnpm build      # production build
-pnpm test       # run vitest suite
-pnpm lint       # eslint
-pnpm pretty-write  # format all ts/tsx files
+pnpm dev          # start dev server (http://localhost:3000)
+pnpm build        # production build (Turbopack)
+pnpm start        # serve the production build
+pnpm test         # run the vitest suite once
+pnpm test-watch   # vitest in watch mode
+pnpm lint         # eslint (flat config; includes Next core-web-vitals rules)
+pnpm pretty-check # verify formatting
+pnpm pretty-write # format all ts/tsx files
 ```
 
-Package manager is **pnpm** — never use npm or yarn.
+Package manager is **pnpm** — never use npm or yarn. Node 24 (see `.nvmrc`).
+
+## Workflow
+
+- **`master` is the source of truth** and is what deploys to production. Feature
+  branches can be far behind — don't assume the local checkout reflects the live
+  site.
+- **Start from a fresh remote view.** Run `git fetch` and check the actual
+  default branch (`gh repo view --json defaultBranchRef`) before starting — do
+  not trust a locally-cached or tool-provided notion of the default branch.
+- **See what's live** any time at [seancoughlin.me](https://www.seancoughlin.me).
+- **Always run the dev server and look at the page** before calling a change
+  done — a green `pnpm build` is necessary but not sufficient. Verify visually
+  (and check `/` and `/blog`).
+- **Keep the docs in sync** with every meaningful change: `README.md`,
+  `CLAUDE.md`, and `CHANGELOG.md` (add a dated entry with the commit).
 
 ## Architecture
 
@@ -48,8 +66,16 @@ The post appears on the blog index (`/blog`) automatically. To surface it on the
 - No skills grid or work timeline — LinkedIn covers that
 - Date-prefixed posts (`YYYY-MM-DD | Title`), newest first
 
+## Tooling & dependencies
+
+- **ESLint** uses the flat config in `eslint.config.js`, composing `eslint-config-next` (core-web-vitals + typescript) with `eslint-config-prettier`. `pnpm lint` runs the ESLint CLI directly — `next lint` was removed in Next 16.
+- **Pre-commit** (husky + lint-staged) runs `eslint --fix` and `prettier` on staged files.
+- **Deliberate version ceilings** — do not bump these without re-checking the toolchain, they were verified to break:
+  - **ESLint 9** — ESLint 10 crashes `eslint-plugin-react`, which `eslint-config-next` bundles.
+  - **TypeScript 6** — TS 7 (the native compiler) isn't supported by `typescript-eslint` yet.
+  - **@vitejs/plugin-react 5** — v6 requires Vite 8, but Vitest 4 ships Vite 7.
+
 ## Notes
 
 - The "recent writing" section on the homepage is commented out in `app/page.tsx` — uncomment when there are real posts to show
-- ESLint config was rewritten in the Node 24 upgrade (the old `eslint-config-next` compat shim broke with `@rushstack/eslint-patch`)
-- `next lint` emits a warning that the Next.js plugin isn't detected — harmless, the config still catches real issues
+- When editing, run `pnpm lint`, `pnpm test`, and `pnpm build` before committing; CI (`.github/workflows/ci.yml`) runs the same on every PR to `master`
