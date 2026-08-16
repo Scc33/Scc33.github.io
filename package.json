@@ -45,7 +45,7 @@
     "lint-staged": "^17.0.8",
     "next": "^16.2.12",
     "postcss": "^8.5.17",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-markdown": "^10.1.0",
