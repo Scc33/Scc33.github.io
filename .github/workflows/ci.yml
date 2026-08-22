@@ -40,7 +40,7 @@ jobs:
       - name: Build application
         run: pnpm run build
       - name: Jest Coverage Comment
-        uses: MishaKav/jest-coverage-comment@25f2818fee93043532f640ad32a7565b4bd4ea9a # v1.0.34
+        uses: MishaKav/jest-coverage-comment@642ef024cc554a34b7082cea12c7bf63575ae151 # v1.0.36
         with:
           title: "Unit Test Coverage Report"
           junitxml-path: ./test-results.xml
